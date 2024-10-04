@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CityVisitorFinaly.AppData"
+             x:Class="CityVisitorFinaly.RegionsPage"
+             Title="Субъекты РФ">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:VisitedToColorConverter x:Key="VisitedToColorConverter" />
+            <local:BackgroundToTextColorConverter x:Key="BackgroundToTextColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="gerb_rf.png" Margin="10,0,10,0" WidthRequest="40" HeightRequest="40" Grid.Row="0" Grid.Column="0" />
+            <Label Text="Российская федерация" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1" FontSize="18" FontAttributes="None" FontFamily="Times New Roman" TextColor="#000000" />
+
+            <Image Source="flag_rf.png" Margin="0,0,10,0" WidthRequest="40" HeightRequest="40" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="End" />
+
+            <ScrollView Grid.Row="1" Grid.ColumnSpan="3">
+                <ListView x:Name="listViewRegion" ItemsSource="{Binding}" ItemTapped="ListView_OnItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout x:Name="myStackLayout" Spacing="15" 
+                                 BackgroundColor="{Binding VisitPercentage, Converter={StaticResource VisitedToColorConverter}}"
+                                    HorizontalOptions="FillAndExpand" 
+                                 VerticalOptions="FillAndExpand">
+                                    <Grid BackgroundColor="{Binding VisitPercentage, Converter={StaticResource VisitedToColorConverter}}">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="{Binding Image}" Margin="10,0,10,0" Grid.Column="0" WidthRequest="40" HeightRequest="40" />
+                                        <Label Text="{Binding Name}" Grid.Column="1" HorizontalOptions="Center" TextColor="{Binding BackgroundColor, Converter={StaticResource BackgroundToTextColorConverter}, Source={x:Reference myStackLayout}}"  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontSize="14" FontAttributes="None" FontFamily="Times New Roman"/>
+                                        <Label Text="{Binding VisitPercentage}" Margin="0,0,10,0" Grid.Column="2" TextColor="{Binding BackgroundColor, Converter={StaticResource BackgroundToTextColorConverter}, Source={x:Reference myStackLayout}}"   HorizontalOptions="End" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" />
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </Grid>
+
+        <!--<ListView ItemsSource="{Binding RegionList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Image Source="{Binding Image}" />
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding VisitPercentage}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> -->
+    </ContentPage.Content>
+</ContentPage>

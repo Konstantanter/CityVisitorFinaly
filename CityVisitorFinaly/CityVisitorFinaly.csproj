@@ -1,0 +1,217 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>CityVisitorFinaly</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>CityVisitorFinaly</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.cityvisitorfinaly</ApplicationId>
+		<ApplicationIdGuid>81252c15-a038-4e8c-a76e-ad7c1ea9dbf2</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\Abinsk.png" />
+	  <None Remove="Resources\Images\AchkhoiMartan.png" />
+	  <None Remove="Resources\Images\AddImage.png" />
+	  <None Remove="Resources\Images\Adygea.png" />
+	  <None Remove="Resources\Images\Adygeisk.png" />
+	  <None Remove="Resources\Images\Akhtubinsk.png" />
+	  <None Remove="Resources\Images\Aksai.png" />
+	  <None Remove="Resources\Images\Anapa.png" />
+	  <None Remove="Resources\Images\Apsheronsk.png" />
+	  <None Remove="Resources\Images\Argun.png" />
+	  <None Remove="Resources\Images\Armavir.png" />
+	  <None Remove="Resources\Images\Astrakhan.png" />
+	  <None Remove="Resources\Images\AstrakhObl.png" />
+	  <None Remove="Resources\Images\Azov.png" />
+	  <None Remove="Resources\Images\Baksan.png" />
+	  <None Remove="Resources\Images\Bataisk.png" />
+	  <None Remove="Resources\Images\BelayaKalitva.png" />
+	  <None Remove="Resources\Images\Belorechensk.png" />
+	  <None Remove="Resources\Images\Beslan.png" />
+	  <None Remove="Resources\Images\Blagodarny.png" />
+	  <None Remove="Resources\Images\Budennovsk.png" />
+	  <None Remove="Resources\Images\Buinaksk.png" />
+	  <None Remove="Resources\Images\Chechnya.png" />
+	  <None Remove="Resources\Images\Cherkessk.png" />
+	  <None Remove="Resources\Images\Dagestan.png" />
+	  <None Remove="Resources\Images\DagestanskieOgni.png" />
+	  <None Remove="Resources\Images\Derbent.png" />
+	  <None Remove="Resources\Images\Doneck.png" />
+	  <None Remove="Resources\Images\Dubovka.png" />
+	  <None Remove="Resources\Images\Elista.png" />
+	  <None Remove="Resources\Images\Essentuki.png" />
+	  <None Remove="Resources\Images\Eysk.png" />
+	  <None Remove="Resources\Images\flag_rf.png" />
+	  <None Remove="Resources\Images\Frolovo.png" />
+	  <None Remove="Resources\Images\Gelendzhik.png" />
+	  <None Remove="Resources\Images\Georgievsk.png" />
+	  <None Remove="Resources\Images\gerb_rf.png" />
+	  <None Remove="Resources\Images\Gorodovikovsk.png" />
+	  <None Remove="Resources\Images\Goryachy_Klyuch.png" />
+	  <None Remove="Resources\Images\Grozny.png" />
+	  <None Remove="Resources\Images\Gudermes.png" />
+	  <None Remove="Resources\Images\Gukovo.png" />
+	  <None Remove="Resources\Images\Gulkevichi.png" />
+	  <None Remove="Resources\Images\Ingushetia.png" />
+	  <None Remove="Resources\Images\Ipatovo.png" />
+	  <None Remove="Resources\Images\Izberbash.png" />
+	  <None Remove="Resources\Images\Izobilny.png" />
+	  <None Remove="Resources\Images\JujnoSukhokumsk.png" />
+	  <None Remove="Resources\Images\KabardinoBalkariya.png" />
+	  <None Remove="Resources\Images\kalachnakonu.png" />
+	  <None Remove="Resources\Images\Kalmykiya.png" />
+	  <None Remove="Resources\Images\KamenskShakhtinsky.png" />
+	  <None Remove="Resources\Images\Kamyshin.png" />
+	  <None Remove="Resources\Images\Kamyzyak.png" />
+	  <None Remove="Resources\Images\Karabulak.png" />
+	  <None Remove="Resources\Images\Karachay.jpg" />
+	  <None Remove="Resources\Images\KarachayCherkessia.png" />
+	  <None Remove="Resources\Images\Kaspiysk.png" />
+	  <None Remove="Resources\Images\Khadyzhensk.png" />
+	  <None Remove="Resources\Images\Kharabali.png" />
+	  <None Remove="Resources\Images\Khasavyurt.png" />
+	  <None Remove="Resources\Images\Kislovodsk.png" />
+	  <None Remove="Resources\Images\Kiziljurt.png" />
+	  <None Remove="Resources\Images\Kizlyar.png" />
+	  <None Remove="Resources\Images\Konstantinovsk.png" />
+	  <None Remove="Resources\Images\Korenovsk.png" />
+	  <None Remove="Resources\Images\Kotelnikovo.png" />
+	  <None Remove="Resources\Images\Kotovo.png" />
+	  <None Remove="Resources\Images\Krasnodar.png" />
+	  <None Remove="Resources\Images\KrasnodarKrai.png" />
+	  <None Remove="Resources\Images\Krasnoslobodsk.png" />
+	  <None Remove="Resources\Images\KrasnySulin.png" />
+	  <None Remove="Resources\Images\Kropotkin.png" />
+	  <None Remove="Resources\Images\Krymsk.png" />
+	  <None Remove="Resources\Images\Kurchaloi.png" />
+	  <None Remove="Resources\Images\Kurganinsk.png" />
+	  <None Remove="Resources\Images\Labinsk.png" />
+	  <None Remove="Resources\Images\Lagan.png" />
+	  <None Remove="Resources\Images\Leninsk.png" />
+	  <None Remove="Resources\Images\Lermontov.png" />
+	  <None Remove="Resources\Images\LinkVideo.png" />
+	  <None Remove="Resources\Images\Magas.png" />
+	  <None Remove="Resources\Images\Makhachkala.png" />
+	  <None Remove="Resources\Images\Malgobek.png" />
+	  <None Remove="Resources\Images\Maykop.png" />
+	  <None Remove="Resources\Images\Mayskiy.png" />
+	  <None Remove="Resources\Images\Mihailovsk.png" />
+	  <None Remove="Resources\Images\Mikhaylovka.png" />
+	  <None Remove="Resources\Images\Millerovo.png" />
+	  <None Remove="Resources\Images\MineralWaters.png" />
+	  <None Remove="Resources\Images\Morozovsk.png" />
+	  <None Remove="Resources\Images\Mozdok.png" />
+	  <None Remove="Resources\Images\Nalchik.png" />
+	  <None Remove="Resources\Images\Narimanov.png" />
+	  <None Remove="Resources\Images\Nazran.png" />
+	  <None Remove="Resources\Images\Neftekumsk.png" />
+	  <None Remove="Resources\Images\Nevinomyssk.png" />
+	  <None Remove="Resources\Images\Nikolayevsk.png" />
+	  <None Remove="Resources\Images\NorthOssetiaAlania.png" />
+	  <None Remove="Resources\Images\Novoaleksandrovsk.png" />
+	  <None Remove="Resources\Images\Novoanninsky.png" />
+	  <None Remove="Resources\Images\Novocherkassk.png" />
+	  <None Remove="Resources\Images\Novokubansk.png" />
+	  <None Remove="Resources\Images\Novopavlovsk.png" />
+	  <None Remove="Resources\Images\Novorossiysk.png" />
+	  <None Remove="Resources\Images\Novoshakhtinsk.png" />
+	  <None Remove="Resources\Images\Pallasovka.png" />
+	  <None Remove="Resources\Images\PrimorskoAkhtarsk.png" />
+	  <None Remove="Resources\Images\Prokhladny.png" />
+	  <None Remove="Resources\Images\Proletarsk.png" />
+	  <None Remove="Resources\Images\Pyatigorsk.png" />
+	  <None Remove="Resources\Images\RostovObl.png" />
+	  <None Remove="Resources\Images\RostovOnDon.png" />
+	  <None Remove="Resources\Images\Salsk.png" />
+	  <None Remove="Resources\Images\Semikarakorsk.png" />
+	  <None Remove="Resources\Images\Serafimovich.png" />
+	  <None Remove="Resources\Images\Shahty.png" />
+	  <None Remove="Resources\Images\Shali.png" />
+	  <None Remove="Resources\Images\SlavyansknaKubani.png" />
+	  <None Remove="Resources\Images\Sochi.png" />
+	  <None Remove="Resources\Images\Stavropol.png" />
+	  <None Remove="Resources\Images\StavropolKrai.png" />
+	  <None Remove="Resources\Images\Surovikino.png" />
+	  <None Remove="Resources\Images\Svetlograd.png" />
+	  <None Remove="Resources\Images\Taganrog.png" />
+	  <None Remove="Resources\Images\Temryuk.png" />
+	  <None Remove="Resources\Images\Terek.png" />
+	  <None Remove="Resources\Images\Tikhoretsk.png" />
+	  <None Remove="Resources\Images\Timashevsk.png" />
+	  <None Remove="Resources\Images\Tsimlyansk.png" />
+	  <None Remove="Resources\Images\Tuapse.png" />
+	  <None Remove="Resources\Images\Tyrnyauz.png" />
+	  <None Remove="Resources\Images\Unknow.png" />
+	  <None Remove="Resources\Images\upinsk.png" />
+	  <None Remove="Resources\Images\UrusMartan.png" />
+	  <None Remove="Resources\Images\UstLabinsk.png" />
+	  <None Remove="Resources\Images\Vladikavkaz.png" />
+	  <None Remove="Resources\Images\Volgdonsk.png" />
+	  <None Remove="Resources\Images\Volgograd.png" />
+	  <None Remove="Resources\Images\VolgogradObl.png" />
+	  <None Remove="Resources\Images\Volzhsky.png" />
+	  <None Remove="Resources\Images\Zelenokumsk.png" />
+	  <None Remove="Resources\Images\Zernograd.png" />
+	  <None Remove="Resources\Images\Zheleznovodsk.png" />
+	  <None Remove="Resources\Images\Zhirnovsk.png" />
+	  <None Remove="Resources\Images\Znamensk.png" />
+	  <None Remove="Resources\Images\Zverevo.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="CitiesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CityPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RegionsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

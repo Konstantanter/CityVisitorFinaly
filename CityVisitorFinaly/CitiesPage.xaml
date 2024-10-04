@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:CityVisitorFinaly.AppData"
+             x:Class="CityVisitorFinaly.CitiesPage"
+             Title="Города региона">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:StateToColorConverter x:Key="StateToColorConverter" />
+            <local:BackgroundToTextColorConverter x:Key="BackgroundToTextColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid BackgroundColor="#FFFFFF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="0">
+                <Image Source="{Binding PathImage}"  Margin ="10,0,10,0" WidthRequest="40" HeightRequest="40" />
+                <Label Text="{Binding TitleCities}" VerticalOptions="CenterAndExpand" FontSize="18" FontAttributes="None" FontFamily="Times New Roman" />
+            </StackLayout>
+
+
+
+            <ScrollView Grid.Row="1">
+                <ListView x:Name="listViewCity" ItemsSource="{Binding CityList}"
+                     ItemTapped="ListView_OnItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout x:Name="myStackLayout" Spacing="15" 
+                                 BackgroundColor="{Binding State, Converter={StaticResource StateToColorConverter}}"
+                                 HorizontalOptions="FillAndExpand" 
+                                 VerticalOptions="FillAndExpand">
+                                    <Grid>
+
+                                        <Grid.ColumnDefinitions ColumnSpacing="10" RowSpacing="10">
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="{Binding Image}" Margin="10,0,10,0" Grid.Column="0" HeightRequest="40" WidthRequest="40"  />
+
+                                        <Label Text="{Binding Name}" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="{Binding BackgroundColor, Converter={StaticResource BackgroundToTextColorConverter}, Source={x:Reference myStackLayout}}" HorizontalTextAlignment="Center" FontSize="14" FontAttributes="None" FontFamily="Times New Roman" />
+                                        <!--"<BoxView Grid.ColumnSpan="1" HeightRequest="10" VerticalOptions="End" Color="{Binding State, Converter={StaticResource StateToColorConverter}}" />-->
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
