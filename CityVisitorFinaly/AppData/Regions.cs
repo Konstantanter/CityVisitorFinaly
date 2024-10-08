@@ -131,7 +131,18 @@ namespace CityVisitorFinaly.AppData
 
         }
         public Regions() { }
+        public string ShowInfo()
+        {
+            int CountCities = ListCities.Count;
+            string info = $"Имя региона {Name}\nОбщее количество городов: {CountCities}\n";
+            int FullCities = ListCities.Where(a => a.State == State.Visited).Count();
+            int TransitCities = ListCities.Where(a => a.State == State.VisitedTransit).Count();
+            int NotCities = CountCities - FullCities - TransitCities;
 
+            info += $"Посещенные города: {FullCities}\nГорода посещеннные проездом: {TransitCities}\nНе посещенные города: {NotCities}";
+            return info;
+
+        }
         private string _visitPercentage { get; set; }
         /// <summary>
         /// Процент посещения
