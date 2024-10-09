@@ -19,7 +19,7 @@
 
 
         <!--<ffimageloadingsvg:SvgCachedImage Source="Rus.svg" Grid.Row="0" Grid.RowSpan="1" HeightRequest="{Binding ImageHeight}" Aspect="Fill" />-->
-        <skia:SKCanvasView x:Name="canvasView" Grid.RowSpan="2" PaintSurface="OnCanvasViewPaintSurface" >
+        <skia:SKCanvasView x:Name="canvasView" Grid.RowSpan="2" >
 
         </skia:SKCanvasView>
         <!--<Button Grid.Row="3" Text="Расскрасить регион" Clicked="OnColorRegionClicked"  />-->

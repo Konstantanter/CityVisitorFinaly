@@ -12,11 +12,35 @@ namespace CityVisitorFinaly;
 public partial class MapsPage : ContentPage
 {
 
-    List<SKPath> trasformedList = new List<SKPath>();
+    List<Regions> RegionList = new List<Regions>();
+    public async Task ReadData()
+    {
+        var regions = await App.Db.GetRegions();
+
+        foreach (var region in regions)
+        {
+            Regions newReg = new Regions(region);
+
+            var newListCities = await App.Db.GetCitiesFromRegion(region.Id);
+            newReg.AddCities(newListCities);
+            RegionList.Add(newReg);
+        }
+      
+    }
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await ReadData();
+        int cur = RegionList.Count;
+        canvasView.PaintSurface += OnCanvasViewPaintSurface;
+        // Обновите интерфейс, если необходимо.
+    }
     public MapsPage()
     {
         InitializeComponent();
-        Config config = new Config();
+
+        
+
         XmlDocument doc = new XmlDocument();
         Assembly assembly = GetType().GetTypeInfo().Assembly;
         Stream stream = assembly.GetManifestResourceStream("CityVisitorFinaly.Resources.Images.test3.svg");
@@ -28,6 +52,7 @@ public partial class MapsPage : ContentPage
             var pathData = element.GetAttribute("d");
             var skPath = SkiaSharp.SKPath.ParseSvgPathData(pathData);
             SVGHelp svgHelp = new SVGHelp(element.GetAttribute("id").ToString(), skPath);
+
             mPaths.Add(svgHelp);
         }
         this.mPaths.RemoveAt(0);
@@ -35,6 +60,8 @@ public partial class MapsPage : ContentPage
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
+
+        
         var tap = new TapGestureRecognizer { NumberOfTapsRequired = 1 };
         tap.Tapped += OnTapGestureRecognizerTapped;
         canvasView.GestureRecognizers.Add(tap);
@@ -58,14 +85,32 @@ public partial class MapsPage : ContentPage
         Point p = (Point)wind;
         float scaledX = (float)(p.X / scaleX); // Преобразование x
         float scaledY = (float)(p.Y / scaleY); // Преобразование y
+        string str = "";
         for (int i = 0; i < mPaths.Count; i++)
         {
             if (mPaths[i].SKPath.Contains(scaledX, scaledY))
             {
+                try
+                {
+                    str = RegionList.First(a => a.IdRegionsMaps.Equals(mPaths[i].IdReg)).ShowInfo();
+                }
+                catch
+                {
+                    str = "к сожалению этот регион еще инициализирован";
+                }
                 cur = 1;
+                break;
+              
             }
         }
-        DisplayAlert("!",$"{cur}", "!");
+        if (cur == 1)
+        {
+            DisplayAlert("Информационное сообщение", $"{str}", "ок");
+        }
+        else
+        {
+            DisplayAlert("Информационное сообщение", "нажатие мимо региона", "ок");
+        }
         // Do something
         // }
     }
@@ -129,7 +174,7 @@ public partial class MapsPage : ContentPage
                 break;
         }
     }
-    List<ShimSkiaSharp.SKPath> list = new List<ShimSkiaSharp.SKPath>();
+
     //void DrawMap()
     //{
     //    SKImageInfo imageInfo = new SKImageInfo(pictureSVG.Width, pictureSVG.Height);
@@ -201,8 +246,10 @@ public partial class MapsPage : ContentPage
 
 
     float scaleX, scaleY;
+
     private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs e)
     {
+
         //var canvas = e.Surface.Canvas;
         ////canvas.Clear();
         //// Рисуем карту России из SVG
@@ -271,8 +318,6 @@ public partial class MapsPage : ContentPage
 
 
 
-            trasformedList.Clear();
-
             for(int i = 0; i < mPaths.Count; i++)
             {
                 paint.Color = SKColors.Black;
@@ -281,23 +326,40 @@ public partial class MapsPage : ContentPage
                 paint.Style = SKPaintStyle.Stroke;
                 transformPath.Rewind();
                 transformPath.AddPath(mPaths[i].SKPath);
-                trasformedList.Add(transformPath);
                 transformPath.Transform(matrix);
-               
-                if (i < 10)
+                try
                 {
-                    paint.Style = SKPaintStyle.Fill;
-                    paint.Color = Config.ColorFullVisit;
-                    canvas.DrawPath(transformPath, paint);
+                    var reg = RegionList.First(a => a.IdRegionsMaps.Equals(mPaths[i].IdReg));
+                    if (reg.StateReg.Equals(State.Visited.ToString()))
+                    {
+                        paint.Style = SKPaintStyle.Fill;
+                        paint.Color = Config.ColorFullVisit;
+                        canvas.DrawPath(transformPath, paint);
 
-                    paint.Style = SKPaintStyle.Stroke;
-                    paint.Color = Config.OutlineColor;
-                    canvas.DrawPath(transformPath, paint);
+                        paint.Style = SKPaintStyle.Stroke;
+                        paint.Color = Config.OutlineColor;
+                        canvas.DrawPath(transformPath, paint);
+                    }
+                    else if (reg.StateReg.Equals(State.VisitedTransit.ToString()))
+                    {
+                        paint.Style = SKPaintStyle.Fill;
+                        paint.Color = Config.ColorPassingVisit;
+                        canvas.DrawPath(transformPath, paint);
+
+                        paint.Style = SKPaintStyle.Stroke;
+                        paint.Color = Config.OutlineColor;
+                        canvas.DrawPath(transformPath, paint);
+                    }
+                    else
+                    {
+                        canvas.DrawPath(transformPath, paint);
+                    }
                 }
-                else
+                catch
                 {
                     canvas.DrawPath(transformPath, paint);
                 }
+               
             }
 
         }

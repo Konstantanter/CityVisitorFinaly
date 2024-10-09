@@ -31,6 +31,10 @@ namespace CityVisitorFinaly.AppData
         /// </summary>
         public string VisitPercentage { get; set; }
         /// <summary>
+        /// Состояние региона
+        /// </summary>
+        public string StateReg { get; set; } = State.NotVisited.ToString();
+        /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
         public RegionsDB() { }
@@ -43,6 +47,7 @@ namespace CityVisitorFinaly.AppData
             Id = reg.IdRegion;
             IdRegionsMaps = reg.IdRegionsMaps;
             Name = reg.Name;
+            StateReg = reg.StateReg.ToString();
             PathImage = reg.PathImage;
             VisitPercentage = reg.VisitPercentage;
         }

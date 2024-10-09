@@ -10,6 +10,8 @@ namespace CityVisitorFinaly
 {
     public partial class RegionsPage : ContentPage
     {
+ 
+        
         /// <summary>
         /// Инициализация городов (в случае их отсутствия)
         /// </summary>
@@ -29,7 +31,7 @@ namespace CityVisitorFinaly
            // Adygea.AddCities(Maykop);
             // RegionList.Add(Adygea);
             AddRegToDB(Adygea);
-
+     
 
 
 
@@ -90,9 +92,8 @@ namespace CityVisitorFinaly
             KrasnodarKrai.AddCities(Tuapse);
             KrasnodarKrai.AddCities(UstLabinsk);
             KrasnodarKrai.AddCities(Khadyzhensk);
-            //RegionList.Add(KrasnodarKrai);
             AddRegToDB(KrasnodarKrai);
-
+           
 
             //Regions RostovObl = new Regions("Ростовская область", "RostovObl.png")
             //{
@@ -416,7 +417,7 @@ namespace CityVisitorFinaly
             //VolgogradObl.AddCities(Frolovo);
             //AddRegToDB(VolgogradObl);
 
-            //BindingContext = this;
+            BindingContext = this;
            // App.DeleteDataBase();
         }
 

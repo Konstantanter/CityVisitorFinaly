@@ -38,6 +38,10 @@ namespace CityVisitorFinaly.AppData
         /// </summary>
         public string PathImage { get; set; }
         /// <summary>
+        /// Состояние региона
+        /// </summary>
+        public string StateReg { get; set; } = State.NotVisited.ToString();
+        /// <summary>
         /// Список городов региона
         /// </summary>
         public ObservableCollection<City> ListCities { get; set; } = new ObservableCollection<City>();
@@ -48,6 +52,10 @@ namespace CityVisitorFinaly.AppData
         public void SetVisitPercentage(double res)
         {
             VisitPercentage = string.Format("{0} %", Math.Round(res, 2));
+
+            RegionsDB reg1 = new RegionsDB(this);
+            //обновляем данные в базе данных
+            App.Db.UpdateRegion(reg1);
         }
         /// <summary>
         /// Процесс регистрации города в регионе
@@ -64,16 +72,19 @@ namespace CityVisitorFinaly.AppData
         /// </summary>
         public void SaveReg(City refreshCity)
         {
-            //задаем индекс
-            int cur = 0;
-            foreach (City city in ListCities)
+           
+            int countFull = ListCities.Where(a=>a.State==State.Visited).Count();  
+            
+            if(countFull == ListCities.Count)
             {
-                if (city.State != State.NotVisited)
-                {
-                    //если есть хот один посещенный город то индекс не равен 0
-                    cur = 1;
-                    break;
-                }
+                this.StateReg = State.Visited.ToString();
+            }
+            else  if(countFull > 0 )
+            {
+                this.StateReg = State.VisitedTransit.ToString();
+            }
+            else {
+                this.StateReg = State.NotVisited.ToString() ;
             }
             ////проверяем наличие посещенных городов
             //if (cur != 0)
@@ -87,6 +98,9 @@ namespace CityVisitorFinaly.AppData
             //    PaintRegionOnMaps(IdRegionsMaps, Color.White);
             //}
             //создаем экземпляр класса для хранения метаданных в базе данных
+
+        
+
             RegionsDB reg1 = new RegionsDB(this);
             //обновляем данные в базе данных
             App.Db.UpdateRegion(reg1);
@@ -126,6 +140,7 @@ namespace CityVisitorFinaly.AppData
             Name = reg.Name;
             PathImage = reg.PathImage;
             Image = reg.PathImage;
+            StateReg = reg.StateReg;
             VisitPercentage = reg.VisitPercentage;
             IdRegionsMaps = reg.IdRegionsMaps;
 

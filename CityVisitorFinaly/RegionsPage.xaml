@@ -49,7 +49,7 @@
                                         </Grid.ColumnDefinitions>
                                         <Image Source="{Binding Image}" Margin="10,0,10,0" Grid.Column="0" WidthRequest="40" HeightRequest="40" />
                                         <Label Text="{Binding Name}" Grid.Column="1" HorizontalOptions="Center" TextColor="{Binding BackgroundColor, Converter={StaticResource BackgroundToTextColorConverter}, Source={x:Reference myStackLayout}}"  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontSize="14" FontAttributes="None" FontFamily="Times New Roman"/>
-                                        <Label Text="{Binding VisitPercentage}" Margin="0,0,10,0" Grid.Column="2" TextColor="{Binding BackgroundColor, Converter={StaticResource BackgroundToTextColorConverter}, Source={x:Reference myStackLayout}}"   HorizontalOptions="End" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" />
+                                        <Label Text="{Binding VisitPercentage}" Margin="0,0,20,0" Grid.Column="2" TextColor="{Binding BackgroundColor, Converter={StaticResource BackgroundToTextColorConverter}, Source={x:Reference myStackLayout}}"   HorizontalOptions="End" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" />
                                     </Grid>
                                 </StackLayout>
                             </ViewCell>

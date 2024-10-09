@@ -12,11 +12,14 @@ public partial class RegionsPage : ContentPage
 		InitializeComponent();
         RegionList = new ObservableCollection<Regions>();
         if (!System.IO.File.Exists(App.DataBasePath))
+        {
             InitCities();
+        }
         Paintdata();
     }
     public async void Paintdata()
     {
+
         var regions = await App.Db.GetRegions();
 
         foreach (var region in regions)

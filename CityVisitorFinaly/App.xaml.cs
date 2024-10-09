@@ -45,7 +45,7 @@ public partial class App : Application
 
        // DeleteDataBase();
         ////MainPage = new MapsPage();
-        DeleteDataBase();
+       // DeleteDataBase();
         MainPage = new NavigationPage(new MapsPage());
         //Regions Adygea = new Regions("Республика Адыгея", "Adygea.png");
         //Adygea.IdRegionsMaps = "path16";
