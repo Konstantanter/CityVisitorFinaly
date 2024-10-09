@@ -11,6 +11,8 @@ namespace CityVisitorFinaly;
 
 public partial class MapsPage : ContentPage
 {
+
+    List<SKPath> trasformedList = new List<SKPath>();
     public MapsPage()
     {
         InitializeComponent();
@@ -22,10 +24,7 @@ public partial class MapsPage : ContentPage
         XmlNodeList elementsByTagName = doc.GetElementsByTagName("path");
         for (int i = 0; i < elementsByTagName.Count; i++)
         {
-            SVGPath sVGPath = new SVGPath();
             XmlElement element = (XmlElement)elementsByTagName.Item(i);
-            sVGPath.setId(element.GetAttribute("id"));
-            sVGPath.setFillColor(48);
             var pathData = element.GetAttribute("d");
             var skPath = SkiaSharp.SKPath.ParseSvgPathData(pathData);
             SVGHelp svgHelp = new SVGHelp(element.GetAttribute("id").ToString(), skPath);
@@ -53,9 +52,20 @@ public partial class MapsPage : ContentPage
         // Handle the tap
         //if (args.Buttons == ButtonsMask.Secondary)
         // {
+        int cur = 0;
+        Point? wind = args.GetPosition((View) sender);
 
-
-        DisplayAlert("!", "!", "!");
+        Point p = (Point)wind;
+        float scaledX = (float)(p.X / scaleX); // Преобразование x
+        float scaledY = (float)(p.Y / scaleY); // Преобразование y
+        for (int i = 0; i < mPaths.Count; i++)
+        {
+            if (mPaths[i].SKPath.Contains(scaledX, scaledY))
+            {
+                cur = 1;
+            }
+        }
+        DisplayAlert("!",$"{cur}", "!");
         // Do something
         // }
     }
@@ -189,6 +199,8 @@ public partial class MapsPage : ContentPage
     SKPath transformPath = new SKPath();
     List<SVGHelp> mPaths = new List<SVGHelp>();
 
+
+    float scaleX, scaleY;
     private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs e)
     {
         //var canvas = e.Surface.Canvas;
@@ -246,8 +258,8 @@ public partial class MapsPage : ContentPage
         using (SKSvg svg = new SKSvg())
         {
             svg.Load(stream);
-            float scaleX = _info.Width / svg.Picture.CullRect.Width;
-            float scaleY = _info.Height / svg.Picture.CullRect.Height;
+            scaleX = _info.Width / svg.Picture.CullRect.Width;
+            scaleY = _info.Height / svg.Picture.CullRect.Height;
             SKMatrix matrix = SKMatrix.CreateScale(scaleX, scaleY);
             // _canvas.DrawPath(t1, new SKPaint
             //{
@@ -256,10 +268,10 @@ public partial class MapsPage : ContentPage
             //    IsAntialias = true
             //});
             SKPaint paint = new SKPaint();
-           
 
 
 
+            trasformedList.Clear();
 
             for(int i = 0; i < mPaths.Count; i++)
             {
@@ -269,7 +281,9 @@ public partial class MapsPage : ContentPage
                 paint.Style = SKPaintStyle.Stroke;
                 transformPath.Rewind();
                 transformPath.AddPath(mPaths[i].SKPath);
+                trasformedList.Add(transformPath);
                 transformPath.Transform(matrix);
+               
                 if (i < 10)
                 {
                     paint.Style = SKPaintStyle.Fill;
