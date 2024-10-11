@@ -6,6 +6,8 @@ using Svg.Skia;
 using System.Reflection;
 using CityVisitorFinaly.AppData;
 using System.Xml;
+using System.Runtime.ConstrainedExecution;
+using System.Numerics;
 
 namespace CityVisitorFinaly;
 
@@ -29,12 +31,22 @@ public partial class MapsPage : ContentPage
     }
     protected override async void OnAppearing()
     {
+        
         base.OnAppearing();
         await ReadData();
         int cur = RegionList.Count;
+        canvasView.InvalidateSurface(); // Обновляем поверхность
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
+        var tap = new TapGestureRecognizer { NumberOfTapsRequired = 1 };
+        tap.Tapped += OnTapGestureRecognizerTapped;
+        canvasView.GestureRecognizers.Add(tap);
+
+
+
         // Обновите интерфейс, если необходимо.
     }
+
+
     public MapsPage()
     {
         InitializeComponent();
@@ -61,10 +73,8 @@ public partial class MapsPage : ContentPage
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
 
-        
-        var tap = new TapGestureRecognizer { NumberOfTapsRequired = 1 };
-        tap.Tapped += OnTapGestureRecognizerTapped;
-        canvasView.GestureRecognizers.Add(tap);
+
+
 
         var pinch = new PinchGestureRecognizer();
         pinch.PinchUpdated += PinchGestureRecognizer_PinchUpdated;
@@ -73,22 +83,33 @@ public partial class MapsPage : ContentPage
         var pan = new PanGestureRecognizer();
         pan.PanUpdated += PanGestureRecognizer_PanUpdated;
         canvasView.GestureRecognizers.Add(pan);
+
     }
+
+    float scaleH, scaleW;
     void OnTapGestureRecognizerTapped(object sender, TappedEventArgs args)
     {
         // Handle the tap
         //if (args.Buttons == ButtonsMask.Secondary)
         // {
         int cur = 0;
-        Point? wind = args.GetPosition((View) sender);
+        PointF point = args.GetPosition(relativeTo: (View)sender).Value;
 
-        Point p = (Point)wind;
-        float scaledX = (float)(p.X / scaleX); // Преобразование x
-        float scaledY = (float)(p.Y / scaleY); // Преобразование y
+        //double lol1 = canvasView.Width;
+        //double lol2 = canvasView.Height;
+       
+
+        float x1 = point.X * scaleW;
+        float y1 = point.Y * scaleH;
+        SKPath trans = new SKPath();
+        SKMatrix matrix = SKMatrix.CreateScale(scaleX, scaleY);
         string str = "";
         for (int i = 0; i < mPaths.Count; i++)
         {
-            if (mPaths[i].SKPath.Contains(scaledX, scaledY))
+            trans.Rewind();
+            trans.AddPath(mPaths[i].SKPath);
+            trans.Transform(matrix);
+            if (trans.Contains(x1, y1))
             {
                 try
                 {
@@ -146,6 +167,7 @@ public partial class MapsPage : ContentPage
                 //case GestureStatus.
         }
     }
+   
     protected override SizeRequest OnMeasure(double widthConstraint, double heightConstraint)
     {
         Scale = MIN_SCALE;
@@ -249,75 +271,23 @@ public partial class MapsPage : ContentPage
 
     private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs e)
     {
-
-        //var canvas = e.Surface.Canvas;
-        ////canvas.Clear();
-        //// Рисуем карту России из SVG
-        ////canvas.DrawPicture(canvasView.Picture);
-        //// Добавляем обработчики событий для нажатий на регионы
-        //canvasView.Touch += (touchSender, touchEvent) =>
-        //{
-        //    // Определяем, на какой регион нажал пользователь
-        //    SKPoint touchPoint = touchEvent.Location;
-        //    if (IsPointInRegion1(touchPoint))
-        //    {
-        //        // Пользователь нажал на регион 1
-        //    }
-        //    // И так далее для остальных регионов
-        //};
-        //SKImageInfo info = e.Info;
-        //SKCanvas canvas = e.Surface.Canvas;
-        //Assembly assembly = GetType().GetTypeInfo().Assembly;
-        //// Stream stream = assembly.GetManifestResourceStream("test4.Resources.Images.Test3.svg");
-        //Stream stream = assembly.GetManifestResourceStream("CityVisitorFinaly.Resources.Images.test3.svg");
-
-        //// Загрузите SVG-файл
-        //using (SKSvg svg = new SKSvg())
-        //{
-        //    svg.Load(stream);
-        //    // Масштабируйте SVG в соответствии с размерами холста
-        //    float scaleX = info.Width / svg.Picture.CullRect.Width;
-        //    float scaleY = info.Height / svg.Picture.CullRect.Height;
-        //    SKMatrix matrix = SKMatrix.CreateScale(scaleX, scaleY);
-        //    foreach (var t in svg.Model.Commands)
-        //    {
-        //        if (t is ShimSkiaSharp.DrawPathCanvasCommand)
-        //        {
-        //            var l = (t as ShimSkiaSharp.DrawPathCanvasCommand);
-        //            list.Add(l.Path);
-        //        }
-        //    }
-        //    // Отобразите SVG на холсте
-        //    canvas.Clear();
-        //    canvas.DrawPicture(svg.Picture, ref matrix);
-        //}
-        //0DisplayAlert("fwe", $"{list.Count}", "hguifdsag");
-
-        // Получение информации об изображении
-
+     
 
         var canvas = e.Surface.Canvas;
         canvas.Clear(); // clears the canvas for every frame
         var _info = e.Info;
         Assembly assembly = GetType().GetTypeInfo().Assembly;
         Stream stream = assembly.GetManifestResourceStream("CityVisitorFinaly.Resources.Images.test3.svg");
-
+       
         using (SKSvg svg = new SKSvg())
         {
             svg.Load(stream);
-            scaleX = _info.Width / svg.Picture.CullRect.Width;
-            scaleY = _info.Height / svg.Picture.CullRect.Height;
+            scaleX = (float) _info.Width / svg.Picture.CullRect.Width;
+            scaleY = (float) _info.Height / svg.Picture.CullRect.Height;
+            scaleW = (float)(e.Info.Width / canvasView.Width);
+            scaleH = (float)(e.Info.Height / canvasView.Height);
             SKMatrix matrix = SKMatrix.CreateScale(scaleX, scaleY);
-            // _canvas.DrawPath(t1, new SKPaint
-            //{
-            //     Style = SKPaintStyle.Fill,
-            //    Color = SKColors.Aqua,
-            //    IsAntialias = true
-            //});
             SKPaint paint = new SKPaint();
-
-
-
             for(int i = 0; i < mPaths.Count; i++)
             {
                 paint.Color = SKColors.Black;
@@ -359,7 +329,6 @@ public partial class MapsPage : ContentPage
                 {
                     canvas.DrawPath(transformPath, paint);
                 }
-               
             }
 
         }

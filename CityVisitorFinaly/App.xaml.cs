@@ -25,10 +25,10 @@ public partial class App : Application
     public App()
     {
         InitializeComponent();
-        //System.IO.File.Delete(DataSVGPath);
+      //  System.IO.File.Delete(DataSVGPath);
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
-        //DeleteDataBase();
+       // DeleteDataBase();
 
 
         //if (!System.IO.File.Exists(DataSVGPath))

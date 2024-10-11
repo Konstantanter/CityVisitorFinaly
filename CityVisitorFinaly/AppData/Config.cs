@@ -32,9 +32,6 @@ namespace CityVisitorFinaly.AppData
         /// Цвет обводки
         /// </summary>
         public static SKColor OutlineColor { get; set; } = SKColors.Black;
-        /// <summary>
-        /// Конструктор по умолчанию
-        /// </summary>
         
     }
 }

@@ -4,6 +4,7 @@
              x:Class="CityVisitorFinaly.MapsPage"
              Title="MapsPage"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Maui.Controls;assembly=SkiaSharp.Views.Maui.Controls">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -12,28 +13,9 @@
         </Grid.RowDefinitions>
 
 
-        <!--<ffimageloadingsvg:SvgCachedImage Source="russia.svg" Grid.RowSpan="1" WidthRequest="400"/>-->
-        <!--<ffimageloadingsvg:SvgCachedImage Source="russia.svg" Grid.Row="0" Grid.RowSpan="1" HeightRequest="{Binding ImageHeight}" Aspect="Fill" />-->
 
-        <!-- <ffimageloadingsvg:SvgCachedImage x:Name ="Img1" Source ="Secos123.svg" Grid.Row="0" Grid.RowSpan="2" HeightRequest="{Binding ImageHeight}" Aspect="Fill" /> -->
-
-
-        <!--<ffimageloadingsvg:SvgCachedImage Source="Rus.svg" Grid.Row="0" Grid.RowSpan="1" HeightRequest="{Binding ImageHeight}" Aspect="Fill" />-->
-        <skia:SKCanvasView x:Name="canvasView" Grid.RowSpan="2" >
-
-        </skia:SKCanvasView>
-        <!--<Button Grid.Row="3" Text="Расскрасить регион" Clicked="OnColorRegionClicked"  />-->
-
-
+        <!-- Просто для примера, если ожидается, что canvasView будет занимать определенные размеры -->
+        <skia:SKCanvasView x:Name="canvasView" Grid.RowSpan="2" />
 
     </Grid>
-    <!--<Image Source="belayakalitva.png">
-        <Image.GestureRecognizers>
-            <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped"
-                              NumberOfTapsRequired="1"/>
-            <PinchGestureRecognizer PinchUpdated="PinchGestureRecognizer_PinchUpdated"/>
-            <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
-
-        </Image.GestureRecognizers>
-    </Image>-->
 </ContentPage>

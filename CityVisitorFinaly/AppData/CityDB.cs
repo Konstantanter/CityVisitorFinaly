@@ -4,10 +4,11 @@ namespace CityVisitorFinaly.AppData
 {
     public class CityDB
     {
+      
+        [PrimaryKey]
         /// <summary>
         // ИД города
         /// </summary>
-        [PrimaryKey]
         public int Id { get; set; }
         /// <summary>
         /// Наличие магнита
