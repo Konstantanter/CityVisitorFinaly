@@ -63,16 +63,22 @@
 	  <None Remove="Resources\Images\Adygeisk.png" />
 	  <None Remove="Resources\Images\Akhtubinsk.png" />
 	  <None Remove="Resources\Images\Aksai.png" />
+	  <None Remove="Resources\Images\alupka.png" />
+	  <None Remove="Resources\Images\alusta.png" />
 	  <None Remove="Resources\Images\Anapa.png" />
 	  <None Remove="Resources\Images\Apsheronsk.png" />
 	  <None Remove="Resources\Images\Argun.png" />
 	  <None Remove="Resources\Images\Armavir.png" />
+	  <None Remove="Resources\Images\armyansk.png" />
 	  <None Remove="Resources\Images\Astrakhan.png" />
 	  <None Remove="Resources\Images\AstrakhObl.png" />
 	  <None Remove="Resources\Images\Azov.png" />
+	  <None Remove="Resources\Images\bahchisarai.png" />
 	  <None Remove="Resources\Images\Baksan.png" />
+	  <None Remove="Resources\Images\balaklava.png" />
 	  <None Remove="Resources\Images\Bataisk.png" />
 	  <None Remove="Resources\Images\BelayaKalitva.png" />
+	  <None Remove="Resources\Images\belogorsk.png" />
 	  <None Remove="Resources\Images\Belorechensk.png" />
 	  <None Remove="Resources\Images\Beslan.png" />
 	  <None Remove="Resources\Images\Blagodarny.png" />
@@ -85,9 +91,12 @@
 	  <None Remove="Resources\Images\Derbent.png" />
 	  <None Remove="Resources\Images\Doneck.png" />
 	  <None Remove="Resources\Images\Dubovka.png" />
+	  <None Remove="Resources\Images\dzhankoi.png" />
 	  <None Remove="Resources\Images\Elista.png" />
 	  <None Remove="Resources\Images\Essentuki.png" />
+	  <None Remove="Resources\Images\evpatoriya.png" />
 	  <None Remove="Resources\Images\Eysk.png" />
+	  <None Remove="Resources\Images\feodosia.png" />
 	  <None Remove="Resources\Images\flag_rf.png" />
 	  <None Remove="Resources\Images\Frolovo.png" />
 	  <None Remove="Resources\Images\Gelendzhik.png" />
@@ -100,6 +109,7 @@
 	  <None Remove="Resources\Images\Gukovo.png" />
 	  <None Remove="Resources\Images\Gulkevichi.png" />
 	  <None Remove="Resources\Images\Ingushetia.png" />
+	  <None Remove="Resources\Images\inkerman.png" />
 	  <None Remove="Resources\Images\Ipatovo.png" />
 	  <None Remove="Resources\Images\Izberbash.png" />
 	  <None Remove="Resources\Images\Izobilny.png" />
@@ -114,6 +124,7 @@
 	  <None Remove="Resources\Images\Karachay.jpg" />
 	  <None Remove="Resources\Images\KarachayCherkessia.png" />
 	  <None Remove="Resources\Images\Kaspiysk.png" />
+	  <None Remove="Resources\Images\kerch.png" />
 	  <None Remove="Resources\Images\Khadyzhensk.png" />
 	  <None Remove="Resources\Images\Kharabali.png" />
 	  <None Remove="Resources\Images\Khasavyurt.png" />
@@ -126,6 +137,7 @@
 	  <None Remove="Resources\Images\Kotovo.png" />
 	  <None Remove="Resources\Images\Krasnodar.png" />
 	  <None Remove="Resources\Images\KrasnodarKrai.png" />
+	  <None Remove="Resources\Images\krasnoperekopsk.png" />
 	  <None Remove="Resources\Images\Krasnoslobodsk.png" />
 	  <None Remove="Resources\Images\KrasnySulin.png" />
 	  <None Remove="Resources\Images\Kropotkin.png" />
@@ -167,17 +179,24 @@
 	  <None Remove="Resources\Images\Prokhladny.png" />
 	  <None Remove="Resources\Images\Proletarsk.png" />
 	  <None Remove="Resources\Images\Pyatigorsk.png" />
+	  <None Remove="Resources\Images\respublik_krym.png" />
 	  <None Remove="Resources\Images\RostovObl.png" />
 	  <None Remove="Resources\Images\RostovOnDon.png" />
+	  <None Remove="Resources\Images\saki.png" />
 	  <None Remove="Resources\Images\Salsk.png" />
 	  <None Remove="Resources\Images\Semikarakorsk.png" />
 	  <None Remove="Resources\Images\Serafimovich.png" />
+	  <None Remove="Resources\Images\sevastopol.png" />
 	  <None Remove="Resources\Images\Shahty.png" />
 	  <None Remove="Resources\Images\Shali.png" />
+	  <None Remove="Resources\Images\shchyolkino.png" />
+	  <None Remove="Resources\Images\simferopol.png" />
 	  <None Remove="Resources\Images\SlavyansknaKubani.png" />
 	  <None Remove="Resources\Images\Sochi.png" />
+	  <None Remove="Resources\Images\staryi_krym.png" />
 	  <None Remove="Resources\Images\Stavropol.png" />
 	  <None Remove="Resources\Images\StavropolKrai.png" />
+	  <None Remove="Resources\Images\sudak.png" />
 	  <None Remove="Resources\Images\Surovikino.png" />
 	  <None Remove="Resources\Images\Svetlograd.png" />
 	  <None Remove="Resources\Images\Taganrog.png" />
@@ -198,6 +217,7 @@
 	  <None Remove="Resources\Images\Volgograd.png" />
 	  <None Remove="Resources\Images\VolgogradObl.png" />
 	  <None Remove="Resources\Images\Volzhsky.png" />
+	  <None Remove="Resources\Images\yalta.png" />
 	  <None Remove="Resources\Images\Zelenokumsk.png" />
 	  <None Remove="Resources\Images\Zernograd.png" />
 	  <None Remove="Resources\Images\Zheleznovodsk.png" />
@@ -212,6 +232,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.91" />
 		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.8" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 		<PackageReference Include="Svg.Skia" Version="2.0.0.1" />

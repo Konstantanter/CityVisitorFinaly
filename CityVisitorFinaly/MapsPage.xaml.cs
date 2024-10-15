@@ -40,19 +40,10 @@ public partial class MapsPage : ContentPage
         var tap = new TapGestureRecognizer { NumberOfTapsRequired = 1 };
         tap.Tapped += OnTapGestureRecognizerTapped;
         canvasView.GestureRecognizers.Add(tap);
-
-
-
-        // Обновите интерфейс, если необходимо.
     }
-
-
     public MapsPage()
     {
         InitializeComponent();
-
-        
-
         XmlDocument doc = new XmlDocument();
         Assembly assembly = GetType().GetTypeInfo().Assembly;
         Stream stream = assembly.GetManifestResourceStream("CityVisitorFinaly.Resources.Images.test3.svg");
@@ -72,44 +63,25 @@ public partial class MapsPage : ContentPage
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
-
-
-
-
         var pinch = new PinchGestureRecognizer();
         pinch.PinchUpdated += PinchGestureRecognizer_PinchUpdated;
         canvasView.GestureRecognizers.Add(pinch);
-
         var pan = new PanGestureRecognizer();
         pan.PanUpdated += PanGestureRecognizer_PanUpdated;
         canvasView.GestureRecognizers.Add(pan);
-
     }
 
     float scaleH, scaleW;
     void OnTapGestureRecognizerTapped(object sender, TappedEventArgs args)
     {
-        // Handle the tap
-        //if (args.Buttons == ButtonsMask.Secondary)
-        // {
         int cur = 0;
         PointF point = args.GetPosition(relativeTo: (View)sender).Value;
-
-        //double lol1 = canvasView.Width;
-        //double lol2 = canvasView.Height;
-       
-
         float x1 = point.X * scaleW;
         float y1 = point.Y * scaleH;
-        SKPath trans = new SKPath();
-        SKMatrix matrix = SKMatrix.CreateScale(scaleX, scaleY);
         string str = "";
         for (int i = 0; i < mPaths.Count; i++)
         {
-            trans.Rewind();
-            trans.AddPath(mPaths[i].SKPath);
-            trans.Transform(matrix);
-            if (trans.Contains(x1, y1))
+            if (mPaths[i].SKPath.Contains(x1/scaleX, y1/scaleY))
             {
                 try
                 {
@@ -117,11 +89,10 @@ public partial class MapsPage : ContentPage
                 }
                 catch
                 {
-                    str = "к сожалению этот регион еще инициализирован";
+                    str = "к сожалению этот регион еще инициализирован ид региона - " + mPaths[i].IdReg;
                 }
                 cur = 1;
                 break;
-              
             }
         }
         if (cur == 1)
@@ -132,8 +103,6 @@ public partial class MapsPage : ContentPage
         {
             DisplayAlert("Информационное сообщение", "нажатие мимо региона", "ок");
         }
-        // Do something
-        // }
     }
     private T Clamp<T>(T value, T minimum, T maximum) where T : IComparable
     {
@@ -196,89 +165,17 @@ public partial class MapsPage : ContentPage
                 break;
         }
     }
-
-    //void DrawMap()
-    //{
-    //    SKImageInfo imageInfo = new SKImageInfo(pictureSVG.Width, pictureSVG.Height);
-    //    using (SKSvg svg = new SKSvg())
-    //    {
-    //        svg.Load(svgPath1);
-    //        scaleX = imageInfo.Width / svg.Picture.CullRect.Width;
-    //        scaleY = imageInfo.Height / svg.Picture.CullRect.Height;
-    //        SkiaSharp.SKMatrix matrix = SkiaSharp.SKMatrix.CreateScale(scaleX, scaleY);
-    //        using (SKSurface surface = SKSurface.Create(imageInfo))
-    //        {
-    //            SKCanvas canvas = surface.Canvas;
-    //            using (SKPaint paint = new SKPaint())
-    //            {
-    //                //цвет
-    //                paint.Color = SKColors.Black;
-    //                //сглаживание
-    //                paint.IsAntialias = false;
-    //                //ширина обводки
-    //                paint.StrokeWidth = Config.StrokeWidth;
-    //                //стиль: SKPaintStyle.Stroke - линия, 
-    //                paint.Style = SkiaSharp.SKPaintStyle.Stroke;
-    //                transformPath.Rewind();
-    //                for (int cur = 0; cur < mPaths.Count; cur++)
-    //                {
-    //                    transformPath.Rewind();
-    //                    transformPath.AddPath(mPaths[cur].SKPath);
-    //                    transformPath.Transform(matrix);
-    //                    // Проверка на количество путей
-    //                    if (cur < 10)
-    //                    {
-    //                        // Установка свойств для первых 10 путей
-    //                        paint.Style = SKPaintStyle.Fill; // Для заливки
-    //                        paint.Color = Config.ColorFullVisit;
-    //                        canvas.DrawPath(transformPath, paint);
-    //                        // Теперь рисуем обводку
-    //                        paint.Style = SKPaintStyle.Stroke; // Теперь обводка
-    //                        paint.Color = Config.OutlineColor; // Цвет обводки
-    //                        canvas.DrawPath(transformPath, paint);
-    //                    }
-    //                    else
-    //                    {
-    //                        paint.Color = Config.OutlineColor;
-    //                        canvas.DrawPath(transformPath, paint);
-    //                    }
-
-    //                }
-    //            }
-    //            using (SKImage image = surface.Snapshot())
-    //            using (SKData data = image.Encode(SKEncodedImageFormat.Png, 100))
-    //            using (MemoryStream mStream = new MemoryStream(data.ToArray()))
-    //            {
-    //                Bitmap bm = new Bitmap(mStream, false);
-    //                pictureSVG.Image = bm;
-    //            }
-    //        }
-    //    }
-    //    Graphics g = this.CreateGraphics();
-    //    img = pictureSVG.Image;
-
-    //    // Fit width
-    //    zoom = ((float)img.Width / (float)img.Width) *
-    //            (img.HorizontalResolution / g.DpiX);
-
-    //    pictureSVG.Paint += new PaintEventHandler(pictureSVG_Paint);
-    //}
     SKPath transformPath = new SKPath();
     List<SVGHelp> mPaths = new List<SVGHelp>();
-
-
     float scaleX, scaleY;
 
     private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs e)
     {
-     
-
         var canvas = e.Surface.Canvas;
-        canvas.Clear(); // clears the canvas for every frame
+        canvas.Clear(); 
         var _info = e.Info;
         Assembly assembly = GetType().GetTypeInfo().Assembly;
         Stream stream = assembly.GetManifestResourceStream("CityVisitorFinaly.Resources.Images.test3.svg");
-       
         using (SKSvg svg = new SKSvg())
         {
             svg.Load(stream);
@@ -305,7 +202,6 @@ public partial class MapsPage : ContentPage
                         paint.Style = SKPaintStyle.Fill;
                         paint.Color = Config.ColorFullVisit;
                         canvas.DrawPath(transformPath, paint);
-
                         paint.Style = SKPaintStyle.Stroke;
                         paint.Color = Config.OutlineColor;
                         canvas.DrawPath(transformPath, paint);
@@ -315,7 +211,6 @@ public partial class MapsPage : ContentPage
                         paint.Style = SKPaintStyle.Fill;
                         paint.Color = Config.ColorPassingVisit;
                         canvas.DrawPath(transformPath, paint);
-
                         paint.Style = SKPaintStyle.Stroke;
                         paint.Color = Config.OutlineColor;
                         canvas.DrawPath(transformPath, paint);
@@ -330,64 +225,6 @@ public partial class MapsPage : ContentPage
                     canvas.DrawPath(transformPath, paint);
                 }
             }
-
         }
-
-        //Stream stream = assembly.GetManifestResourceStream("CityVisitorFinaly.Resources.Images.test3.svg");
-
-        //using (SKSvg svg = new SKSvg())
-        //{
-        //    svg.Load(stream);
-        //    float scaleX = imageInfo.Width / svg.Picture.CullRect.Width;
-        //    float scaleY = imageInfo.Height / svg.Picture.CullRect.Height;
-        //    SKMatrix matrix = SKMatrix.CreateScale(scaleX, scaleY);
-        //    using (SKSurface surface = SKSurface.Create(imageInfo))
-        //    {
-        //        var canvas = e.Surface.Canvas;
-        //        using (SKPaint paint = new SKPaint())
-        //        {
-        //            paint.Color = SKColors.Black;
-        //            paint.IsAntialias = false;
-        //            paint.StrokeWidth = Config.StrokeWidth;
-        //            paint.Style = SKPaintStyle.Stroke;
-
-        //            transformPath.Rewind();
-        //            for (int cur = 0; cur < mPaths.Count; cur++)
-        //            {
-        //                transformPath.Rewind();
-        //                transformPath.AddPath(mPaths[cur].SKPath);
-        //                transformPath.Transform(matrix);
-
-        //                if (cur < 10)
-        //                {
-        //                    paint.Style = SKPaintStyle.Fill;
-        //                    paint.Color = Config.ColorFullVisit;
-        //                    canvas.DrawPath(transformPath, paint);
-
-        //                    paint.Style = SKPaintStyle.Stroke;
-        //                    paint.Color = Config.OutlineColor;
-        //                    canvas.DrawPath(transformPath, paint);
-        //                }
-        //                else
-        //                {
-        //                    paint.Color = Config.OutlineColor;
-        //                    canvas.DrawPath(transformPath, paint);
-        //                }
-        //            }
-        //        }
-        //        // Отрисовка на основном canvas
-        //       // canvas.Clear();
-        //        //canvas.DrawPicture(svg.Picture, ref matrix);
-        //    }
-        //}
-        //Graphics g = this.CreateGraphics();
-        //img = pictureSVG.Image;
-
-        //// Fit width
-        //zoom = ((float)img.Width / (float)img.Width) *
-        //        (img.HorizontalResolution / g.DpiX);
-
-        //pictureSVG.Paint += new PaintEventHandler(pictureSVG_Paint);
-
     }
 }
