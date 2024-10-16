@@ -17,22 +17,18 @@ namespace CityVisitorFinaly
         /// </summary>
         public void InitCities()
         {
-
-            //RegionList = new ObservableCollection<Regions>();
+            //////////////////////////////////////////////////////////////////////////
             Regions Adygea = new Regions("Республика Адыгея", "adygea.png")
             {
                 IdRegionsMaps = "path16"
             };
             City Adygeisk = new City("Адыгейск", "adygeisk.png");
-
             City Maykop = new City("Майкоп", "maykop.png");
 
             Adygea.AddCities(Adygeisk);
             Adygea.AddCities(Maykop);
             AddRegToDB(Adygea);
-
-
-
+            //////////////////////////////////////////////////////////////////////////
 
             Regions KrasnodarKrai = new Regions("Краснодарский край", "KrasnodarKrai.png")
             {
@@ -92,8 +88,7 @@ namespace CityVisitorFinaly
             KrasnodarKrai.AddCities(UstLabinsk);
             KrasnodarKrai.AddCities(Khadyzhensk);
             AddRegToDB(KrasnodarKrai);
-
-
+            //////////////////////////////////////////////////////////////////////////
             Regions RostovObl = new Regions("Ростовская область", "RostovObl.png")
             {
                 IdRegionsMaps = "path148"
@@ -105,7 +100,6 @@ namespace CityVisitorFinaly
             City Volgdonsk = new City("Волгодонск", "Volgdonsk.png");
             City Gukovo = new City("Гуково", "Gukovo.png");
             City Doneck = new City("Донецк", "Doneck.png");
-
             City Zverevo = new City("Зверево", "Zverevo.png");
             City Zernograd = new City("Зерноград", "Zernograd.png");
             City KamenskShakhtinsky = new City("Каменск-Шахтинский", "KamenskShakhtinsky.png");
@@ -145,9 +139,8 @@ namespace CityVisitorFinaly
             RostovObl.AddCities(Taganrog);
             RostovObl.AddCities(Tsimlyansk);
             RostovObl.AddCities(Shahty);
-            //RegionList.Add(RostovObl);
             AddRegToDB(RostovObl);
-
+            //////////////////////////////////////////////////////////////////////////
             Regions StavropolKrai = new Regions("Ставропольский край", "StavropolKrai.png")
             {
                 IdRegionsMaps = "path80"
@@ -172,8 +165,6 @@ namespace CityVisitorFinaly
             City Svetlograd = new City("Светлоград", "Svetlograd.png");
             City Stavropol = new City("Ставрополь", "Stavropol.png");
 
-
-
             StavropolKrai.AddCities(Blagodarny);
             StavropolKrai.AddCities(Budennovsk);
             StavropolKrai.AddCities(Essentuki);
@@ -195,9 +186,7 @@ namespace CityVisitorFinaly
             StavropolKrai.AddCities(Stavropol);
 
             AddRegToDB(StavropolKrai);
-
-
-
+            //////////////////////////////////////////////////////////////////////////
             Regions KarachayCherkessia = new Regions("Карачаево-Черкесская республика", "KarachayCherkessia.png")
             {
                 IdRegionsMaps = "path32"
@@ -234,21 +223,17 @@ namespace CityVisitorFinaly
             KabardinoBalkariya.AddCities(Mayskiy);
             KabardinoBalkariya.AddCities(Nalchik);
             KabardinoBalkariya.AddCities(Nartkala);
-
             KabardinoBalkariya.AddCities(Prokhladny);
             KabardinoBalkariya.AddCities(Terek);
             KabardinoBalkariya.AddCities(Tyrnyauz);
             KabardinoBalkariya.AddCities(Сhegem);
 
             AddRegToDB(KabardinoBalkariya);
-
-
-
+            //////////////////////////////////////////////////////////////////////////
             Regions NorthOssetiaAlania = new Regions("Республика Северная Осетия - Алания", "NorthOssetiaAlania.png")
             {
                 IdRegionsMaps = "path46"
             };
-
             City Alagir = new City("Алагир", "Unknow.png");
             City Ardon = new City("Ардон", "Unknow.png");
             City Beslan = new City("Беслан", "Beslan.png");
@@ -260,12 +245,11 @@ namespace CityVisitorFinaly
             NorthOssetiaAlania.AddCities(Ardon);
             NorthOssetiaAlania.AddCities(Beslan);
             NorthOssetiaAlania.AddCities(Vladikavkaz);
-
             NorthOssetiaAlania.AddCities(Digora);
             NorthOssetiaAlania.AddCities(Mozdok);
 
             AddRegToDB(NorthOssetiaAlania);
-
+            //////////////////////////////////////////////////////////////////////////
 
             Regions Ingushetia = new Regions("Республика Ингушетия", "Ingushetia.png")
             {
@@ -277,14 +261,13 @@ namespace CityVisitorFinaly
             City Malgobek = new City("Малгобек", "Malgobek.png");
             City Nazran = new City("Назрань", "Nazran.png");
             City Sunzha = new City("Сунжа", "Sunzha.png");
-            //RegionList.Add(StavropolKrai);
             Ingushetia.AddCities(Karabulak);
             Ingushetia.AddCities(Magas);
             Ingushetia.AddCities(Malgobek);
             Ingushetia.AddCities(Nazran);
             Ingushetia.AddCities(Sunzha);
             AddRegToDB(Ingushetia);
-
+            //////////////////////////////////////////////////////////////////////////
 
             Regions Dagestan = new Regions("Республика Дагестан", "Dagestan.png")
             {
@@ -296,14 +279,11 @@ namespace CityVisitorFinaly
             City Derbent = new City("Дербент", "Derbent.png");
             City Izberbash = new City("Избербаш", "Izberbash.png");
             City Kaspiysk = new City("Каспийск", "Kaspiysk.png");
-
             City Kiziljurt = new City("Кизилюрт", "Kiziljurt.png");
             City Kizlyar = new City("Кизляр", "Kizlyar.png");
             City Makhachkala = new City("Махачкала", "Makhachkala.png");
             City Khasavyurt = new City("Хасавюрт", "Khasavyurt.png");
             City JujnoSukhokumsk = new City("Южно-Сухокумск", "JujnoSukhokumsk.png");
-
-            //RegionList.Add(StavropolKrai);
             Dagestan.AddCities(Buinaksk);
             Dagestan.AddCities(DagestanskieOgni);
             Dagestan.AddCities(Derbent);
@@ -316,7 +296,7 @@ namespace CityVisitorFinaly
             Dagestan.AddCities(JujnoSukhokumsk);
 
             AddRegToDB(Dagestan);
-
+            //////////////////////////////////////////////////////////////////////////
 
 
             Regions Chechnya = new Regions("Чеченская республика", "Chechnya.png")
@@ -337,7 +317,7 @@ namespace CityVisitorFinaly
             Chechnya.AddCities(UrusMartan);
             Chechnya.AddCities(Shali);
             AddRegToDB(Chechnya);
-
+            //////////////////////////////////////////////////////////////////////////
             Regions Kalmykiya = new Regions("Республика Калмыкия", "Kalmykiya.png")
             {
                 IdRegionsMaps = "path148"
@@ -350,7 +330,7 @@ namespace CityVisitorFinaly
             Kalmykiya.AddCities(Lagan);
             Kalmykiya.AddCities(Elista);
             AddRegToDB(Kalmykiya);
-
+            //////////////////////////////////////////////////////////////////////////
             Regions AstrakhObl = new Regions("Астраханская область", "AstrakhObl.png")
             {
                 IdRegionsMaps = "path90"
@@ -369,7 +349,7 @@ namespace CityVisitorFinaly
             AstrakhObl.AddCities(Narimanov);
             AstrakhObl.AddCities(Kharabali);
             AddRegToDB(AstrakhObl);
-
+            //////////////////////////////////////////////////////////////////////////
             Regions VolgogradObl = new Regions("Волгоградская область", "VolgogradObl.png")
             {
                 IdRegionsMaps = "path98"
@@ -415,9 +395,7 @@ namespace CityVisitorFinaly
             VolgogradObl.AddCities(Uryupinsk);
             VolgogradObl.AddCities(Frolovo);
             AddRegToDB(VolgogradObl);
-
-
-
+            //////////////////////////////////////////////////////////////////////////
             Regions Krym = new Regions("Республика Крым", "respublik_krym.png")
             {
                 IdRegionsMaps = "path38"
@@ -457,7 +435,7 @@ namespace CityVisitorFinaly
             Krym.AddCities(shchyolkino);
             Krym.AddCities(yalta);
             AddRegToDB(Krym);
-
+            //////////////////////////////////////////////////////////////////////////
             Regions Sevastopl = new Regions("Севастополь", "sevastopolobl.png")
             {
                 IdRegionsMaps = "path188"
@@ -470,8 +448,7 @@ namespace CityVisitorFinaly
             Sevastopl.AddCities(inkerman);
             Sevastopl.AddCities(sevastopol);
             AddRegToDB(Sevastopl);
-
-
+            //////////////////////////////////////////////////////////////////////////
             Regions BelgorodskyaObl = new Regions("Белгородская область", "belgorodoblast.png")
             {
                 IdRegionsMaps = "path92"
@@ -500,8 +477,46 @@ namespace CityVisitorFinaly
             BelgorodskyaObl.AddCities(stroitel);
             BelgorodskyaObl.AddCities(shebekino);
             AddRegToDB(BelgorodskyaObl);
+            //////////////////////////////////////////////////////////////////////////
 
-
+            Regions Bryanskobl = new Regions("Брянская область", "bryanskobl.png")
+            {
+                IdRegionsMaps = "path94"
+            };
+            City bryansk = new City("Брянск", "bryansk.png");
+            City dyatkovo = new City("Дятьково", "dyatkovo.png");
+            City zukovsk = new City("Жуковка", "zukovsk.png");
+            City zlynka = new City("Злынка", "zlynka.png");
+            City karachev = new City("Карачев", "karachev.png");
+            City klincy = new City("Клинцы", "klincy.png");
+            City mglin = new City("Мглин", "mglin.png");
+            City novozybkov = new City("Новозыбков", "novozybkov.png");
+            City pochep = new City("Почеп", "pochep.png");
+            City sevsk = new City("Севск", "sevsk.png");
+            City seltso = new City("Сельцо", "seltso.png");
+            City strarodub = new City("Стародуб", "strarodub.png");
+            City suraz = new City("Сураж", "suraz.png");
+            City trubchevsk = new City("Трубчевск", "trubchevsk.png");
+            City unecha = new City("Унеча", "unecha.png");
+            City fokino = new City("Фокино", "fokino.png");
+            Bryanskobl.AddCities(bryansk);
+            Bryanskobl.AddCities(dyatkovo);
+            Bryanskobl.AddCities(zukovsk);
+            Bryanskobl.AddCities(zlynka);
+            Bryanskobl.AddCities(karachev);
+            Bryanskobl.AddCities(klincy);
+            Bryanskobl.AddCities(mglin);
+            Bryanskobl.AddCities(novozybkov);
+            Bryanskobl.AddCities(pochep);
+            Bryanskobl.AddCities(sevsk);
+            Bryanskobl.AddCities(seltso);
+            Bryanskobl.AddCities(strarodub);
+            Bryanskobl.AddCities(suraz);
+            Bryanskobl.AddCities(trubchevsk);
+            Bryanskobl.AddCities(unecha);
+            Bryanskobl.AddCities(fokino);
+            AddRegToDB(Bryanskobl);
+            //////////////////////////////////////////////////////////////////////////
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
             //regionNames.Add("path44", "Республика Саха (Якутия)");
