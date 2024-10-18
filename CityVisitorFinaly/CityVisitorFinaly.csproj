@@ -106,6 +106,7 @@
 	  <None Remove="Resources\Images\DagestanskieOgni.png" />
 	  <None Remove="Resources\Images\demenskii.png" />
 	  <None Remove="Resources\Images\Derbent.png" />
+	  <None Remove="Resources\Images\dmitrev.png" />
 	  <None Remove="Resources\Images\Doneck.png" />
 	  <None Remove="Resources\Images\Dubovka.png" />
 	  <None Remove="Resources\Images\dyatkovo.png" />
@@ -116,6 +117,7 @@
 	  <None Remove="Resources\Images\Essentuki.png" />
 	  <None Remove="Resources\Images\evpatoriya.png" />
 	  <None Remove="Resources\Images\Eysk.png" />
+	  <None Remove="Resources\Images\fatezh.png" />
 	  <None Remove="Resources\Images\feodosia.png" />
 	  <None Remove="Resources\Images\flag_rf.png" />
 	  <None Remove="Resources\Images\fokino.png" />
@@ -195,13 +197,17 @@
 	  <None Remove="Resources\Images\Kropotkin.png" />
 	  <None Remove="Resources\Images\Krymsk.png" />
 	  <None Remove="Resources\Images\Kurchaloi.png" />
+	  <None Remove="Resources\Images\kurchatov.png" />
 	  <None Remove="Resources\Images\Kurganinsk.png" />
 	  <None Remove="Resources\Images\kurlovo.png" />
+	  <None Remove="Resources\Images\kursk.png" />
+	  <None Remove="Resources\Images\kurskoblast.png" />
 	  <None Remove="Resources\Images\Labinsk.png" />
 	  <None Remove="Resources\Images\Lagan.png" />
 	  <None Remove="Resources\Images\lakinsk.png" />
 	  <None Remove="Resources\Images\Leninsk.png" />
 	  <None Remove="Resources\Images\Lermontov.png" />
+	  <None Remove="Resources\Images\lgov.png" />
 	  <None Remove="Resources\Images\LinkVideo.png" />
 	  <None Remove="Resources\Images\liski.png" />
 	  <None Remove="Resources\Images\lyudinovo.png" />
@@ -247,6 +253,7 @@
 	  <None Remove="Resources\Images\novozybkov.png" />
 	  <None Remove="Resources\Images\novy_oskol.png" />
 	  <None Remove="Resources\Images\obninsk.png" />
+	  <None Remove="Resources\Images\oboyan.png" />
 	  <None Remove="Resources\Images\ostrogozsk.png" />
 	  <None Remove="Resources\Images\Pallasovka.png" />
 	  <None Remove="Resources\Images\pavlovsk.png" />
@@ -267,8 +274,10 @@
 	  <None Remove="Resources\Images\rossosh.png" />
 	  <None Remove="Resources\Images\RostovObl.png" />
 	  <None Remove="Resources\Images\RostovOnDon.png" />
+	  <None Remove="Resources\Images\rylsk.png" />
 	  <None Remove="Resources\Images\saki.png" />
 	  <None Remove="Resources\Images\Salsk.png" />
+	  <None Remove="Resources\Images\schigry.png" />
 	  <None Remove="Resources\Images\seltso.png" />
 	  <None Remove="Resources\Images\Semikarakorsk.png" />
 	  <None Remove="Resources\Images\semiluki.png" />
@@ -297,6 +306,7 @@
 	  <None Remove="Resources\Images\strunino.png" />
 	  <None Remove="Resources\Images\sudak.png" />
 	  <None Remove="Resources\Images\sudogda.png" />
+	  <None Remove="Resources\Images\sudza.png" />
 	  <None Remove="Resources\Images\sukhinichy.png" />
 	  <None Remove="Resources\Images\suraz.png" />
 	  <None Remove="Resources\Images\Surovikino.png" />
@@ -339,6 +349,7 @@
 	  <None Remove="Resources\Images\yuza.png" />
 	  <None Remove="Resources\Images\zavolzhsk.png" />
 	  <None Remove="Resources\Images\Zelenokumsk.png" />
+	  <None Remove="Resources\Images\zelezno.png" />
 	  <None Remove="Resources\Images\Zernograd.png" />
 	  <None Remove="Resources\Images\Zheleznovodsk.png" />
 	  <None Remove="Resources\Images\Zhirnovsk.png" />
