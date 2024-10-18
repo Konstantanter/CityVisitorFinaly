@@ -96,10 +96,12 @@
 	  <None Remove="Resources\Images\bryansk.png" />
 	  <None Remove="Resources\Images\bryanskobl.png" />
 	  <None Remove="Resources\Images\Budennovsk.png" />
+	  <None Remove="Resources\Images\bui.png" />
 	  <None Remove="Resources\Images\Buinaksk.png" />
 	  <None Remove="Resources\Images\buturlinovskoe.png" />
 	  <None Remove="Resources\Images\Chechnya.png" />
 	  <None Remove="Resources\Images\Cherkessk.png" />
+	  <None Remove="Resources\Images\chuhloma.png" />
 	  <None Remove="Resources\Images\Dagestan.png" />
 	  <None Remove="Resources\Images\DagestanskieOgni.png" />
 	  <None Remove="Resources\Images\demenskii.png" />
@@ -119,6 +121,7 @@
 	  <None Remove="Resources\Images\fokino.png" />
 	  <None Remove="Resources\Images\Frolovo.png" />
 	  <None Remove="Resources\Images\furmanov.png" />
+	  <None Remove="Resources\Images\galich.png" />
 	  <None Remove="Resources\Images\gavrilovposad.png" />
 	  <None Remove="Resources\Images\Gelendzhik.png" />
 	  <None Remove="Resources\Images\Georgievsk.png" />
@@ -170,12 +173,15 @@
 	  <None Remove="Resources\Images\klincy.png" />
 	  <None Remove="Resources\Images\kokhma.png" />
 	  <None Remove="Resources\Images\kolch.png" />
+	  <None Remove="Resources\Images\kologriv.png" />
 	  <None Remove="Resources\Images\komsomi.png" />
 	  <None Remove="Resources\Images\kondrovo.png" />
 	  <None Remove="Resources\Images\Konstantinovsk.png" />
 	  <None Remove="Resources\Images\Korenovsk.png" />
 	  <None Remove="Resources\Images\korocha.png" />
 	  <None Remove="Resources\Images\kosteryovo.png" />
+	  <None Remove="Resources\Images\kostroma.png" />
+	  <None Remove="Resources\Images\kostromskayaobl.png" />
 	  <None Remove="Resources\Images\Kotelnikovo.png" />
 	  <None Remove="Resources\Images\Kotovo.png" />
 	  <None Remove="Resources\Images\kovrov.png" />
@@ -200,9 +206,11 @@
 	  <None Remove="Resources\Images\liski.png" />
 	  <None Remove="Resources\Images\lyudinovo.png" />
 	  <None Remove="Resources\Images\Magas.png" />
+	  <None Remove="Resources\Images\makarjev.png" />
 	  <None Remove="Resources\Images\Makhachkala.png" />
 	  <None Remove="Resources\Images\Malgobek.png" />
 	  <None Remove="Resources\Images\maloyaroslavets.png" />
+	  <None Remove="Resources\Images\manturovo.png" />
 	  <None Remove="Resources\Images\Maykop.png" />
 	  <None Remove="Resources\Images\Mayskiy.png" />
 	  <None Remove="Resources\Images\medyn.png" />
@@ -222,7 +230,9 @@
 	  <None Remove="Resources\Images\navoloksk.png" />
 	  <None Remove="Resources\Images\Nazran.png" />
 	  <None Remove="Resources\Images\Neftekumsk.png" />
+	  <None Remove="Resources\Images\nerehta.png" />
 	  <None Remove="Resources\Images\Nevinomyssk.png" />
+	  <None Remove="Resources\Images\neya.png" />
 	  <None Remove="Resources\Images\Nikolayevsk.png" />
 	  <None Remove="Resources\Images\NorthOssetiaAlania.png" />
 	  <None Remove="Resources\Images\Novoaleksandrovsk.png" />
@@ -268,6 +278,7 @@
 	  <None Remove="Resources\Images\sevsk.png" />
 	  <None Remove="Resources\Images\Shahty.png" />
 	  <None Remove="Resources\Images\Shali.png" />
+	  <None Remove="Resources\Images\sharya.png" />
 	  <None Remove="Resources\Images\shchyolkino.png" />
 	  <None Remove="Resources\Images\shebekino.png" />
 	  <None Remove="Resources\Images\shuya.png" />
@@ -275,6 +286,7 @@
 	  <None Remove="Resources\Images\SlavyansknaKubani.png" />
 	  <None Remove="Resources\Images\sobinka.png" />
 	  <None Remove="Resources\Images\Sochi.png" />
+	  <None Remove="Resources\Images\soligalich.png" />
 	  <None Remove="Resources\Images\sosensky.png" />
 	  <None Remove="Resources\Images\staryi_krym.png" />
 	  <None Remove="Resources\Images\stary_oskol.png" />
@@ -315,6 +327,7 @@
 	  <None Remove="Resources\Images\Volgdonsk.png" />
 	  <None Remove="Resources\Images\Volgograd.png" />
 	  <None Remove="Resources\Images\VolgogradObl.png" />
+	  <None Remove="Resources\Images\volgorechensk.png" />
 	  <None Remove="Resources\Images\Volzhsky.png" />
 	  <None Remove="Resources\Images\voronezh.png" />
 	  <None Remove="Resources\Images\voronezhobl.png" />
