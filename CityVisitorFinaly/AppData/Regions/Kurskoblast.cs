@@ -5,7 +5,7 @@ namespace CityVisitorFinaly
     public partial class RegionsPage : ContentPage
     {
         /// <summary>
-        /// Инициализация Курской области области
+        /// Инициализация Курской области
         /// </summary>
         public void Kurskoblast()
         {
