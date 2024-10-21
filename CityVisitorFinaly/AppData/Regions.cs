@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CityVisitorFinaly.AppData
 {
@@ -72,19 +67,20 @@ namespace CityVisitorFinaly.AppData
         /// </summary>
         public void SaveReg(City refreshCity)
         {
-           
-            int countFull = ListCities.Where(a=>a.State==State.Visited).Count();  
-            
-            if(countFull == ListCities.Count)
+
+            int countFull = ListCities.Where(a => a.State == State.Visited).Count();
+
+            if (countFull == ListCities.Count)
             {
                 this.StateReg = State.Visited.ToString();
             }
-            else  if(countFull > 0 )
+            else if (countFull > 0)
             {
                 this.StateReg = State.VisitedTransit.ToString();
             }
-            else {
-                this.StateReg = State.NotVisited.ToString() ;
+            else
+            {
+                this.StateReg = State.NotVisited.ToString();
             }
             ////проверяем наличие посещенных городов
             //if (cur != 0)
@@ -99,7 +95,7 @@ namespace CityVisitorFinaly.AppData
             //}
             //создаем экземпляр класса для хранения метаданных в базе данных
 
-        
+
 
             RegionsDB reg1 = new RegionsDB(this);
             //обновляем данные в базе данных
@@ -125,8 +121,8 @@ namespace CityVisitorFinaly.AppData
             Image = pathImg;
             Id++;
             IdRegion = Id;
-        } 
-       
+        }
+
         public void AddCities(List<CityDB> cities)
         {
             foreach (CityDB CityDB in cities)

@@ -1,9 +1,4 @@
 ﻿using SkiaSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CityVisitorFinaly.AppData
 {
@@ -32,6 +27,6 @@ namespace CityVisitorFinaly.AppData
         /// Цвет обводки
         /// </summary>
         public static SKColor OutlineColor { get; set; } = SKColors.Black;
-        
+
     }
 }

@@ -1,13 +1,9 @@
-
+using CityVisitorFinaly.AppData;
 using SkiaSharp;
 using SkiaSharp.Views.Maui;
-using Svg;
 using Svg.Skia;
 using System.Reflection;
-using CityVisitorFinaly.AppData;
 using System.Xml;
-using System.Runtime.ConstrainedExecution;
-using System.Numerics;
 
 namespace CityVisitorFinaly;
 
@@ -27,11 +23,11 @@ public partial class MapsPage : ContentPage
             newReg.AddCities(newListCities);
             RegionList.Add(newReg);
         }
-      
+
     }
     protected override async void OnAppearing()
     {
-        
+
         base.OnAppearing();
         await ReadData();
         int cur = RegionList.Count;
@@ -81,7 +77,7 @@ public partial class MapsPage : ContentPage
         string str = "";
         for (int i = 0; i < mPaths.Count; i++)
         {
-            if (mPaths[i].SKPath.Contains(x1/scaleX, y1/scaleY))
+            if (mPaths[i].SKPath.Contains(x1 / scaleX, y1 / scaleY))
             {
                 try
                 {
@@ -136,7 +132,7 @@ public partial class MapsPage : ContentPage
                 //case GestureStatus.
         }
     }
-   
+
     protected override SizeRequest OnMeasure(double widthConstraint, double heightConstraint)
     {
         Scale = MIN_SCALE;
@@ -172,20 +168,20 @@ public partial class MapsPage : ContentPage
     private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs e)
     {
         var canvas = e.Surface.Canvas;
-        canvas.Clear(); 
+        canvas.Clear();
         var _info = e.Info;
         Assembly assembly = GetType().GetTypeInfo().Assembly;
         Stream stream = assembly.GetManifestResourceStream("CityVisitorFinaly.Resources.Images.test3.svg");
         using (SKSvg svg = new SKSvg())
         {
             svg.Load(stream);
-            scaleX = (float) _info.Width / svg.Picture.CullRect.Width;
-            scaleY = (float) _info.Height / svg.Picture.CullRect.Height;
+            scaleX = (float)_info.Width / svg.Picture.CullRect.Width;
+            scaleY = (float)_info.Height / svg.Picture.CullRect.Height;
             scaleW = (float)(e.Info.Width / canvasView.Width);
             scaleH = (float)(e.Info.Height / canvasView.Height);
             SKMatrix matrix = SKMatrix.CreateScale(scaleX, scaleY);
             SKPaint paint = new SKPaint();
-            for(int i = 0; i < mPaths.Count; i++)
+            for (int i = 0; i < mPaths.Count; i++)
             {
                 paint.Color = SKColors.Black;
                 paint.IsAntialias = false;
