@@ -39,17 +39,7 @@ public partial class RegionsPage : ContentPage
         {
 
             await Navigation.PushAsync(new CitiesPage(selectedRegion));
-            // Выполните необходимые действия с выбранным регионом (selectedRegion)
         }
-
-    // Сбросьте выделение элемента списка
          ((ListView)sender).SelectedItem = null;
-        //if (e.SelectedItem == null)
-        //    return;
-
-        //var selectedRegion = (Region)e.SelectedItem;
-        //await Navigation.PushAsync(new CitiesPage(selectedRegion));
-
-        //((ListView)sender).SelectedItem = null;
     }
 }
