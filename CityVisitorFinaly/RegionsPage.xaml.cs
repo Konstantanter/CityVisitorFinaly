@@ -8,7 +8,6 @@ public partial class RegionsPage : ContentPage
     public ObservableCollection<Regions> RegionList { get; set; }
     public RegionsPage()
 	{
-        //App.DeleteDataBase();
 		InitializeComponent();
         RegionList = new ObservableCollection<Regions>();
         if (!System.IO.File.Exists(App.DataBasePath))

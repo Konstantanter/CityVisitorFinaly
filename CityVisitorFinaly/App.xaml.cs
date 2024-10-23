@@ -22,14 +22,19 @@ public partial class App : Application
             return db;
         }
     }
+
+    public  void ShowForm(Page page)
+    {
+        MainPage = new NavigationPage(new MenuPage(page));
+    }
     public App()
     {
         InitializeComponent();
-      //  System.IO.File.Delete(DataSVGPath);
+        //  System.IO.File.Delete(DataSVGPath);
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
-       // DeleteDataBase();
-
+        // DeleteDataBase();
+        MainPage = new NavigationPage(new MenuPage(MainPage));
 
         //if (!System.IO.File.Exists(DataSVGPath))
         //{
@@ -43,10 +48,10 @@ public partial class App : Application
         //    System.IO.File.WriteAllText(DataSVGPath, content, System.Text.Encoding.Default);
         //}
 
-       // DeleteDataBase();
+        // DeleteDataBase();
         ////MainPage = new MapsPage();
-        DeleteDataBase();
-        MainPage = new NavigationPage(new RegionsPage());
+        // DeleteDataBase();
+
         //Regions Adygea = new Regions("Республика Адыгея", "Adygea.png");
         //Adygea.IdRegionsMaps = "path16";
         //City Adygeisk = new City("Адыгейск", "Adygeisk.png");

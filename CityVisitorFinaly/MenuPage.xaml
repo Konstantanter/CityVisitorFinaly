@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CityVisitorFinaly.MenuPage"
+             Title="MenuPage">
+    <VerticalStackLayout>
+        <Button  
+            Text="Регионы"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Clicked="ButtonRegion_Clicked"/>
+        <Button  
+            Text="Карты"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Clicked="ButtonMaps_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
