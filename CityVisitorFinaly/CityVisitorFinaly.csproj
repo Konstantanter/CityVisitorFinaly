@@ -236,6 +236,9 @@
 	  <None Remove="Resources\Images\MineralWaters.png" />
 	  <None Remove="Resources\Images\Morozovsk.png" />
 	  <None Remove="Resources\Images\mosalsk.png" />
+	  <None Remove="Resources\Images\moscov.png" />
+	  <None Remove="Resources\Images\moscovreg.png" />
+	  <None Remove="Resources\Images\moskovsky.png" />
 	  <None Remove="Resources\Images\Mozdok.png" />
 	  <None Remove="Resources\Images\murom.png" />
 	  <None Remove="Resources\Images\Nalchik.png" />
@@ -284,6 +287,7 @@
 	  <None Remove="Resources\Images\rylsk.png" />
 	  <None Remove="Resources\Images\saki.png" />
 	  <None Remove="Resources\Images\Salsk.png" />
+	  <None Remove="Resources\Images\scherbinka.png" />
 	  <None Remove="Resources\Images\schigry.png" />
 	  <None Remove="Resources\Images\seltso.png" />
 	  <None Remove="Resources\Images\Semikarakorsk.png" />
@@ -327,6 +331,7 @@
 	  <None Remove="Resources\Images\test3.svg" />
 	  <None Remove="Resources\Images\Tikhoretsk.png" />
 	  <None Remove="Resources\Images\Timashevsk.png" />
+	  <None Remove="Resources\Images\troick.png" />
 	  <None Remove="Resources\Images\trubchevsk.png" />
 	  <None Remove="Resources\Images\Tsimlyansk.png" />
 	  <None Remove="Resources\Images\Tuapse.png" />
@@ -357,6 +362,7 @@
 	  <None Remove="Resources\Images\yuza.png" />
 	  <None Remove="Resources\Images\zadonsk.png" />
 	  <None Remove="Resources\Images\zavolzhsk.png" />
+	  <None Remove="Resources\Images\zelenograd.png" />
 	  <None Remove="Resources\Images\Zelenokumsk.png" />
 	  <None Remove="Resources\Images\zelezno.png" />
 	  <None Remove="Resources\Images\Zernograd.png" />
