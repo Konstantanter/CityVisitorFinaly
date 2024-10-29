@@ -83,8 +83,28 @@ public partial class CityPage : ContentPage
             city.State = State.NotVisited;
         }
         city.DataVisited = datePicker.Date.ToShortDateString();
-        int cur = myReg.ListCities.Count(a => a.State != State.NotVisited);
+
+        int cur = myReg.ListCities.Count(a => a.State == State.Visited);
         double a1 = cur, a2 = myReg.ListCities.Count;
+
+        int countFull = myReg.ListCities.Where(a => a.State == State.Visited).Count();
+        int countTransit = 0;
+        if (Config.VisiblePassing == true)
+        {
+            countTransit = myReg.ListCities.Where(a => a.State == State.VisitedTransit).Count();
+        }
+        if (countFull == myReg.ListCities.Count)
+        {
+            myReg.StateReg = State.Visited.ToString();
+        }
+        else if (countTransit > 0 && countTransit < myReg.ListCities.Count)
+        {
+            myReg.StateReg = State.VisitedTransit.ToString();
+        }
+        else
+        {
+            myReg.StateReg = State.NotVisited.ToString();
+        }
         myReg.SetVisitPercentage(a1 / a2 * 100.0);
         myReg.SaveReg(city);
     }

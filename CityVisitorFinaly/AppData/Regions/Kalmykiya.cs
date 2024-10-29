@@ -11,7 +11,7 @@ namespace CityVisitorFinaly
         {
             Regions Kalmykiya = new Regions("Республика Калмыкия", "Kalmykiya.png")
             {
-                IdRegionsMaps = "path148"
+                IdRegionsMaps = "path30"
             };
 
             City Gorodovikovsk = new City("Городовиковск", "Gorodovikovsk.png");

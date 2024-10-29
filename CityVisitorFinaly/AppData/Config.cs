@@ -23,6 +23,7 @@ namespace CityVisitorFinaly.AppData
         /// Ширина границы
         /// </summary>
         public static int StrokeWidth { get; set; } = 1;
+
         /// <summary>
         /// Цвет обводки
         /// </summary>

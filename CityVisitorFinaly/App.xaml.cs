@@ -33,7 +33,7 @@ public partial class App : Application
         //  System.IO.File.Delete(DataSVGPath);
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
-         DeleteDataBase();
+        // DeleteDataBase();
         MainPage = new NavigationPage(new MenuPage(MainPage));
 
         //if (!System.IO.File.Exists(DataSVGPath))

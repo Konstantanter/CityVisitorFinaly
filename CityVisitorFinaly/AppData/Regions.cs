@@ -68,20 +68,7 @@ namespace CityVisitorFinaly.AppData
         public void SaveReg(City refreshCity)
         {
 
-            int countFull = ListCities.Where(a => a.State == State.Visited).Count();
-
-            if (countFull == ListCities.Count)
-            {
-                this.StateReg = State.Visited.ToString();
-            }
-            else if (countFull > 0)
-            {
-                this.StateReg = State.VisitedTransit.ToString();
-            }
-            else
-            {
-                this.StateReg = State.NotVisited.ToString();
-            }
+            
             ////проверяем наличие посещенных городов
             //if (cur != 0)
             //{

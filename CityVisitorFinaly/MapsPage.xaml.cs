@@ -202,7 +202,7 @@ public partial class MapsPage : ContentPage
                         paint.Color = Config.OutlineColor;
                         canvas.DrawPath(transformPath, paint);
                     }
-                    else if (reg.StateReg.Equals(State.VisitedTransit.ToString()))
+                    else if (reg.StateReg.Equals(State.VisitedTransit.ToString()) && Config.VisiblePassing==true)
                     {
                         paint.Style = SKPaintStyle.Fill;
                         paint.Color = Config.ColorPassingVisit;
