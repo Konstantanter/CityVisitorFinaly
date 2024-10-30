@@ -60,6 +60,8 @@ namespace CityVisitorFinaly
             Moskov();
             //Московская область
             MoskovObl();
+            //Орловская область
+            OrlovskayaObl();
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
             //regionNames.Add("path44", "Республика Саха (Якутия)");

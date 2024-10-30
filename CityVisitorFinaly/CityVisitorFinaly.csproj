@@ -94,6 +94,7 @@
 	  <None Remove="Resources\Images\Blagodarny.png" />
 	  <None Remove="Resources\Images\bobrov.png" />
 	  <None Remove="Resources\Images\boguchar.png" />
+	  <None Remove="Resources\Images\bolkhov.png" />
 	  <None Remove="Resources\Images\borisoglebsk.png" />
 	  <None Remove="Resources\Images\borovsk.png" />
 	  <None Remove="Resources\Images\bronnitsy.png" />
@@ -117,6 +118,7 @@
 	  <None Remove="Resources\Images\Derbent.png" />
 	  <None Remove="Resources\Images\dimitrov.png" />
 	  <None Remove="Resources\Images\dmitrev.png" />
+	  <None Remove="Resources\Images\dmitrovsk.png" />
 	  <None Remove="Resources\Images\dolgoprudny.png" />
 	  <None Remove="Resources\Images\domodedovo.png" />
 	  <None Remove="Resources\Images\Doneck.png" />
@@ -251,6 +253,7 @@
 	  <None Remove="Resources\Images\lipetsk.png" />
 	  <None Remove="Resources\Images\lipetskobl.png" />
 	  <None Remove="Resources\Images\liski.png" />
+	  <None Remove="Resources\Images\livny.png" />
 	  <None Remove="Resources\Images\lobnja.png" />
 	  <None Remove="Resources\Images\losinopetrovsky.png" />
 	  <None Remove="Resources\Images\luchovitsy.png" />
@@ -261,6 +264,7 @@
 	  <None Remove="Resources\Images\makarjev.png" />
 	  <None Remove="Resources\Images\Makhachkala.png" />
 	  <None Remove="Resources\Images\Malgobek.png" />
+	  <None Remove="Resources\Images\maloarkhangelsk.png" />
 	  <None Remove="Resources\Images\maloyaroslavets.png" />
 	  <None Remove="Resources\Images\manturovo.png" />
 	  <None Remove="Resources\Images\Maykop.png" />
@@ -281,6 +285,7 @@
 	  <None Remove="Resources\Images\moskovsky.png" />
 	  <None Remove="Resources\Images\Mozdok.png" />
 	  <None Remove="Resources\Images\mozhaisk.png" />
+	  <None Remove="Resources\Images\mtsensk.png" />
 	  <None Remove="Resources\Images\murom.png" />
 	  <None Remove="Resources\Images\mutishy.png" />
 	  <None Remove="Resources\Images\Nalchik.png" />
@@ -303,6 +308,7 @@
 	  <None Remove="Resources\Images\Novopavlovsk.png" />
 	  <None Remove="Resources\Images\Novorossiysk.png" />
 	  <None Remove="Resources\Images\Novoshakhtinsk.png" />
+	  <None Remove="Resources\Images\novosil.png" />
 	  <None Remove="Resources\Images\novovoronezh.png" />
 	  <None Remove="Resources\Images\novozybkov.png" />
 	  <None Remove="Resources\Images\novy_oskol.png" />
@@ -310,6 +316,8 @@
 	  <None Remove="Resources\Images\oboyan.png" />
 	  <None Remove="Resources\Images\odintsovo.png" />
 	  <None Remove="Resources\Images\orekhovozuevo.png" />
+	  <None Remove="Resources\Images\orel.png" />
+	  <None Remove="Resources\Images\orelobl.png" />
 	  <None Remove="Resources\Images\ostrogozsk.png" />
 	  <None Remove="Resources\Images\ozery.png" />
 	  <None Remove="Resources\Images\Pallasovka.png" />
