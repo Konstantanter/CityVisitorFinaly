@@ -14,8 +14,8 @@ namespace CityVisitorFinaly
                 IdRegionsMaps = "path120"
             };
 
-            City dmitrev = new City("Дмитриев", "alupka.png");
-            City zelezno = new City("Железногорск", "alupka.png");
+            City dmitrev = new City("Дмитриев", "dmitrev.png");
+            City zelezno = new City("Железногорск", "zelezno.png");
             City kursk = new City("Курск", "kursk.png");
             City kurchatov = new City("Курчатов", "kurchatov.png");
             City lgov = new City("Льгов", "lgov.png");
