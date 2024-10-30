@@ -14,23 +14,14 @@ namespace CityVisitorFinaly
                 IdRegionsMaps = "path28"
             };
 
-            City Baksan = new City("Баксан", "Baksan.png");
-            City Mayskiy = new City("Майский", "Mayskiy.png");
-            City Nalchik = new City("Нальчик", "Nalchik.png");
-            City Nartkala = new City("Нарткала", "Unknow.png");
-            City Prokhladny = new City("Прохладный", "Prokhladny.png");
-            City Terek = new City("Терек", "Terek.png");
-            City Tyrnyauz = new City("Тырныауз", "Tyrnyauz.png");
-            City Сhegem = new City("Чегем", "Unknow.png");
-
-            KabardinoBalkariya.AddCities(Baksan);
-            KabardinoBalkariya.AddCities(Mayskiy);
-            KabardinoBalkariya.AddCities(Nalchik);
-            KabardinoBalkariya.AddCities(Nartkala);
-            KabardinoBalkariya.AddCities(Prokhladny);
-            KabardinoBalkariya.AddCities(Terek);
-            KabardinoBalkariya.AddCities(Tyrnyauz);
-            KabardinoBalkariya.AddCities(Сhegem);
+            KabardinoBalkariya.AddCities(new City("Баксан", "Baksan.png"));
+            KabardinoBalkariya.AddCities(new City("Майский", "Mayskiy.png"));
+            KabardinoBalkariya.AddCities(new City("Нальчик", "Nalchik.png"));
+            KabardinoBalkariya.AddCities(new City("Нарткала", "Unknow.png"));
+            KabardinoBalkariya.AddCities(new City("Прохладный", "Prokhladny.png"));
+            KabardinoBalkariya.AddCities(new City("Терек", "Terek.png"));
+            KabardinoBalkariya.AddCities(new City("Тырныауз", "Tyrnyauz.png"));
+            KabardinoBalkariya.AddCities(new City("Чегем", "Unknow.png"));
 
             AddRegToDB(KabardinoBalkariya);
         }

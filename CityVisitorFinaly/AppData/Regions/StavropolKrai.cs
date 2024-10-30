@@ -13,45 +13,26 @@ namespace CityVisitorFinaly
             {
                 IdRegionsMaps = "path80"
             };
-            City Blagodarny = new City("Благодарный", "Blagodarny.png");
-            City Budennovsk = new City("Будённовск", "Budennovsk.png");
-            City Essentuki = new City("Ессентуки", "Essentuki.png");
-            City Georgievsk = new City("Георгиевск", "Georgievsk.png");
-            City Zheleznovodsk = new City("Железноводск", "Zheleznovodsk.png");
-            City Zelenokumsk = new City("Зеленокумск", "Zelenokumsk.png");
-            City Izobilny = new City("Изобильный", "Izobilny.png");
-            City Ipatovo = new City("Ипатово", "Ipatovo.png");
-            City Kislovodsk = new City("Кисловодск", "Kislovodsk.png");
-            City Lermontov = new City("Лермонтов", "Lermontov.png");
-            City MineralWaters = new City("Минеральные Воды", "MineralWaters.png");
-            City Mihailovsk = new City("Михайловск", "Mihailovsk.png");
-            City Nevinomyssk = new City("Невиномысск", "Nevinomyssk.png");
-            City Neftekumsk = new City("Нефтекумск", "Neftekumsk.png");
-            City Novoaleksandrovsk = new City("Новоалександровск", "Novoaleksandrovsk.png");
-            City Novopavlovsk = new City("Новопавловск", "Novopavlovsk.png");
-            City Pyatigorsk = new City("Пятигорск", "Pyatigorsk.png");
-            City Svetlograd = new City("Светлоград", "Svetlograd.png");
-            City Stavropol = new City("Ставрополь", "Stavropol.png");
 
-            StavropolKrai.AddCities(Blagodarny);
-            StavropolKrai.AddCities(Budennovsk);
-            StavropolKrai.AddCities(Essentuki);
-            StavropolKrai.AddCities(Georgievsk);
-            StavropolKrai.AddCities(Zheleznovodsk);
-            StavropolKrai.AddCities(Zelenokumsk);
-            StavropolKrai.AddCities(Izobilny);
-            StavropolKrai.AddCities(Ipatovo);
-            StavropolKrai.AddCities(Kislovodsk);
-            StavropolKrai.AddCities(Lermontov);
-            StavropolKrai.AddCities(MineralWaters);
-            StavropolKrai.AddCities(Mihailovsk);
-            StavropolKrai.AddCities(Nevinomyssk);
-            StavropolKrai.AddCities(Neftekumsk);
-            StavropolKrai.AddCities(Novoaleksandrovsk);
-            StavropolKrai.AddCities(Novopavlovsk);
-            StavropolKrai.AddCities(Pyatigorsk);
-            StavropolKrai.AddCities(Svetlograd);
-            StavropolKrai.AddCities(Stavropol);
+            StavropolKrai.AddCities(new City("Благодарный", "Blagodarny.png"));
+            StavropolKrai.AddCities(new City("Будённовск", "Budennovsk.png"));
+            StavropolKrai.AddCities(new City("Ессентуки", "Essentuki.png"));
+            StavropolKrai.AddCities(new City("Георгиевск", "Georgievsk.png"));
+            StavropolKrai.AddCities(new City("Железноводск", "Zheleznovodsk.png"));
+            StavropolKrai.AddCities(new City("Зеленокумск", "Zelenokumsk.png"));
+            StavropolKrai.AddCities(new City("Изобильный", "Izobilny.png"));
+            StavropolKrai.AddCities(new City("Ипатово", "Ipatovo.png"));
+            StavropolKrai.AddCities(new City("Кисловодск", "Kislovodsk.png"));
+            StavropolKrai.AddCities(new City("Лермонтов", "Lermontov.png"));
+            StavropolKrai.AddCities(new City("Минеральные Воды", "MineralWaters.png"));
+            StavropolKrai.AddCities(new City("Михайловск", "Mihailovsk.png"));
+            StavropolKrai.AddCities(new City("Невиномысск", "Nevinomyssk.png"));
+            StavropolKrai.AddCities(new City("Нефтекумск", "Neftekumsk.png"));
+            StavropolKrai.AddCities(new City("Новоалександровск", "Novoaleksandrovsk.png"));
+            StavropolKrai.AddCities(new City("Новопавловск", "Novopavlovsk.png"));
+            StavropolKrai.AddCities(new City("Пятигорск", "Pyatigorsk.png"));
+            StavropolKrai.AddCities(new City("Светлоград", "Svetlograd.png"));
+            StavropolKrai.AddCities(new City("Ставрополь", "Stavropol.png"));
 
             AddRegToDB(StavropolKrai);
         }

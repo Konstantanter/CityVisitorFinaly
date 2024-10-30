@@ -16,15 +16,11 @@ namespace CityVisitorFinaly
                 IdRegionsMaps = "path32"
             };
 
-            City Karachay = new City("Карачаевск", "Karachay.png");
-            City Teberda = new City("Теберда", "Unknow.png");
-            City UstDzheguta = new City("Усть-Джегута", "Unknow.png");
-            City Cherkessk = new City("Черкесск", "Cherkessk.png");
+            KarachayCherkessia.AddCities(new City("Карачаевск", "Karachay.png"));
+            KarachayCherkessia.AddCities(new City("Теберда", "Unknow.png"));
+            KarachayCherkessia.AddCities(new City("Усть-Джегута", "Unknow.png"));
+            KarachayCherkessia.AddCities(new City("Черкесск", "Cherkessk.png"));
 
-            KarachayCherkessia.AddCities(Karachay);
-            KarachayCherkessia.AddCities(Teberda);
-            KarachayCherkessia.AddCities(UstDzheguta);
-            KarachayCherkessia.AddCities(Cherkessk);
             AddRegToDB(KarachayCherkessia);
         }
     }

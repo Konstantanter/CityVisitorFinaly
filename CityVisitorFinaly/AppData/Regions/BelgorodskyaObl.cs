@@ -13,29 +13,18 @@ namespace CityVisitorFinaly
             {
                 IdRegionsMaps = "path92"
             };
-            City alekseev = new City("Алексеевка", "alekseev.png");
-            City belgorod = new City("Белгород", "belgorod.png");
-            City biryuch = new City("Бирюч", "biryuch.png");
-            City valuyki = new City("Валуйки", "valuyki.png");
-            City grayvoron = new City("Грайворон", "grayvoron.png");
-            City gubkin = new City("Губкин", "gubkin.png");
-            City korocha = new City("Короча", "korocha.png");
-            City novy_oskol = new City("Новый Оскол", "novy_oskol.png");
-            City stary_oskol = new City("Старый Оскол", "stary_oskol.png");
-            City stroitel = new City("Строитель", "stroitel.png");
-            City shebekino = new City("Шебекино", "shebekino.png");
 
-            BelgorodskyaObl.AddCities(alekseev);
-            BelgorodskyaObl.AddCities(belgorod);
-            BelgorodskyaObl.AddCities(biryuch);
-            BelgorodskyaObl.AddCities(valuyki);
-            BelgorodskyaObl.AddCities(grayvoron);
-            BelgorodskyaObl.AddCities(gubkin);
-            BelgorodskyaObl.AddCities(korocha);
-            BelgorodskyaObl.AddCities(novy_oskol);
-            BelgorodskyaObl.AddCities(stary_oskol);
-            BelgorodskyaObl.AddCities(stroitel);
-            BelgorodskyaObl.AddCities(shebekino);
+            BelgorodskyaObl.AddCities(new City("Алексеевка", "alekseev.png"));
+            BelgorodskyaObl.AddCities(new City("Белгород", "belgorod.png"));
+            BelgorodskyaObl.AddCities(new City("Бирюч", "biryuch.png"));
+            BelgorodskyaObl.AddCities(new City("Валуйки", "valuyki.png"));
+            BelgorodskyaObl.AddCities(new City("Грайворон", "grayvoron.png"));
+            BelgorodskyaObl.AddCities(new City("Губкин", "gubkin.png"));
+            BelgorodskyaObl.AddCities(new City("Короча", "korocha.png"));
+            BelgorodskyaObl.AddCities(new City("Новый Оскол", "novy_oskol.png"));
+            BelgorodskyaObl.AddCities(new City("Старый Оскол", "stary_oskol.png"));
+            BelgorodskyaObl.AddCities(new City("Строитель", "stroitel.png"));
+            BelgorodskyaObl.AddCities(new City("Шебекино", "shebekino.png"));
             AddRegToDB(BelgorodskyaObl);
         }
     }

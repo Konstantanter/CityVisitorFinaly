@@ -13,13 +13,10 @@ namespace CityVisitorFinaly
             {
                 IdRegionsMaps = "path188"
             };
-            City balaklava = new City("Балаклава", "balaklava.png");
-            City inkerman = new City("Инкерман", "inkerman.png");
-            City sevastopol = new City("Севастополь", "sevastopol.png");
 
-            Sevastopl.AddCities(balaklava);
-            Sevastopl.AddCities(inkerman);
-            Sevastopl.AddCities(sevastopol);
+            Sevastopl.AddCities(new City("Балаклава", "balaklava.png"));
+            Sevastopl.AddCities(new City("Инкерман", "inkerman.png"));
+            Sevastopl.AddCities(new City("Севастополь", "sevastopol.png"));
             AddRegToDB(Sevastopl);
         }
     }

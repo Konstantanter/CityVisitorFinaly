@@ -14,17 +14,12 @@ namespace CityVisitorFinaly
             {
                 IdRegionsMaps = "path184"
             };
-            City moscov = new City("Москва", "moscov.png");
-            City zelenograd = new City("Зеленоград", "zelenograd.png");
-            City moskovsky = new City("Московский", "moskovsky.png");
-            City troick = new City("Троицк", "troick.png");
-            City scherbinka = new City("Щербинка", "scherbinka.png");
 
-            Moscov.AddCities(moscov);
-            Moscov.AddCities(zelenograd);
-            Moscov.AddCities(moskovsky);
-            Moscov.AddCities(troick);
-            Moscov.AddCities(scherbinka);
+            Moscov.AddCities(new City("Москва", "moscov.png"));
+            Moscov.AddCities(new City("Зеленоград", "zelenograd.png"));
+            Moscov.AddCities(new City("Московский", "moskovsky.png"));
+            Moscov.AddCities(new City("Троицк", "troick.png"));
+            Moscov.AddCities(new City("Щербинка", "scherbinka.png"));
             AddRegToDB(Moscov);
 
         }

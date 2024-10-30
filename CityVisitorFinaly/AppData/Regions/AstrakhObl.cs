@@ -13,19 +13,12 @@ namespace CityVisitorFinaly
             {
                 IdRegionsMaps = "path90"
             };
-
-            City Astrakhan = new City("Астрахань", "Astrakhan.png");
-            City Akhtubinsk = new City("Ахтубинск", "Akhtubinsk.png");
-            City Znamensk = new City("Знаменск", "Znamensk.png");
-            City Kamyzyak = new City("Камызяк", "Kamyzyak.png");
-            City Narimanov = new City("Нариманов", "Narimanov.png");
-            City Kharabali = new City("Харабали", "Kharabali.png");
-            AstrakhObl.AddCities(Astrakhan);
-            AstrakhObl.AddCities(Akhtubinsk);
-            AstrakhObl.AddCities(Znamensk);
-            AstrakhObl.AddCities(Kamyzyak);
-            AstrakhObl.AddCities(Narimanov);
-            AstrakhObl.AddCities(Kharabali);
+            AstrakhObl.AddCities(new City("Астрахань", "Astrakhan.png"));
+            AstrakhObl.AddCities(new City("Ахтубинск", "Akhtubinsk.png"));
+            AstrakhObl.AddCities(new City("Знаменск", "Znamensk.png"));
+            AstrakhObl.AddCities(new City("Камызяк", "Kamyzyak.png"));
+            AstrakhObl.AddCities(new City("Нариманов", "Narimanov.png"));
+            AstrakhObl.AddCities(new City("Харабали", "Kharabali.png"));
             AddRegToDB(AstrakhObl);
         }
     }

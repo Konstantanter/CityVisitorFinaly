@@ -14,41 +14,23 @@ namespace CityVisitorFinaly
                 IdRegionsMaps = "path104"
             };
 
-            City vichuga = new City("Вичуга", "vichuga.png");
-            City gavrilovposad = new City("Гаврилов Посад", "gavrilovposad.png");
-            City zavolzhsk = new City("Заволжск", "zavolzhsk.png");
-            City ivanovo = new City("Иваново", "ivanovo.png");
-            City kineshma = new City("Кинешма", "kineshma.png");
-            City komsomi = new City("Комсомольск", "komsomi.png");
-            City kokhma = new City("Кохма", "kokhma.png");
-            City navoloksk = new City("Наволоки", "navoloksk.png");
-            City ples = new City("Плёс", "ples.png");
-            City privolzsk = new City("Приволжск", "privolzsk.png");
-            City puchezh = new City("Пучеж", "puchezh.png");
-            City rodniki = new City("Родники", "rodniki.png");
-            City teikovo = new City("Тейково", "teikovo.png");
-            City furmanov = new City("Фурманов", "furmanov.png");
-            City shuya = new City("Шуя", "shuya.png");
-            City yuza = new City("Южа", "yuza.png");
-            City yurievets = new City("Юрьевевц", "yurievets.png");
-
-            IvanovoOblast.AddCities(vichuga);
-            IvanovoOblast.AddCities(gavrilovposad);
-            IvanovoOblast.AddCities(zavolzhsk);
-            IvanovoOblast.AddCities(ivanovo);
-            IvanovoOblast.AddCities(kineshma);
-            IvanovoOblast.AddCities(komsomi);
-            IvanovoOblast.AddCities(kokhma);
-            IvanovoOblast.AddCities(navoloksk);
-            IvanovoOblast.AddCities(ples);
-            IvanovoOblast.AddCities(privolzsk);
-            IvanovoOblast.AddCities(puchezh);
-            IvanovoOblast.AddCities(rodniki);
-            IvanovoOblast.AddCities(teikovo);
-            IvanovoOblast.AddCities(furmanov);
-            IvanovoOblast.AddCities(shuya);
-            IvanovoOblast.AddCities(yuza);
-            IvanovoOblast.AddCities(yurievets);
+            IvanovoOblast.AddCities(new City("Вичуга", "vichuga.png"));
+            IvanovoOblast.AddCities(new City("Гаврилов Посад", "gavrilovposad.png"));
+            IvanovoOblast.AddCities(new City("Заволжск", "zavolzhsk.png"));
+            IvanovoOblast.AddCities(new City("Иваново", "ivanovo.png"));
+            IvanovoOblast.AddCities(new City("Кинешма", "kineshma.png"));
+            IvanovoOblast.AddCities(new City("Комсомольск", "komsomi.png"));
+            IvanovoOblast.AddCities(new City("Кохма", "kokhma.png"););
+            IvanovoOblast.AddCities(new City("Наволоки", "navoloksk.png"));
+            IvanovoOblast.AddCities(new City("Плёс", "ples.png"););
+            IvanovoOblast.AddCities(new City("Приволжск", "privolzsk.png"));
+            IvanovoOblast.AddCities(new City("Пучеж", "puchezh.png"));
+            IvanovoOblast.AddCities(new City("Родники", "rodniki.png"));
+            IvanovoOblast.AddCities(new City("Тейково", "teikovo.png"));
+            IvanovoOblast.AddCities(new City("Фурманов", "furmanov.png"));
+            IvanovoOblast.AddCities(new City("Шуя", "shuya.png"));
+            IvanovoOblast.AddCities(new City("Южа", "yuza.png"));
+            IvanovoOblast.AddCities(new City("Юрьевевц", "yurievets.png"));
             AddRegToDB(IvanovoOblast);
 
         }

@@ -13,27 +13,16 @@ namespace CityVisitorFinaly
             {
                 IdRegionsMaps = "path24"
             };
-
-            City Buinaksk = new City("Буйнакск", "Buinaksk.png");
-            City DagestanskieOgni = new City("Дагестанские Огни", "DagestanskieOgni.png");
-            City Derbent = new City("Дербент", "Derbent.png");
-            City Izberbash = new City("Избербаш", "Izberbash.png");
-            City Kaspiysk = new City("Каспийск", "Kaspiysk.png");
-            City Kiziljurt = new City("Кизилюрт", "Kiziljurt.png");
-            City Kizlyar = new City("Кизляр", "Kizlyar.png");
-            City Makhachkala = new City("Махачкала", "Makhachkala.png");
-            City Khasavyurt = new City("Хасавюрт", "Khasavyurt.png");
-            City JujnoSukhokumsk = new City("Южно-Сухокумск", "JujnoSukhokumsk.png");
-            Dagestan.AddCities(Buinaksk);
-            Dagestan.AddCities(DagestanskieOgni);
-            Dagestan.AddCities(Derbent);
-            Dagestan.AddCities(Izberbash);
-            Dagestan.AddCities(Kaspiysk);
-            Dagestan.AddCities(Kiziljurt);
-            Dagestan.AddCities(Kizlyar);
-            Dagestan.AddCities(Makhachkala);
-            Dagestan.AddCities(Khasavyurt);
-            Dagestan.AddCities(JujnoSukhokumsk);
+            Dagestan.AddCities(new City("Буйнакск", "Buinaksk.png"));
+            Dagestan.AddCities(new City("Дагестанские Огни", "DagestanskieOgni.png"););
+            Dagestan.AddCities(new City("Дербент", "Derbent.png"));
+            Dagestan.AddCities(new City("Избербаш", "Izberbash.png"));
+            Dagestan.AddCities(new City("Каспийск", "Kaspiysk.png"));
+            Dagestan.AddCities(new City("Кизилюрт", "Kiziljurt.png"));
+            Dagestan.AddCities(new City("Кизляр", "Kizlyar.png"));
+            Dagestan.AddCities(new City("Махачкала", "Makhachkala.png"));
+            Dagestan.AddCities(new City("Хасавюрт", "Khasavyurt.png"));
+            Dagestan.AddCities(new City("Южно-Сухокумск", "JujnoSukhokumsk.png"));
 
             AddRegToDB(Dagestan);
         }

@@ -14,12 +14,10 @@ namespace CityVisitorFinaly
                 IdRegionsMaps = "path30"
             };
 
-            City Gorodovikovsk = new City("Городовиковск", "Gorodovikovsk.png");
-            City Lagan = new City("Лагань", "Lagan.png");
-            City Elista = new City("Элиста", "Elista.png");
-            Kalmykiya.AddCities(Gorodovikovsk);
-            Kalmykiya.AddCities(Lagan);
-            Kalmykiya.AddCities(Elista);
+            Kalmykiya.AddCities(new City("Городовиковск", "Gorodovikovsk.png"));
+            Kalmykiya.AddCities(new City("Лагань", "Lagan.png"));
+            Kalmykiya.AddCities(new City("Элиста", "Elista.png"));
+
             AddRegToDB(Kalmykiya);
         }
     }

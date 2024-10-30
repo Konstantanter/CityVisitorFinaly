@@ -13,11 +13,10 @@ namespace CityVisitorFinaly
             {
                 IdRegionsMaps = "path16"
             };
-            City Adygeisk = new City("Адыгейск", "adygeisk.png");
-            City Maykop = new City("Майкоп", "maykop.png");
 
-            Adygea.AddCities(Adygeisk);
-            Adygea.AddCities(Maykop);
+            Adygea.AddCities(new City("Адыгейск", "adygeisk.png"));
+            Adygea.AddCities(new City("Майкоп", "maykop.png"));
+
             AddRegToDB(Adygea);
         }
     }
