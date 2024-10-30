@@ -14,7 +14,7 @@ namespace CityVisitorFinaly
                 IdRegionsMaps = "path24"
             };
             Dagestan.AddCities(new City("Буйнакск", "Buinaksk.png"));
-            Dagestan.AddCities(new City("Дагестанские Огни", "DagestanskieOgni.png"););
+            Dagestan.AddCities(new City("Дагестанские Огни", "DagestanskieOgni.png"));
             Dagestan.AddCities(new City("Дербент", "Derbent.png"));
             Dagestan.AddCities(new City("Избербаш", "Izberbash.png"));
             Dagestan.AddCities(new City("Каспийск", "Kaspiysk.png"));

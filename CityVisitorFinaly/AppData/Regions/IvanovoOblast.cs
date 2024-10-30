@@ -20,9 +20,9 @@ namespace CityVisitorFinaly
             IvanovoOblast.AddCities(new City("Иваново", "ivanovo.png"));
             IvanovoOblast.AddCities(new City("Кинешма", "kineshma.png"));
             IvanovoOblast.AddCities(new City("Комсомольск", "komsomi.png"));
-            IvanovoOblast.AddCities(new City("Кохма", "kokhma.png"););
+            IvanovoOblast.AddCities(new City("Кохма", "kokhma.png"));
             IvanovoOblast.AddCities(new City("Наволоки", "navoloksk.png"));
-            IvanovoOblast.AddCities(new City("Плёс", "ples.png"););
+            IvanovoOblast.AddCities(new City("Плёс", "ples.png"));
             IvanovoOblast.AddCities(new City("Приволжск", "privolzsk.png"));
             IvanovoOblast.AddCities(new City("Пучеж", "puchezh.png"));
             IvanovoOblast.AddCities(new City("Родники", "rodniki.png"));
