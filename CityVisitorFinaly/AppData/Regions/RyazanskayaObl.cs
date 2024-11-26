@@ -24,7 +24,7 @@ namespace CityVisitorFinaly
             RyazanskayaObl.AddCities(new City("Спас-Клепики", "spasklepiki.png"));
             RyazanskayaObl.AddCities(new City("Спасск-Рязанский", "spasskryazansky.png"));
             RyazanskayaObl.AddCities(new City("Шацк", "shatsk.png"));
-
+            AddRegToDB(RyazanskayaObl);
         }
     }
 }
