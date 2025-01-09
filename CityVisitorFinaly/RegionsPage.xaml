@@ -28,7 +28,7 @@
             </Grid.ColumnDefinitions>
 
             <Image Source="gerb_rf.png" Margin="10,0,10,0" WidthRequest="40" HeightRequest="40" Grid.Row="0" Grid.Column="0" />
-            <Label Text="Российская федерация" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1" FontSize="18" FontAttributes="None" FontFamily="Times New Roman" TextColor="#000000" />
+            <Label Text="Российская Федерация" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1" FontSize="18" FontAttributes="None" FontFamily="Times New Roman" TextColor="#000000" />
 
             <Image Source="flag_rf.png" Margin="0,0,10,0" WidthRequest="40" HeightRequest="40" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="End" />
 
