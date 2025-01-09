@@ -66,6 +66,10 @@ namespace CityVisitorFinaly
             RyazanskayaObl();
             //Смоленская область
             SmolenskOblast();
+            //Тамбовская область
+            TambovskayaObl();
+            //Тверская область
+            TverskayaObl();
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
             //regionNames.Add("path44", "Республика Саха (Якутия)");
