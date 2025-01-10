@@ -97,7 +97,7 @@ public partial class CityPage : ContentPage
         {
             myReg.StateReg = State.Visited.ToString();
         }
-        else if (countTransit > 0 && countTransit < myReg.ListCities.Count)
+        else if (countTransit > 0 && countTransit < myReg.ListCities.Count || countFull>0)
         {
             myReg.StateReg = State.VisitedTransit.ToString();
         }

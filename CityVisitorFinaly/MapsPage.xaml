@@ -13,9 +13,9 @@
         </Grid.RowDefinitions>
 
 
-
-        <!-- Просто для примера, если ожидается, что canvasView будет занимать определенные размеры -->
+        <ContentView x:Name="comicPageContainer">
+            <!-- Просто для примера, если ожидается, что canvasView будет занимать определенные размеры -->
         <skia:SKCanvasView x:Name="canvasView" Grid.RowSpan="2" />
-
+        </ContentView>
     </Grid>
 </ContentPage>

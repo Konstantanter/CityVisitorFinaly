@@ -142,24 +142,11 @@ public partial class MapsPage : ContentPage
     }
     private void PinchGestureRecognizer_PinchUpdated(object sender, PinchGestureUpdatedEventArgs e)
     {
-        switch (e.Status)
-        {
-            case GestureStatus.Started:
-                StartScale = Scale;
-                AnchorX = e.ScaleOrigin.X;
-                AnchorY = e.ScaleOrigin.Y;
-                break;
-            case GestureStatus.Running:
-                double current = Scale + (e.Scale - 1) * StartScale;
-                Scale = Clamp(current, MIN_SCALE * (1 - OVERSHOOT), MAX_SCALE * (1 + OVERSHOOT));
-                break;
-            case GestureStatus.Completed:
-                if (Scale > MAX_SCALE)
-                    this.ScaleTo(MAX_SCALE, 250, Easing.SpringOut);
-                else if (Scale < MIN_SCALE)
-                    this.ScaleTo(MIN_SCALE, 250, Easing.SpringOut);
-                break;
-        }
+        var newScale = Math.Clamp(1.0, this.comicPageContainer.Scale * e.Scale, 3.0);
+        this.comicPageContainer.Scale = newScale;
+        this.comicPageContainer.TranslationX = e.ScaleOrigin.X;
+        this.comicPageContainer.TranslationY = e.ScaleOrigin.Y;
+       // Debug.WriteLine("Scale: {0}", newScale);
     }
     SKPath transformPath = new SKPath();
     List<SVGHelp> mPaths = new List<SVGHelp>();

@@ -136,8 +136,8 @@ namespace CityVisitorFinaly.AppData
             int FullCities = ListCities.Where(a => a.State == State.Visited).Count();
             int TransitCities = ListCities.Where(a => a.State == State.VisitedTransit).Count();
             int NotCities = CountCities - FullCities - TransitCities;
-
-            info += $"Посещенные города: {FullCities}\nГорода посещеннные проездом: {TransitCities}\nНе посещенные города: {NotCities}";
+            string state = this.StateReg;
+            info += $"Посещенные города: {FullCities}\nГорода посещеннные проездом: {TransitCities}\nНе посещенные города: {NotCities}\nСтатус региона: {state}";
             return info;
 
         }
