@@ -195,6 +195,7 @@
 	  <None Remove="Resources\Images\inkerman.png" />
 	  <None Remove="Resources\Images\Ipatovo.png" />
 	  <None Remove="Resources\Images\irbit.png" />
+	  <None Remove="Resources\Images\ishim.png" />
 	  <None Remove="Resources\Images\istra.png" />
 	  <None Remove="Resources\Images\ivanovo.png" />
 	  <None Remove="Resources\Images\ivanovooblast.png" />
@@ -525,6 +526,7 @@
 	  <None Remove="Resources\Images\test3.svg" />
 	  <None Remove="Resources\Images\Tikhoretsk.png" />
 	  <None Remove="Resources\Images\Timashevsk.png" />
+	  <None Remove="Resources\Images\tobolsk.png" />
 	  <None Remove="Resources\Images\toropets.png" />
 	  <None Remove="Resources\Images\torzhok.png" />
 	  <None Remove="Resources\Images\troick.png" />
@@ -538,6 +540,8 @@
 	  <None Remove="Resources\Images\tver.png" />
 	  <None Remove="Resources\Images\tveroblast.png" />
 	  <None Remove="Resources\Images\Tyrnyauz.png" />
+	  <None Remove="Resources\Images\tyumen.png" />
+	  <None Remove="Resources\Images\tyumenoblast.png" />
 	  <None Remove="Resources\Images\udomlya.png" />
 	  <None Remove="Resources\Images\uglich.png" />
 	  <None Remove="Resources\Images\unecha.png" />
@@ -579,6 +583,7 @@
 	  <None Remove="Resources\Images\vysokovsk.png" />
 	  <None Remove="Resources\Images\yahroma.png" />
 	  <None Remove="Resources\Images\yalta.png" />
+	  <None Remove="Resources\Images\yalutorovsk.png" />
 	  <None Remove="Resources\Images\yaroslavloblast.png" />
 	  <None Remove="Resources\Images\yartcevo.png" />
 	  <None Remove="Resources\Images\yasnogorsk.png" />
@@ -591,6 +596,7 @@
 	  <None Remove="Resources\Images\zapadnayadvina.png" />
 	  <None Remove="Resources\Images\zaraisk.png" />
 	  <None Remove="Resources\Images\zarechnyi.png" />
+	  <None Remove="Resources\Images\zavodoukovsk.png" />
 	  <None Remove="Resources\Images\zavolzhsk.png" />
 	  <None Remove="Resources\Images\zelenograd.png" />
 	  <None Remove="Resources\Images\Zelenokumsk.png" />
