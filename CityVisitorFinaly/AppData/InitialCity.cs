@@ -82,6 +82,8 @@ namespace CityVisitorFinaly
             TymenskayaObl();
             //Ханты-Мансийский Округ - Юрга
             KhantymansiyskiyAO();
+            //Челябинская область
+            ChelyabinskayaObl();
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
             //regionNames.Add("path44", "Республика Саха (Якутия)");
