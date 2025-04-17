@@ -193,6 +193,7 @@
 	  <None Remove="Resources\Images\Grozny.png" />
 	  <None Remove="Resources\Images\gryazi.png" />
 	  <None Remove="Resources\Images\gubkin.png" />
+	  <None Remove="Resources\Images\gubkinsky.png" />
 	  <None Remove="Resources\Images\Gudermes.png" />
 	  <None Remove="Resources\Images\Gukovo.png" />
 	  <None Remove="Resources\Images\Gulkevichi.png" />
@@ -317,6 +318,7 @@
 	  <None Remove="Resources\Images\kuvshinovo.png" />
 	  <None Remove="Resources\Images\kyshtym.png" />
 	  <None Remove="Resources\Images\Labinsk.png" />
+	  <None Remove="Resources\Images\labytnangi.png" />
 	  <None Remove="Resources\Images\Lagan.png" />
 	  <None Remove="Resources\Images\lakinsk.png" />
 	  <None Remove="Resources\Images\langepas.png" />
@@ -376,9 +378,11 @@
 	  <None Remove="Resources\Images\Mozdok.png" />
 	  <None Remove="Resources\Images\mozhaisk.png" />
 	  <None Remove="Resources\Images\mtsensk.png" />
+	  <None Remove="Resources\Images\muravlenko.png" />
 	  <None Remove="Resources\Images\murom.png" />
 	  <None Remove="Resources\Images\mutishy.png" />
 	  <None Remove="Resources\Images\myshkin.png" />
+	  <None Remove="Resources\Images\nadym.png" />
 	  <None Remove="Resources\Images\Nalchik.png" />
 	  <None Remove="Resources\Images\Narimanov.png" />
 	  <None Remove="Resources\Images\narofominsk.png" />
@@ -414,7 +418,9 @@
 	  <None Remove="Resources\Images\novouralsk.png" />
 	  <None Remove="Resources\Images\novovoronezh.png" />
 	  <None Remove="Resources\Images\novozybkov.png" />
+	  <None Remove="Resources\Images\novyurengoy.png" />
 	  <None Remove="Resources\Images\novy_oskol.png" />
+	  <None Remove="Resources\Images\noyabrsk.png" />
 	  <None Remove="Resources\Images\nyagan.png" />
 	  <None Remove="Resources\Images\nyazepetrovsk.png" />
 	  <None Remove="Resources\Images\obninsk.png" />
@@ -481,6 +487,7 @@
 	  <None Remove="Resources\Images\rzhev.png" />
 	  <None Remove="Resources\Images\safonovo.png" />
 	  <None Remove="Resources\Images\saki.png" />
+	  <None Remove="Resources\Images\salekhard.png" />
 	  <None Remove="Resources\Images\Salsk.png" />
 	  <None Remove="Resources\Images\sasovo.png" />
 	  <None Remove="Resources\Images\satka.png" />
@@ -556,6 +563,7 @@
 	  <None Remove="Resources\Images\talica.png" />
 	  <None Remove="Resources\Images\tambov.png" />
 	  <None Remove="Resources\Images\tambovoblast.png" />
+	  <None Remove="Resources\Images\tarkosale.png" />
 	  <None Remove="Resources\Images\tarusa.png" />
 	  <None Remove="Resources\Images\tavda.png" />
 	  <None Remove="Resources\Images\teikovo.png" />
@@ -628,6 +636,7 @@
 	  <None Remove="Resources\Images\yahroma.png" />
 	  <None Remove="Resources\Images\yalta.png" />
 	  <None Remove="Resources\Images\yalutorovsk.png" />
+	  <None Remove="Resources\Images\yamalnenetsia.png" />
 	  <None Remove="Resources\Images\yaroslavloblast.png" />
 	  <None Remove="Resources\Images\yartcevo.png" />
 	  <None Remove="Resources\Images\yasnogorsk.png" />
