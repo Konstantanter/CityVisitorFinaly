@@ -45,7 +45,7 @@ namespace CityVisitorFinaly
             ChelyabinskayaObl.AddCities(new City("Челябинск", "chelyabinsk.png"));
             ChelyabinskayaObl.AddCities(new City("Южноуральск", "yuzhnouralsk.png"));
             ChelyabinskayaObl.AddCities(new City("Юрюзань", "yuryuzan.png"));
-           
+            ChelyabinskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(ChelyabinskayaObl);
         }
     }

@@ -28,6 +28,7 @@ namespace CityVisitorFinaly
             SmolenskOblast.AddCities(new City("Смоленск", "smolensk.png"));
             SmolenskOblast.AddCities(new City("Сычёвка", "sychyovka.png"));
             SmolenskOblast.AddCities(new City("Ярцево", "yartcevo.png"));
+            SmolenskOblast.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(SmolenskOblast);
         }
     }

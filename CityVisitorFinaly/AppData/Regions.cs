@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using SkiaSharp;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace CityVisitorFinaly.AppData
@@ -109,7 +110,7 @@ namespace CityVisitorFinaly.AppData
             Id++;
             IdRegion = Id;
         }
-
+        public string Append_Reg { get; set; } = AppendReg.RegNoAppend.ToString();
         public void AddCities(List<CityDB> cities)
         {
             foreach (CityDB CityDB in cities)
@@ -126,6 +127,7 @@ namespace CityVisitorFinaly.AppData
             StateReg = reg.StateReg;
             VisitPercentage = reg.VisitPercentage;
             IdRegionsMaps = reg.IdRegionsMaps;
+            Append_Reg = reg.Append_Reg;
 
         }
         public Regions() { }

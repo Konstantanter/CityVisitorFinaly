@@ -16,6 +16,10 @@ namespace CityVisitorFinaly.AppData
         /// </summary>
         public static SKColor ColorPassingVisit { get; set; } = SKColors.Yellow;
         /// <summary>
+        /// Цвет которым закрашиваются добавленные регионы (для вузализации на карте)
+        /// </summary>
+        public static SKColor ColorAppendReg { get; set; } = SKColors.Coral;
+        /// <summary>
         /// Отображать регионы проездом
         /// </summary>
         public static bool VisiblePassing { get; set; } = true;

@@ -61,8 +61,7 @@ namespace CityVisitorFinaly
             SverdlovskayaObl.AddCities(new City("Тавда", "tavda.png"));
             SverdlovskayaObl.AddCities(new City("Талица", "talica.png"));
             SverdlovskayaObl.AddCities(new City("Туринск", "turinsk.png"));
-         
-
+            SverdlovskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(SverdlovskayaObl);
         }
     }

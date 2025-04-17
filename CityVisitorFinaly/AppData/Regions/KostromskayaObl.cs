@@ -25,7 +25,7 @@ namespace CityVisitorFinaly
             KostromskayaObl.AddCities(new City("Солигалич", "soligalich.png"));
             KostromskayaObl.AddCities(new City("Чухлома", "chuhloma.png"));
             KostromskayaObl.AddCities(new City("Шарья", "sharya.png"));
-
+            KostromskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(KostromskayaObl);
         }
     }

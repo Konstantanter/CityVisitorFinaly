@@ -18,8 +18,7 @@ namespace CityVisitorFinaly
             TymenskayaObl.AddCities(new City("Тобольск", "tobolsk.png"));
             TymenskayaObl.AddCities(new City("Тюмень", "tyumen.png"));
             TymenskayaObl.AddCities(new City("Ялтуровск", "yalutorovsk.png"));
-     
-
+            TymenskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(TymenskayaObl);
         }
     }

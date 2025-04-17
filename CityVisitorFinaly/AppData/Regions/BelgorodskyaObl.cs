@@ -25,6 +25,7 @@ namespace CityVisitorFinaly
             BelgorodskyaObl.AddCities(new City("Старый Оскол", "stary_oskol.png"));
             BelgorodskyaObl.AddCities(new City("Строитель", "stroitel.png"));
             BelgorodskyaObl.AddCities(new City("Шебекино", "shebekino.png"));
+            BelgorodskyaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(BelgorodskyaObl);
         }
     }

@@ -29,6 +29,7 @@ namespace CityVisitorFinaly
             Bryanskobl.AddCities(new City("Трубчевск", "trubchevsk.png"));
             Bryanskobl.AddCities(new City("Унеча", "unecha.png"));
             Bryanskobl.AddCities(new City("Фокино", "fokino.png"));
+            Bryanskobl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Bryanskobl);
         }
     }

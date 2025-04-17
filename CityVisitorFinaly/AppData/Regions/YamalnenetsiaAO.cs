@@ -22,6 +22,7 @@ namespace CityVisitorFinaly
             YamalnenetsiaAO.AddCities(new City("Ноябрьск", "noyabrsk.png"));
             YamalnenetsiaAO.AddCities(new City("Салехард", "salekhard.png"));
             YamalnenetsiaAO.AddCities(new City("Тарко-Сале", "tarkosale.png"));
+            YamalnenetsiaAO.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(YamalnenetsiaAO);
         }
     }

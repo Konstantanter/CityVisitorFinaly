@@ -32,8 +32,7 @@ namespace CityVisitorFinaly
             TulskayaObl.AddCities(new City("Чекалин", "chekalin.png"));
             TulskayaObl.AddCities(new City("Щёкино", "rzhev.png"));
             TulskayaObl.AddCities(new City("Ясногорск", "yasnogorsk.png"));
-         
-
+            TulskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(TulskayaObl);
         }
     }

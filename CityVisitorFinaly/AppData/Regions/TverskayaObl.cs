@@ -36,7 +36,7 @@ namespace CityVisitorFinaly
             TverskayaObl.AddCities(new City("Торжок", "torzhok.png"));
             TverskayaObl.AddCities(new City("Торопец", "toropets.png"));
             TverskayaObl.AddCities(new City("Удомля", "udomlya.png"));
-
+            TverskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(TverskayaObl);
         }
     }

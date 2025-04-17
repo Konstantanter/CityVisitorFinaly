@@ -33,7 +33,7 @@ namespace CityVisitorFinaly
             StavropolKrai.AddCities(new City("Пятигорск", "Pyatigorsk.png"));
             StavropolKrai.AddCities(new City("Светлоград", "Svetlograd.png"));
             StavropolKrai.AddCities(new City("Ставрополь", "Stavropol.png"));
-
+            StavropolKrai.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(StavropolKrai);
         }
     }

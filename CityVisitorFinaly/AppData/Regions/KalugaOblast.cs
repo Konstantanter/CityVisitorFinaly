@@ -36,6 +36,7 @@ namespace CityVisitorFinaly
             KalugaOblast.AddCities(new City("Сухиничи", "sukhinichy.png"));
             KalugaOblast.AddCities(new City("Таруса", "tarusa.png"));
             KalugaOblast.AddCities(new City("Юхнов", "yukhnov.png"));
+            KalugaOblast.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(KalugaOblast);
         }
     }

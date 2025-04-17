@@ -17,6 +17,7 @@ namespace CityVisitorFinaly
             Sevastopl.AddCities(new City("Балаклава", "balaklava.png"));
             Sevastopl.AddCities(new City("Инкерман", "inkerman.png"));
             Sevastopl.AddCities(new City("Севастополь", "sevastopol.png"));
+            Sevastopl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Sevastopl);
         }
     }

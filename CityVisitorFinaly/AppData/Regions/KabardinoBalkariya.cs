@@ -22,7 +22,7 @@ namespace CityVisitorFinaly
             KabardinoBalkariya.AddCities(new City("Терек", "Terek.png"));
             KabardinoBalkariya.AddCities(new City("Тырныауз", "Tyrnyauz.png"));
             KabardinoBalkariya.AddCities(new City("Чегем", "Unknow.png"));
-
+            KabardinoBalkariya.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(KabardinoBalkariya);
         }
     }

@@ -37,6 +37,7 @@ namespace CityVisitorFinaly
             RostovObl.AddCities(new City("Таганрог", "Taganrog.png"));
             RostovObl.AddCities(new City("Цимлянск", "Tsimlyansk.png"));
             RostovObl.AddCities(new City("Шахты", "Shahty.png"));
+            RostovObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(RostovObl);
         }
     }

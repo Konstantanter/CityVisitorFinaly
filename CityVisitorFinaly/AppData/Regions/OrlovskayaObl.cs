@@ -21,7 +21,7 @@ namespace CityVisitorFinaly
             OrlovskayaObl.AddCities(new City("Мценск", "mtsensk.png"));
             OrlovskayaObl.AddCities(new City("Новосиль", "novosil.png"));
             OrlovskayaObl.AddCities(new City("Орёл", "orel.png"));
-
+            OrlovskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(OrlovskayaObl);
         }
     }

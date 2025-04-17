@@ -17,7 +17,7 @@ namespace CityVisitorFinaly
             Kalmykiya.AddCities(new City("Городовиковск", "Gorodovikovsk.png"));
             Kalmykiya.AddCities(new City("Лагань", "Lagan.png"));
             Kalmykiya.AddCities(new City("Элиста", "Elista.png"));
-
+            Kalmykiya.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Kalmykiya);
         }
     }

@@ -19,6 +19,7 @@ namespace CityVisitorFinaly
             Ingushetia.AddCities(new City("Малгобек", "Malgobek.png"));
             Ingushetia.AddCities(new City("Назрань", "Nazran.png"));
             Ingushetia.AddCities(new City("Сунжа", "Sunzha.png"));
+            Ingushetia.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Ingushetia);
         }
     }

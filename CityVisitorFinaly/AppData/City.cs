@@ -165,4 +165,14 @@ namespace CityVisitorFinaly.AppData
         /// </summary>
         NotVisited
     }
+    /// <summary>
+    /// Статус региона по добавлению
+    /// </summary>
+    public enum AppendReg
+    {
+        //Добавлен
+        RegAppend,
+        //Не добавлен
+        RegNoAppend
+    }
 }

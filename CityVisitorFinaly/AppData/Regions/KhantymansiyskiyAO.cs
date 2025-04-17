@@ -30,7 +30,7 @@ namespace CityVisitorFinaly
             KhantymansiyskiyAO.AddCities(new City("Урай", "uray.png"));
             KhantymansiyskiyAO.AddCities(new City("Ханты-Мансийск", "khantymansiysk.png"));
             KhantymansiyskiyAO.AddCities(new City("Югорск", "yugorsk.png"));
-
+            KhantymansiyskiyAO.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(KhantymansiyskiyAO);
         }
     }

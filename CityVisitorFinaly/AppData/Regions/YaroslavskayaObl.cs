@@ -25,6 +25,7 @@ namespace CityVisitorFinaly
             YaroslavskayaObl.AddCities(new City("Тутаев", "tutaev.png"));
             YaroslavskayaObl.AddCities(new City("Углич", "uglich.png"));
             YaroslavskayaObl.AddCities(new City("Ярославль", "jaroslavl.png"));
+            YaroslavskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(YaroslavskayaObl);
         }
     }

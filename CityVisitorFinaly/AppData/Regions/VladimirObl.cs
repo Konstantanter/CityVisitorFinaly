@@ -37,7 +37,7 @@ namespace CityVisitorFinaly
             VladimirObl.AddCities(new City("Судогда", "sudogda.png"));
             VladimirObl.AddCities(new City("Суздаль", "suzdal.png"));
             VladimirObl.AddCities(new City("Юрьев-Польский", "yurievpolskiy.png"));
-
+            VladimirObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(VladimirObl);
         }
     }

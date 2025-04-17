@@ -24,7 +24,7 @@ namespace CityVisitorFinaly
             Kurskoblast.AddCities(new City("Суджа", "sudza.png"));
             Kurskoblast.AddCities(new City("Фатеж", "fatezh.png"));
             Kurskoblast.AddCities(new City("Щигры", "schigry.png"));
-
+            Kurskoblast.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Kurskoblast);
         }
     }

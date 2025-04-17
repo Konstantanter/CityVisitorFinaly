@@ -22,7 +22,7 @@ namespace CityVisitorFinaly
             NorthOssetiaAlania.AddCities(new City("Владикавказ", "Vladikavkaz.png"));
             NorthOssetiaAlania.AddCities(new City("Дигора", "Unknow.png"));
             NorthOssetiaAlania.AddCities(new City("Моздок", "Mozdok.png"));
-
+            NorthOssetiaAlania.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(NorthOssetiaAlania);
         }
     }

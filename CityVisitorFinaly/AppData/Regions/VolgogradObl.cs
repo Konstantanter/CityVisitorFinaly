@@ -33,7 +33,7 @@ namespace CityVisitorFinaly
             VolgogradObl.AddCities(new City("Суровикино", "Surovikino.png"));
             VolgogradObl.AddCities(new City("Урюпинск", "Uryupinsk.png"));
             VolgogradObl.AddCities(new City("Форолово", "Frolovo.png"));
-
+            VolgogradObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(VolgogradObl);
         }
     }

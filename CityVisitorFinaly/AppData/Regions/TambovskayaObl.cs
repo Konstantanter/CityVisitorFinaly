@@ -21,8 +21,7 @@ namespace CityVisitorFinaly
             TambovskayaObl.AddCities(new City("Рассказово", "rasskazovo.png"));
             TambovskayaObl.AddCities(new City("Тамбов", "tambov.png"));
             TambovskayaObl.AddCities(new City("Уварово", "uvarovo.png"));
-    
-        
+            TambovskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(TambovskayaObl);
         }
     }

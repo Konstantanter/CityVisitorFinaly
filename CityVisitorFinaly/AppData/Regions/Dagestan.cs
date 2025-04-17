@@ -23,7 +23,7 @@ namespace CityVisitorFinaly
             Dagestan.AddCities(new City("Махачкала", "Makhachkala.png"));
             Dagestan.AddCities(new City("Хасавюрт", "Khasavyurt.png"));
             Dagestan.AddCities(new City("Южно-Сухокумск", "JujnoSukhokumsk.png"));
-
+            Dagestan.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Dagestan);
         }
     }

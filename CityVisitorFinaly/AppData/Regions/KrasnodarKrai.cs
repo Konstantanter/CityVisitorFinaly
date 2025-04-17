@@ -42,7 +42,7 @@ namespace CityVisitorFinaly
             KrasnodarKrai.AddCities(new City("Туапсе", "Tuapse.png"));
             KrasnodarKrai.AddCities(new City("Усть-Лабинск", "UstLabinsk.png"));
             KrasnodarKrai.AddCities(new City("Хадыженск", "Khadyzhensk.png"));
-
+            KrasnodarKrai.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(KrasnodarKrai);
         }
     }

@@ -22,7 +22,7 @@ namespace CityVisitorFinaly
             KurganskayaObl.AddCities(new City("Шадринск", "shadrinsk.png"));
             KurganskayaObl.AddCities(new City("Шумиха", "shumikha.png"));
             KurganskayaObl.AddCities(new City("Щучье", "schuche.png"));
-
+            KurganskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(KurganskayaObl);
         }
     }

@@ -16,7 +16,7 @@ namespace CityVisitorFinaly
 
             Adygea.AddCities(new City("Адыгейск", "adygeisk.png"));
             Adygea.AddCities(new City("Майкоп", "maykop.png"));
-
+            Adygea.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Adygea);
         }
     }

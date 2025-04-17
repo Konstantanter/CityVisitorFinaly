@@ -19,6 +19,7 @@ namespace CityVisitorFinaly
             Chechnya.AddCities(new City("Курчалой", "Kurchaloi.png"));
             Chechnya.AddCities(new City("Урус-Мартан", "UrusMartan.png"));
             Chechnya.AddCities(new City("Шали", "Shali.png"));
+            Chechnya.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Chechnya);
         }
     }

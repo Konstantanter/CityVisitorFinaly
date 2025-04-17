@@ -22,6 +22,7 @@ namespace CityVisitorFinaly
             Lipetskobl.AddCities(new City("Липецк", "lipetsk.png"));
             Lipetskobl.AddCities(new City("Усмань", "usman.png"));
             Lipetskobl.AddCities(new City("Чаплыгин", "chaplygin.png"));
+            Lipetskobl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Lipetskobl);
         }
     }

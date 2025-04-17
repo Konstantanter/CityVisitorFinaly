@@ -20,7 +20,7 @@ namespace CityVisitorFinaly
             KarachayCherkessia.AddCities(new City("Теберда", "Unknow.png"));
             KarachayCherkessia.AddCities(new City("Усть-Джегута", "Unknow.png"));
             KarachayCherkessia.AddCities(new City("Черкесск", "Cherkessk.png"));
-
+            KarachayCherkessia.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(KarachayCherkessia);
         }
     }

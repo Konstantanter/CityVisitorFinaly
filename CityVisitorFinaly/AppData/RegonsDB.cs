@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using SkiaSharp;
+using SQLite;
 
 namespace CityVisitorFinaly.AppData
 {
@@ -29,10 +30,17 @@ namespace CityVisitorFinaly.AppData
         /// Состояние региона
         /// </summary>
         public string StateReg { get; set; } = State.NotVisited.ToString();
+
+        /// <summary>
+        /// Статус региона на карте (добавлен/не добавлен)
+        /// </summary>
+        public string Append_Reg { get; set; } = AppendReg.RegNoAppend.ToString();
+
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
         public RegionsDB() { }
+
         /// <summary>
         /// Конструктор с пааметрами
         /// </summary>
@@ -45,6 +53,7 @@ namespace CityVisitorFinaly.AppData
             StateReg = reg.StateReg.ToString();
             PathImage = reg.PathImage;
             VisitPercentage = reg.VisitPercentage;
+            Append_Reg = reg.Append_Reg.ToString();
         }
     }
 }

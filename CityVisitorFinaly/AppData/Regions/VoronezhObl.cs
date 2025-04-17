@@ -29,6 +29,7 @@ namespace CityVisitorFinaly
             VoronezhObl.AddCities(new City("Россошь", "rossosh.png"));
             VoronezhObl.AddCities(new City("Семилуки", "semiluki.png"));
             VoronezhObl.AddCities(new City("Эриль", "ertil.png"));
+            VoronezhObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(VoronezhObl);
         }
     }

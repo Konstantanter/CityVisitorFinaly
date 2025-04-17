@@ -30,6 +30,7 @@ namespace CityVisitorFinaly
             Krym.AddCities(new City("Феодосия", "feodosia.png"));
             Krym.AddCities(new City("Щёлкино", "shchyolkino.png"));
             Krym.AddCities(new City("Ялта", "alupka.png"));
+            Krym.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Krym);
         }
     } 

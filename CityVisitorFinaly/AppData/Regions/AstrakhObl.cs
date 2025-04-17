@@ -19,6 +19,7 @@ namespace CityVisitorFinaly
             AstrakhObl.AddCities(new City("Камызяк", "Kamyzyak.png"));
             AstrakhObl.AddCities(new City("Нариманов", "Narimanov.png"));
             AstrakhObl.AddCities(new City("Харабали", "Kharabali.png"));
+            AstrakhObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(AstrakhObl);
         }
     }

@@ -20,6 +20,7 @@ namespace CityVisitorFinaly
             Moscov.AddCities(new City("Московский", "moskovsky.png"));
             Moscov.AddCities(new City("Троицк", "troick.png"));
             Moscov.AddCities(new City("Щербинка", "scherbinka.png"));
+            Moscov.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(Moscov);
 
         }

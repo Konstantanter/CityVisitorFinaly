@@ -89,7 +89,7 @@ namespace CityVisitorFinaly
             MoscovObl.AddCities(new City("Электросталь", "elektrostal.png"));
             MoscovObl.AddCities(new City("Электроугли", "elektrougli.png"));
             MoscovObl.AddCities(new City("Яхрома", "yahroma.png"));
-
+            MoscovObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(MoscovObl);
         }
     }
