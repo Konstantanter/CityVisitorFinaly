@@ -1,7 +1,9 @@
 using CityVisitorFinaly.AppData;
 using SkiaSharp;
 using SkiaSharp.Views.Maui;
+using Svg;
 using Svg.Skia;
+using System.Diagnostics;
 using System.Reflection;
 using System.Xml;
 
@@ -9,8 +11,13 @@ namespace CityVisitorFinaly;
 
 public partial class MapsPage : ContentPage
 {
-
+    /// <summary>
+    /// Список регионов
+    /// </summary>
     List<Regions> RegionList = new List<Regions>();
+    /// <summary>
+    /// Процесс чтения данных
+    /// </summary>
     public async Task ReadData()
     {
         var regions = await App.Db.GetRegions();
@@ -25,6 +32,7 @@ public partial class MapsPage : ContentPage
         }
 
     }
+    //Обязательная конструкция
     protected override async void OnAppearing()
     {
 
@@ -59,6 +67,7 @@ public partial class MapsPage : ContentPage
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
+        
         var pinch = new PinchGestureRecognizer();
         pinch.PinchUpdated += PinchGestureRecognizer_PinchUpdated;
         canvasView.GestureRecognizers.Add(pinch);
@@ -68,6 +77,11 @@ public partial class MapsPage : ContentPage
     }
 
     float scaleH, scaleW;
+    /// <summary>
+    /// Определение нажатия на карту
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="args"></param>
     void OnTapGestureRecognizerTapped(object sender, TappedEventArgs args)
     {
         int cur = 0;
@@ -115,21 +129,29 @@ public partial class MapsPage : ContentPage
     private const double OVERSHOOT = 0.15;
     private double StartScale;
     private double LastX, LastY;
-
+    private Point? _panStart;
+    public bool IsZoomed => this.comicPageContainer?.Scale > 1.0 == true;
     private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
     {
-        switch (e.StatusType)
+        Debug.WriteLine(",k'n");
+        if (this.IsZoomed)
         {
-            case GestureStatus.Started:
-                LastX = (1 - AnchorX) * Width;
-                LastY = (1 - AnchorY) * Height;
-                break;
-            case GestureStatus.Running:
-                double speedCoefficient = 2.0; // Измените это значение по вашему усмотрению
-                AnchorX = Clamp(1 - (LastX + e.TotalX * speedCoefficient) / Width, 0, 1);
-                AnchorY = Clamp(1 - (LastY + e.TotalY * speedCoefficient) / Height, 0, 1);
-                break;
-                //case GestureStatus.
+            switch (e.StatusType)
+            {
+                case GestureStatus.Started:
+                    _panStart = new(this.comicPageContainer.TranslationX, this.comicPageContainer.TranslationY);
+                    break;
+                case GestureStatus.Running:
+                    if (_panStart is Point start)
+                    {
+                        this.comicPageContainer.TranslationX = start.X + (e.TotalX * this.comicPageContainer.Scale);
+                        this.comicPageContainer.TranslationY = start.Y + (e.TotalY * this.comicPageContainer.Scale);
+                    }
+                    break;
+                default:
+                    _panStart = default;
+                    break;
+            }
         }
     }
 
@@ -142,6 +164,7 @@ public partial class MapsPage : ContentPage
     }
     private void PinchGestureRecognizer_PinchUpdated(object sender, PinchGestureUpdatedEventArgs e)
     {
+        Debug.WriteLine("!!!!");
         var newScale = Math.Clamp(1.0, this.comicPageContainer.Scale * e.Scale, 3.0);
         this.comicPageContainer.Scale = newScale;
         this.comicPageContainer.TranslationX = e.ScaleOrigin.X;
