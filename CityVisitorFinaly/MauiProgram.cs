@@ -12,7 +12,7 @@ public static class MauiProgram
 			.UseMauiApp<App>()
 
 			.UseSkiaSharp()
-			 .UseMauiMaps()
+			//.UseMauiMaps()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

@@ -11,7 +11,7 @@ namespace CityVisitorFinaly
         /// </summary>
         public void KemerovskayaObl()
         {
-            Regions KemerovskayaObl = new Regions("Кемеровская Область", "kemerovooblast.png")
+            Regions KemerovskayaObl = new Regions("Кемеровская область", "kemerovooblast.png")
             {
                 IdRegionsMaps = "path112"
             };

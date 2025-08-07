@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net9.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
 		<RootNamespace>CityVisitorFinaly</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
-
+       
 		<!-- Display name -->
 		<ApplicationTitle>CityVisitorFinaly</ApplicationTitle>
 
@@ -30,7 +30,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0-android|AnyCPU'">
 	  <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
 	</PropertyGroup>
 
@@ -54,9 +54,10 @@
 	<ItemGroup>
 	  <MauiImage Remove="Resources\Images\test3.svg" />
 	</ItemGroup>
-
+    
 	<ItemGroup>
 	  <None Remove="Resources\Images\Abinsk.png" />
+	  <None Remove="Resources\Images\achinsk.png" />
 	  <None Remove="Resources\Images\AchkhoiMartan.png" />
 	  <None Remove="Resources\Images\AddImage.png" />
 	  <None Remove="Resources\Images\Adygea.png" />
@@ -82,6 +83,7 @@
 	  <None Remove="Resources\Images\Argun.png" />
 	  <None Remove="Resources\Images\Armavir.png" />
 	  <None Remove="Resources\Images\armyansk.png" />
+	  <None Remove="Resources\Images\arrtemovsk.png" />
 	  <None Remove="Resources\Images\artemovskiy.png" />
 	  <None Remove="Resources\Images\asbest.png" />
 	  <None Remove="Resources\Images\asha.png" />
@@ -122,11 +124,13 @@
 	  <None Remove="Resources\Images\bodaibo.png" />
 	  <None Remove="Resources\Images\bogdanovich.png" />
 	  <None Remove="Resources\Images\bogoroditsk.png" />
+	  <None Remove="Resources\Images\bogotol.png" />
 	  <None Remove="Resources\Images\boguchar.png" />
 	  <None Remove="Resources\Images\bolkhov.png" />
 	  <None Remove="Resources\Images\bologoe.png" />
 	  <None Remove="Resources\Images\bolohovo.png" />
 	  <None Remove="Resources\Images\borisoglebsk.png" />
+	  <None Remove="Resources\Images\borodino.png" />
 	  <None Remove="Resources\Images\borovsk.png" />
 	  <None Remove="Resources\Images\borzya.png" />
 	  <None Remove="Resources\Images\bratsk.png" />
@@ -161,6 +165,7 @@
 	  <None Remove="Resources\Images\Derbent.png" />
 	  <None Remove="Resources\Images\desnogorsk.png" />
 	  <None Remove="Resources\Images\dimitrov.png" />
+	  <None Remove="Resources\Images\divnogorsk.png" />
 	  <None Remove="Resources\Images\dmitrev.png" />
 	  <None Remove="Resources\Images\dmitrovsk.png" />
 	  <None Remove="Resources\Images\dolgoprudny.png" />
@@ -171,6 +176,7 @@
 	  <None Remove="Resources\Images\drezna.png" />
 	  <None Remove="Resources\Images\dubna.png" />
 	  <None Remove="Resources\Images\Dubovka.png" />
+	  <None Remove="Resources\Images\dudinka.png" />
 	  <None Remove="Resources\Images\dukhovshchina.png" />
 	  <None Remove="Resources\Images\dyatkovo.png" />
 	  <None Remove="Resources\Images\dzerzhinsky.png" />
@@ -221,6 +227,8 @@
 	  <None Remove="Resources\Images\guskhrustalny.png" />
 	  <None Remove="Resources\Images\hilok.png" />
 	  <None Remove="Resources\Images\hotkovo.png" />
+	  <None Remove="Resources\Images\igarka.png" />
+	  <None Remove="Resources\Images\ilansky.png" />
 	  <None Remove="Resources\Images\Ingushetia.png" />
 	  <None Remove="Resources\Images\inkerman.png" />
 	  <None Remove="Resources\Images\Ipatovo.png" />
@@ -253,6 +261,7 @@
 	  <None Remove="Resources\Images\Kamyshin.png" />
 	  <None Remove="Resources\Images\kamyshlov.png" />
 	  <None Remove="Resources\Images\Kamyzyak.png" />
+	  <None Remove="Resources\Images\kansk.png" />
 	  <None Remove="Resources\Images\karabanovo.png" />
 	  <None Remove="Resources\Images\karabash.png" />
 	  <None Remove="Resources\Images\Karabulak.png" />
@@ -292,6 +301,7 @@
 	  <None Remove="Resources\Images\Kizlyar.png" />
 	  <None Remove="Resources\Images\klin.png" />
 	  <None Remove="Resources\Images\klincy.png" />
+	  <None Remove="Resources\Images\kodinsk.png" />
 	  <None Remove="Resources\Images\kogalym.png" />
 	  <None Remove="Resources\Images\kokhma.png" />
 	  <None Remove="Resources\Images\kolch.png" />
@@ -326,6 +336,8 @@
 	  <None Remove="Resources\Images\krasnoturinsk.png" />
 	  <None Remove="Resources\Images\krasnoufimsk.png" />
 	  <None Remove="Resources\Images\krasnouralsk.png" />
+	  <None Remove="Resources\Images\krasnoyarsk.png" />
+	  <None Remove="Resources\Images\krasnoyarskkrai.png" />
 	  <None Remove="Resources\Images\krasnozavodsk.png" />
 	  <None Remove="Resources\Images\krasnoznamensk.png" />
 	  <None Remove="Resources\Images\krasnykholm.png" />
@@ -358,6 +370,7 @@
 	  <None Remove="Resources\Images\leninskkuznezckii.png" />
 	  <None Remove="Resources\Images\Lermontov.png" />
 	  <None Remove="Resources\Images\lesnoi.png" />
+	  <None Remove="Resources\Images\lesosibirsk.png" />
 	  <None Remove="Resources\Images\lgov.png" />
 	  <None Remove="Resources\Images\likhoslavl.png" />
 	  <None Remove="Resources\Images\likinodulevo.png" />
@@ -401,6 +414,7 @@
 	  <None Remove="Resources\Images\Mikhaylovka.png" />
 	  <None Remove="Resources\Images\Millerovo.png" />
 	  <None Remove="Resources\Images\MineralWaters.png" />
+	  <None Remove="Resources\Images\minusinsk.png" />
 	  <None Remove="Resources\Images\minyar.png" />
 	  <None Remove="Resources\Images\mogocha.png" />
 	  <None Remove="Resources\Images\Morozovsk.png" />
@@ -424,6 +438,7 @@
 	  <None Remove="Resources\Images\Narimanov.png" />
 	  <None Remove="Resources\Images\narofominsk.png" />
 	  <None Remove="Resources\Images\navoloksk.png" />
+	  <None Remove="Resources\Images\nazarovo.png" />
 	  <None Remove="Resources\Images\Nazran.png" />
 	  <None Remove="Resources\Images\Neftekumsk.png" />
 	  <None Remove="Resources\Images\nefteyugansk.png" />
@@ -441,6 +456,7 @@
 	  <None Remove="Resources\Images\nizhnyayatura.png" />
 	  <None Remove="Resources\Images\nizhnytagil.png" />
 	  <None Remove="Resources\Images\noginsk.png" />
+	  <None Remove="Resources\Images\norilsk.png" />
 	  <None Remove="Resources\Images\NorthOssetiaAlania.png" />
 	  <None Remove="Resources\Images\novayalyalya.png" />
 	  <None Remove="Resources\Images\Novoaleksandrovsk.png" />
@@ -557,6 +573,7 @@
 	  <None Remove="Resources\Images\Shahty.png" />
 	  <None Remove="Resources\Images\Shali.png" />
 	  <None Remove="Resources\Images\sharya.png" />
+	  <None Remove="Resources\Images\sharypovo.png" />
 	  <None Remove="Resources\Images\shatsk.png" />
 	  <None Remove="Resources\Images\shatura.png" />
 	  <None Remove="Resources\Images\shchyolkino.png" />
@@ -581,6 +598,7 @@
 	  <None Remove="Resources\Images\soligalich.png" />
 	  <None Remove="Resources\Images\solnechnogorsk.png" />
 	  <None Remove="Resources\Images\sosensky.png" />
+	  <None Remove="Resources\Images\sosnovoborsk.png" />
 	  <None Remove="Resources\Images\sovetsk.png" />
 	  <None Remove="Resources\Images\sovetsky.png" />
 	  <None Remove="Resources\Images\spasklepiki.png" />
@@ -663,6 +681,8 @@
 	  <None Remove="Resources\Images\ustkut.png" />
 	  <None Remove="Resources\Images\UstLabinsk.png" />
 	  <None Remove="Resources\Images\uvarovo.png" />
+	  <None Remove="Resources\Images\uyar.png" />
+	  <None Remove="Resources\Images\uzhur.png" />
 	  <None Remove="Resources\Images\uzlovayajpeg.png" />
 	  <None Remove="Resources\Images\valuyki.png" />
 	  <None Remove="Resources\Images\velizh.png" />
@@ -705,6 +725,7 @@
 	  <None Remove="Resources\Images\yartcevo.png" />
 	  <None Remove="Resources\Images\yasnogorsk.png" />
 	  <None Remove="Resources\Images\yegorievsk.png" />
+	  <None Remove="Resources\Images\yeniseysk.png" />
 	  <None Remove="Resources\Images\yugorsk.png" />
 	  <None Remove="Resources\Images\yukhnov.png" />
 	  <None Remove="Resources\Images\yurga.png" />
@@ -715,6 +736,7 @@
 	  <None Remove="Resources\Images\yuzhnouralsk.png" />
 	  <None Remove="Resources\Images\zabaykalsky.png" />
 	  <None Remove="Resources\Images\zadonsk.png" />
+	  <None Remove="Resources\Images\zaozyorny.png" />
 	  <None Remove="Resources\Images\zapadnayadvina.png" />
 	  <None Remove="Resources\Images\zaraisk.png" />
 	  <None Remove="Resources\Images\zarechnyi.png" />
@@ -725,6 +747,7 @@
 	  <None Remove="Resources\Images\Zelenokumsk.png" />
 	  <None Remove="Resources\Images\zelezno.png" />
 	  <None Remove="Resources\Images\Zernograd.png" />
+	  <None Remove="Resources\Images\zheleznogorsk.png" />
 	  <None Remove="Resources\Images\zheleznogorskilimskyi.png" />
 	  <None Remove="Resources\Images\Zheleznovodsk.png" />
 	  <None Remove="Resources\Images\zherdevka.png" />
@@ -748,7 +771,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.91" />
 		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.8" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
