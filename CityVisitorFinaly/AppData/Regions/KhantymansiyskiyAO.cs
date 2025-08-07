@@ -5,11 +5,11 @@ namespace CityVisitorFinaly
     public partial class RegionsPage : ContentPage
     {
         /// <summary>
-        /// Инициализация Кабардино-Балкарской Республики
+        /// Инициализация Ханты-Мансийский АО - Югра
         /// </summary>
         public void KhantymansiyskiyAO()
         {
-            Regions KhantymansiyskiyAO = new Regions("Ханты-Мансийский АО - Юрга", "khantymansia.png")
+            Regions KhantymansiyskiyAO = new Regions("Ханты-Мансийский АО - Югра", "khantymansia.png")
             {
                 IdRegionsMaps = "path357"
             };
