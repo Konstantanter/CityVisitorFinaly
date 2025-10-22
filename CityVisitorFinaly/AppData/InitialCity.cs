@@ -108,6 +108,9 @@ namespace CityVisitorFinaly
             RespublicTyva();
             //Республика Хакасия
             RespublicKhakasiya();
+            //Архангельская область
+            ArkhangelskObl();
+
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
             //regionNames.Add("path44", "Республика Саха (Якутия)");
