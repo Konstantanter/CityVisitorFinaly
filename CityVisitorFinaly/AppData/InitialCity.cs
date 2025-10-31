@@ -116,6 +116,8 @@ namespace CityVisitorFinaly
             KaliningradObl(); 
             //Ленинградская область
             LeningradObl();
+            //Мурманская область
+            MurmanskayaObl();
 
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
