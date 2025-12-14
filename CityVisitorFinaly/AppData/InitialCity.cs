@@ -117,6 +117,7 @@ namespace CityVisitorFinaly
             //Ленинградская область
             LeningradObl();
             //Мурманская область
+            //Мурманская область
             MurmanskayaObl();
             //Ненецкий АО
             NenetsAO();
