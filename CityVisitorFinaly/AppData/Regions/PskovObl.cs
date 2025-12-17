@@ -11,7 +11,7 @@ namespace CityVisitorFinaly
         {
             Regions PskovObl = new Regions("Псковская область", "pskovoblast.png")
             {
-                IdRegionsMaps = "path134"
+                IdRegionsMaps = "path146"
             };
             PskovObl.AddCities(new City("Великие Луки", "velikiyeluki.png"));
             PskovObl.AddCities(new City("Гдов", "gdov.png"));
@@ -24,7 +24,7 @@ namespace CityVisitorFinaly
             PskovObl.AddCities(new City("Печоры", "pechory.png"));
             PskovObl.AddCities(new City("Порхов", "porhov.png"));
             PskovObl.AddCities(new City("Псков", "pskov.png"));
-            PskovObl.AddCities(new City("Порхов", "chudovo.png"));
+            PskovObl.AddCities(new City("Порхов", "porhov.png"));
             PskovObl.AddCities(new City("Пустошка", "pustoshka.png"));
             PskovObl.AddCities(new City("Пыталово", "pyitalovo.png"));
             PskovObl.AddCities(new City("Себеж", "sebezh.png"));
