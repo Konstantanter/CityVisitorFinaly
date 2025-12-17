@@ -5,7 +5,7 @@ namespace CityVisitorFinaly
     public partial class RegionsPage : ContentPage
     {
         /// <summary>
-        /// Инициализация Псковской области области
+        /// Инициализация Псковской области
         /// </summary>
         public void PskovObl()
         {
