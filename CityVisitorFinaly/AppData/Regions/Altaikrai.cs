@@ -17,7 +17,6 @@ namespace CityVisitorFinaly
             Altaikrai.AddCities(new City("Барнаул", "barnaul.png"));
             Altaikrai.AddCities(new City("Белокуриха", "belokurikha.png"));
             Altaikrai.AddCities(new City("Бийск", "biysk.png"));
-            Altaikrai.AddCities(new City("Горно-Алтайск", "gornoaltaisk.png"));
             Altaikrai.AddCities(new City("Горняк", "gornyak.png"));
             Altaikrai.AddCities(new City("Заринск", "zarinsk.png"));
             Altaikrai.AddCities(new City("Змеиногорск", "zmeinogorsk.png"));

@@ -117,7 +117,6 @@ namespace CityVisitorFinaly
             //Ленинградская область
             LeningradObl();
             //Мурманская область
-            //Мурманская область
             MurmanskayaObl();
             //Ненецкий АО
             NenetsAO();
@@ -131,6 +130,8 @@ namespace CityVisitorFinaly
             RepublicKomi();
             //Санкт-Петербург
             SaintpetersBurg();
+            //Республика Алтай
+            RespublicAltai();
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
             //regionNames.Add("path44", "Республика Саха (Якутия)");
