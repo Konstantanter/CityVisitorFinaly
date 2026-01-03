@@ -9,7 +9,7 @@ namespace CityVisitorFinaly
         /// </summary>
         public void RespulicKareliya()
         {
-            Regions RespulicKareliya = new Regions("Псковская область", "republic_of_karelia.png")
+            Regions RespulicKareliya = new Regions("Республика Карелия", "republic_of_karelia.png")
             {
                 IdRegionsMaps = "path34"
             };
