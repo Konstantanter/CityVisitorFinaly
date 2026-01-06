@@ -7,40 +7,37 @@ namespace CityVisitorFinaly
         /// <summary>
         /// Инициализация Пензенской области
         /// </summary>
-        public void PermKrai()
+        public void RespublicBashkortostan()
         {
-            Regions PermKrai = new Regions("Пермский край", "permkrai.png")
+            Regions RespublicBashkortostan = new Regions("Республика Башкортостан", "bashkortostan.png")
             {
-                IdRegionsMaps = "path76"
+                IdRegionsMaps = "path20"
             };
-            PermKrai.AddCities(new City("Александровск", "aleksandrovsky.png"));
-            PermKrai.AddCities(new City("Березники", "berezniki.png"));
-            PermKrai.AddCities(new City("Верещегино", "vereshchagino.png"));
-            PermKrai.AddCities(new City("Горнозаводск", "gornozavodzk.png"));
-            PermKrai.AddCities(new City("Гремячинск", "gremyachinsk.png"));
-            PermKrai.AddCities(new City("Губаха", "gubaha.png"));
-            PermKrai.AddCities(new City("Добрянка", "dobryanka.png"));
-            PermKrai.AddCities(new City("Кизел", "kizel.png"));
-            PermKrai.AddCities(new City("Красновишерск", "krasnovishersk.png"));
-            PermKrai.AddCities(new City("Краснокамск", "krasnokamsk.png"));
-            PermKrai.AddCities(new City("Кудымкар", "kudymkar.png"));
-            PermKrai.AddCities(new City("Кунгур", "kungur.png"));
-            PermKrai.AddCities(new City("Лысьва", "lysva.png"));
-            PermKrai.AddCities(new City("Нытва", "nytva.png"));
-            PermKrai.AddCities(new City("Оса", "osa.png"));
-            PermKrai.AddCities(new City("Оханск", "ohansk.png"));
-            PermKrai.AddCities(new City("Очёр", "ochyor.png"));
-            PermKrai.AddCities(new City("Пермь", "perm.png"));
-            PermKrai.AddCities(new City("Соликамск", "solikamsk.png"));
-            PermKrai.AddCities(new City("Усолье", "usolye.png"));
-            PermKrai.AddCities(new City("Чайковский", "chaykovskii.png"));
-            PermKrai.AddCities(new City("Чердынь", "cherdyn.png"));
-            PermKrai.AddCities(new City("Чёрмоз", "chermoz.png"));
-            PermKrai.AddCities(new City("Чернушка", "chernyshka.png"));
-            PermKrai.AddCities(new City("Чусовой", "chusovskoy.png"));
+            RespublicBashkortostan.AddCities(new City("Агидель", "agidel.png"));
+            RespublicBashkortostan.AddCities(new City("Баймак", "baimak.png"));
+            RespublicBashkortostan.AddCities(new City("Белебей", "belebei.png"));
+            RespublicBashkortostan.AddCities(new City("Белорецк", "beloretsk.png"));
+            RespublicBashkortostan.AddCities(new City("Бирск", "birsk.png"));
+            RespublicBashkortostan.AddCities(new City("Благовещенск", "blagoveschenskbashkortostan.png"));
+            RespublicBashkortostan.AddCities(new City("Давлеканово", "davlekanovo.png"));
+            RespublicBashkortostan.AddCities(new City("Дюртюли", "durtuli.png"));
+            RespublicBashkortostan.AddCities(new City("Ишимбай", "durtuli.png"));
+            RespublicBashkortostan.AddCities(new City("Кумертау", "kumertau.png"));
+            RespublicBashkortostan.AddCities(new City("Межгорье", "mezhgorie.png"));
+            RespublicBashkortostan.AddCities(new City("Мелеуз", "meleuz.png"));
+            RespublicBashkortostan.AddCities(new City("Нефтекамск", "neftekamsk.png"));
+            RespublicBashkortostan.AddCities(new City("Октябрьский", "oktyabrsky.png"));
+            RespublicBashkortostan.AddCities(new City("Салават", "salavat.png"));
+            RespublicBashkortostan.AddCities(new City("Сибай", "sibai.png"));
+            RespublicBashkortostan.AddCities(new City("Стерлитамак", "sterlitamak.png"));
+            RespublicBashkortostan.AddCities(new City("Туймазы", "tuimazy.png"));
+            RespublicBashkortostan.AddCities(new City("Уфа", "ufa.png"));
+            RespublicBashkortostan.AddCities(new City("Учалы", "uchaly.png"));
+            RespublicBashkortostan.AddCities(new City("Янаул", "yanaul.png"));
+
    
-            PermKrai.Append_Reg = AppendReg.RegAppend.ToString();
-            AddRegToDB(PermKrai);
+            RespublicBashkortostan.Append_Reg = AppendReg.RegAppend.ToString();
+            AddRegToDB(RespublicBashkortostan);
         }
     }
 }

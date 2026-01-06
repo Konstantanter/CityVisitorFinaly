@@ -148,6 +148,8 @@ namespace CityVisitorFinaly
             SamaraObl();
             //Марий Эл
             RespublicMariEl();
+            //Республика Башкортостан
+            RespublicBashkortostan();
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
             //regionNames.Add("path44", "Республика Саха (Якутия)");
