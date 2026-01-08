@@ -3,6 +3,7 @@ namespace CityVisitorFinaly;
 public partial class MenuPage : ContentPage
 {
     Page MainPage;
+
 	public MenuPage(Page page)
 	{
         InitializeComponent();

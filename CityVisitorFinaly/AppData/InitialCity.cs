@@ -113,7 +113,7 @@ namespace CityVisitorFinaly
             //Вологодская область
             VologdaOblast();
             //Калининградская область
-            KaliningradObl(); 
+            KaliningradObl();
             //Ленинградская область
             LeningradObl();
             //Мурманская область
@@ -156,6 +156,10 @@ namespace CityVisitorFinaly
             RespublicChuvashiya();
             //Ульяновская облать
             UlyanovskayaObl();
+            //Республика Татарстан
+            RespublicTatarstan();
+            //Владимировская область
+            VladimirObl();
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
             //regionNames.Add("path44", "Республика Саха (Якутия)");
