@@ -166,6 +166,8 @@ namespace CityVisitorFinaly
             ChukotkaAO();
             //Хабаровский край
             KhabarovskKrai();
+            //Сахалинская область
+            SakhalinObl();
             //regionNames.Add("path72", "Краснодарский край");
             //regionNames.Add("path74", "Красноярский край");
             //regionNames.Add("path44", "Республика Саха (Якутия)");
