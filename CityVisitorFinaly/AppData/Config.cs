@@ -27,6 +27,11 @@ namespace CityVisitorFinaly.AppData
         /// Отображение "новых" регионов 
         /// </summary>
         public static bool VisibleNewRegion { get; set; } = false;
+
+        public static HashSet<string> HiddenReg = new HashSet<string>
+{
+    "path60", "path52", "path176", "path178"
+};
         /// <summary>
         /// Ширина границы
         /// </summary>

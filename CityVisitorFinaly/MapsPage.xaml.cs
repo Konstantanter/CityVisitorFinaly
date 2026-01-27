@@ -63,7 +63,7 @@ public partial class MapsPage : ContentPage
 
             if (Config.VisibleNewRegion == false)
             {
-                if(idReg.Equals("path60") || idReg.Equals("path52") || idReg.Equals("path176") || idReg.Equals("path178"))
+                if (Config.HiddenReg.Contains(idReg, StringComparer.OrdinalIgnoreCase))
                 {
                     continue;
                 }
