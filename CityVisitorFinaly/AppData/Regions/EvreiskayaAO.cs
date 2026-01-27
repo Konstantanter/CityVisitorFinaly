@@ -5,7 +5,7 @@ namespace CityVisitorFinaly
     public partial class RegionsPage : ContentPage
     {
         /// <summary>
-        /// Инициализация Приморского края
+        /// Инициализация Еврейской АО
         /// </summary>
         public void EvreiskayaAO()
         {
