@@ -24,6 +24,10 @@ namespace CityVisitorFinaly.AppData
         /// </summary>
         public static bool VisiblePassing { get; set; } = true;
         /// <summary>
+        /// Отображение "новых" регионов 
+        /// </summary>
+        public static bool VisibleNewRegion { get; set; } = false;
+        /// <summary>
         /// Ширина границы
         /// </summary>
         public static int StrokeWidth { get; set; } = 1;

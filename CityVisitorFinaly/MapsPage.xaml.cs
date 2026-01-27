@@ -58,15 +58,30 @@ public partial class MapsPage : ContentPage
             XmlElement element = (XmlElement)elementsByTagName.Item(i);
             var pathData = element.GetAttribute("d");
             var skPath = SkiaSharp.SKPath.ParseSvgPathData(pathData);
-            SVGHelp svgHelp = new SVGHelp(element.GetAttribute("id").ToString(), skPath);
+
+            string idReg = element.GetAttribute("id").ToString();
+
+            if (Config.VisibleNewRegion == false)
+            {
+                if(idReg.Equals("path60") || idReg.Equals("path52") || idReg.Equals("path176") || idReg.Equals("path178"))
+                {
+                    continue;
+                }
+            }
+            SVGHelp svgHelp = new SVGHelp(idReg, skPath);
 
             mPaths.Add(svgHelp);
         }
+        //if (Config.VisibleNewRegion == false)
+        //{
+        //    this.mPaths.Any(a=>a.IdReg.Equals("path60"))
+        //}
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
+
         
         var pinch = new PinchGestureRecognizer();
         pinch.PinchUpdated += PinchGestureRecognizer_PinchUpdated;
