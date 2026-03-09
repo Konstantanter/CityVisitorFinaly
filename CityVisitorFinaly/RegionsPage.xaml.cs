@@ -12,7 +12,7 @@ public partial class RegionsPage : ContentPage
         RegionList = new ObservableCollection<Regions>();
         if (!System.IO.File.Exists(App.DataBasePath))
         {
-            //InitCities();
+            InitCities();
         }
         Paintdata();
     }
