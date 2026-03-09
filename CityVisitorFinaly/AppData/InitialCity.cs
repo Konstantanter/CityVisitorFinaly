@@ -6,7 +6,6 @@ namespace CityVisitorFinaly
     public partial class RegionsPage : ContentPage
     {
 
-
         /// <summary>
         /// Инициализация городов (в случае их отсутствия)
         /// </summary>
@@ -181,11 +180,9 @@ namespace CityVisitorFinaly
             //Республика Мордовия
             RespublicMordovia();
 
-
             BindingContext = this;
             // App.DeleteDataBase();
         }
-
 
         public void AddRegToDB(Regions region)
         {
