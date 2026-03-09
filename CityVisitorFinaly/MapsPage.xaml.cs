@@ -238,19 +238,7 @@ public partial class MapsPage : ContentPage
                     }
                     else
                     {
-                        if (reg.Append_Reg.Equals(AppendReg.RegAppend.ToString()))
-                        {
-                            paint.Style = SKPaintStyle.Fill;
-                            paint.Color = Config.ColorAppendReg;
-                            canvas.DrawPath(transformPath, paint);
-                            paint.Style = SKPaintStyle.Stroke;
-                            paint.Color = Config.OutlineColor;
-                            canvas.DrawPath(transformPath, paint);
-                        }
-                        else
-                        {
-                            canvas.DrawPath(transformPath, paint);
-                        }
+                        canvas.DrawPath(transformPath, paint);
                     }
                 }
                 catch

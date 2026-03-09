@@ -29,7 +29,7 @@ namespace CityVisitorFinaly
             MurmanskayaObl.AddCities(new City("Полярный", "polyarny.png"));
             MurmanskayaObl.AddCities(new City("Североморск", "severomorsk.png"));
             MurmanskayaObl.AddCities(new City("Снежногорск", "snezhnogorsk.png"));
-            MurmanskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(MurmanskayaObl);
         }
     }

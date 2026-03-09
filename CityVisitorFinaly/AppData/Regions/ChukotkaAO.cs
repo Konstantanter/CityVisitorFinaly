@@ -18,7 +18,7 @@ namespace CityVisitorFinaly
             ChukotkaAO.AddCities(new City("Билибино", "bilibino.png"));
             ChukotkaAO.AddCities(new City("Певек", "pevek.png"));
  
-            ChukotkaAO.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(ChukotkaAO);
         }
     }

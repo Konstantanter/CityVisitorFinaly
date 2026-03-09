@@ -36,7 +36,7 @@ namespace CityVisitorFinaly
             KemerovskayaObl.AddCities(new City("Таштагол", "tashtagol.png"));
             KemerovskayaObl.AddCities(new City("Топки", "topki.png"));
             KemerovskayaObl.AddCities(new City("Юрга", "yurga.png"));
-            KemerovskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(KemerovskayaObl);
         }
     }

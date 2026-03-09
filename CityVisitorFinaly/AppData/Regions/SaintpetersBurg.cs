@@ -24,8 +24,6 @@ namespace CityVisitorFinaly
             SaintpetersBurg.AddCities(new City("Санкт-Петербург", "saintpetersburg.png"));
             SaintpetersBurg.AddCities(new City("Сестрорецк", "sestroretsk.png"));
            
-
-            SaintpetersBurg.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(SaintpetersBurg);
         }
     }

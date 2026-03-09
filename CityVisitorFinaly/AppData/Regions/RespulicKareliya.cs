@@ -26,8 +26,7 @@ namespace CityVisitorFinaly
             RespulicKareliya.AddCities(new City("Сегежа", "segezha.png"));
             RespulicKareliya.AddCities(new City("Сортавала", "sortavala.png"));
             RespulicKareliya.AddCities(new City("Суоярви", "suoyarv.png"));
-           
-            RespulicKareliya.Append_Reg = AppendReg.RegAppend.ToString();
+
             AddRegToDB(RespulicKareliya);
         }
     }

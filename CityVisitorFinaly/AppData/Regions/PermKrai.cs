@@ -36,7 +36,7 @@ namespace CityVisitorFinaly
             RespublicBashkortostan.AddCities(new City("Янаул", "yanaul.png"));
 
    
-            RespublicBashkortostan.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(RespublicBashkortostan);
         }
     }

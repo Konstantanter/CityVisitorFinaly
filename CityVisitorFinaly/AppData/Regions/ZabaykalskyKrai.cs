@@ -24,7 +24,7 @@ namespace CityVisitorFinaly
             ZabaykalskyKrai.AddCities(new City("Хилок", "hilok.png"));
             ZabaykalskyKrai.AddCities(new City("Чита", "chita.png"));
             ZabaykalskyKrai.AddCities(new City("Шилка", "shilka.png"));
-            ZabaykalskyKrai.Append_Reg = AppendReg.RegAppend.ToString();
+           
             AddRegToDB(ZabaykalskyKrai);
         }
     }

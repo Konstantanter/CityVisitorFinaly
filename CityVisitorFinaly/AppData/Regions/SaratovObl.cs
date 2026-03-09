@@ -32,7 +32,6 @@ namespace CityVisitorFinaly
             SaratovObl.AddCities(new City("Шиханы", "shikhany.png"));
             SaratovObl.AddCities(new City("Энгельс", "engels.png"));
             
-            SaratovObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(SaratovObl);
         }
     }

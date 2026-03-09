@@ -36,7 +36,7 @@ namespace CityVisitorFinaly
             KaliningradObl.AddCities(new City("Советск", "sovetskkaliningrad.png"));
             KaliningradObl.AddCities(new City("Черняховск", "chernyakhovsk.png"));
 
-            KaliningradObl.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(KaliningradObl);
         }
     }

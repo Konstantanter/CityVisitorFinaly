@@ -14,7 +14,7 @@ namespace CityVisitorFinaly
                 IdRegionsMaps = "path355"
             };
             NenetsAO.AddCities(new City("Нарьян-Мар", "naryanmar.png"));
-            NenetsAO.Append_Reg = AppendReg.RegAppend.ToString();
+           
             AddRegToDB(NenetsAO);
         }
     }

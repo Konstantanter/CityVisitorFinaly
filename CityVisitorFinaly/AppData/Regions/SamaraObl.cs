@@ -25,7 +25,6 @@ namespace CityVisitorFinaly
             SamaraObl.AddCities(new City("Тольятти", "togliattil.png"));
             SamaraObl.AddCities(new City("Чапаевск", "chapaevsk.png"));
 
-            SamaraObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(SamaraObl);
         }
     }

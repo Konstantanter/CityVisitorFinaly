@@ -15,7 +15,7 @@ namespace CityVisitorFinaly
             };
             
             Altaikrai.AddCities(new City("Горно-Алтайск", "gornoaltaisk.png"));
-            Altaikrai.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(Altaikrai);
         }
     }

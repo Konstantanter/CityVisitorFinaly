@@ -28,7 +28,7 @@ namespace CityVisitorFinaly
             NovosibirskayaObl.AddCities(new City("Тогучин", "toguchin.png"));
             NovosibirskayaObl.AddCities(new City("Черепаново", "cherepanovo.png"));
             NovosibirskayaObl.AddCities(new City("Чулым", "chulym.png"));
-            NovosibirskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
+          
             AddRegToDB(NovosibirskayaObl);
         }
     }

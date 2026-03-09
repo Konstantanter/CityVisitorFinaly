@@ -37,7 +37,7 @@ namespace CityVisitorFinaly
             Irkutskayaobl.AddCities(new City("Черемхово", "cheremkhovo.png"));
             Irkutskayaobl.AddCities(new City("Шелехов", "shelehov.png"));
           
-            Irkutskayaobl.Append_Reg = AppendReg.RegAppend.ToString();
+      
             AddRegToDB(Irkutskayaobl);
 
         }

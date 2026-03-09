@@ -28,7 +28,7 @@ namespace CityVisitorFinaly
             PskovObl.AddCities(new City("Пустошка", "pustoshka.png"));
             PskovObl.AddCities(new City("Пыталово", "pyitalovo.png"));
             PskovObl.AddCities(new City("Себеж", "sebezh.png"));
-            PskovObl.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(PskovObl);
         }
     }

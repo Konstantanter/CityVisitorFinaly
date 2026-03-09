@@ -23,7 +23,7 @@ namespace CityVisitorFinaly
             NovgorodObl.AddCities(new City("Старая Русса", "starayarussa.png"));
             NovgorodObl.AddCities(new City("Холм", "kholm.png"));
             NovgorodObl.AddCities(new City("Чудово", "chudovo.png"));
-            NovgorodObl.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(NovgorodObl);
         }
     }

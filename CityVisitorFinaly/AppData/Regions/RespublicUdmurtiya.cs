@@ -20,7 +20,6 @@ namespace CityVisitorFinaly
             RespublicUdmurtiya.AddCities(new City("Можга", "mozhga.png"));
             RespublicUdmurtiya.AddCities(new City("Сарапул", "sarapul.png"));
             
-            RespublicUdmurtiya.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(RespublicUdmurtiya);
         }
     }

@@ -21,7 +21,7 @@ namespace CityVisitorFinaly
             OmskayaObl.AddCities(new City("Тара", "tara.png"));
             OmskayaObl.AddCities(new City("Тюкалинск", "tyukalinsk.png"));
 
-            OmskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
+           
             AddRegToDB(OmskayaObl);
         }
     }

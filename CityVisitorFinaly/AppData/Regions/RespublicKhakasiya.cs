@@ -20,7 +20,6 @@ namespace CityVisitorFinaly
             RespublicKhakasiya.AddCities(new City("Сорск", "sorsk.png"));
             RespublicKhakasiya.AddCities(new City("Черногорск", "chernogorsk.png"));
 
-            RespublicKhakasiya.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(RespublicKhakasiya);
         }
     }

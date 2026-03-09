@@ -38,7 +38,7 @@ namespace CityVisitorFinaly
             KrasnoyarskiyKrai.AddCities(new City("Ужур", "uzhur.png"));
             KrasnoyarskiyKrai.AddCities(new City("Уяр", "uyar.png"));
             KrasnoyarskiyKrai.AddCities(new City("Шарыпово", "sharypovo.png"));
-            KrasnoyarskiyKrai.Append_Reg = AppendReg.RegAppend.ToString();
+           
             AddRegToDB(KrasnoyarskiyKrai);
         }
     }

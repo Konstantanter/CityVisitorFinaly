@@ -18,8 +18,6 @@ namespace CityVisitorFinaly
             KamchatckiyKrai.AddCities(new City("Елизово", "elizovo.png"));
             KamchatckiyKrai.AddCities(new City("Петропавловск-Камчатский", "petropavlovskkamchatsky.png"));
 
-
-            KamchatckiyKrai.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(KamchatckiyKrai);
         }
     }

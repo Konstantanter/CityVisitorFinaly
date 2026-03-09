@@ -39,7 +39,7 @@ namespace CityVisitorFinaly
             PermKrai.AddCities(new City("Чернушка", "chernyshka.png"));
             PermKrai.AddCities(new City("Чусовой", "chusovskoy.png"));
 
-            PermKrai.Append_Reg = AppendReg.RegAppend.ToString();
+           
             AddRegToDB(PermKrai);
         }
     }

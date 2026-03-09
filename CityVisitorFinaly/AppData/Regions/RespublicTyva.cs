@@ -20,7 +20,6 @@ namespace CityVisitorFinaly
             RespublicTyva.AddCities(new City("Чадан", "chadan.png"));
             RespublicTyva.AddCities(new City("Шагонар", "shagonar.png"));
 
-            RespublicTyva.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(RespublicTyva);
         }
     }

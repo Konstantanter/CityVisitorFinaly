@@ -48,7 +48,7 @@ namespace CityVisitorFinaly
             LeningradObl.AddCities(new City("Тихвин", "tikhvin.png"));
             LeningradObl.AddCities(new City("Тосно", "tosno.png"));
             LeningradObl.AddCities(new City("Шлиссельбург", "shlisselburg.png"));
-            LeningradObl.Append_Reg = AppendReg.RegAppend.ToString();
+          
             AddRegToDB(LeningradObl);
         }
     }

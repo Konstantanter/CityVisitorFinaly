@@ -17,7 +17,6 @@ namespace CityVisitorFinaly
             EvreiskayaAO.AddCities(new City("Биробиджан", "birobidzhan.png"));
             EvreiskayaAO.AddCities(new City("Облучье", "obluche.png"));
 
-            EvreiskayaAO.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(EvreiskayaAO);
         }
     }

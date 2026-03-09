@@ -17,9 +17,6 @@ namespace CityVisitorFinaly
             MagadanskayaObl.AddCities(new City("Магадан", "magadan.png"));
             MagadanskayaObl.AddCities(new City("Сусуман", "susuman.png"));
 
-
-
-            MagadanskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(MagadanskayaObl);
         }
     }

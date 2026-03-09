@@ -26,7 +26,7 @@ namespace CityVisitorFinaly
             OrenburgObl.AddCities(new City("Сорочинск", "sorochinsk.png"));
             OrenburgObl.AddCities(new City("Ясный", "yasnyi.png"));
 
-            OrenburgObl.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(OrenburgObl);
         }
     }

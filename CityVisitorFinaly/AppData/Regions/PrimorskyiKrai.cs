@@ -28,7 +28,7 @@ namespace CityVisitorFinaly
             PrimorskyiKrai.AddCities(new City("Фокино", "fokino_primorskiy.png"));
 
 
-            PrimorskyiKrai.Append_Reg = AppendReg.RegAppend.ToString();
+           
             AddRegToDB(PrimorskyiKrai);
         }
     }

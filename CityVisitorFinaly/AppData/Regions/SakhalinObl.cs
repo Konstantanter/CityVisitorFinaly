@@ -29,7 +29,6 @@ namespace CityVisitorFinaly
             SakhalinObl.AddCities(new City("Холмск", "kholmsk.png"));
             SakhalinObl.AddCities(new City("Южно-Сахалинск", "yuzhnosakhalinsk.png"));
             
-            SakhalinObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(SakhalinObl);
         }
     }

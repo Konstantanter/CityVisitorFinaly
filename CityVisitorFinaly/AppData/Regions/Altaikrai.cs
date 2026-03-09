@@ -25,7 +25,7 @@ namespace CityVisitorFinaly
             Altaikrai.AddCities(new City("Рубцовск", "rubtsovsk.png"));
             Altaikrai.AddCities(new City("Славгород", "slavgorod.png"));
             Altaikrai.AddCities(new City("Яровое", "yarovoe.png"));
-            Altaikrai.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(Altaikrai);
         }
     }

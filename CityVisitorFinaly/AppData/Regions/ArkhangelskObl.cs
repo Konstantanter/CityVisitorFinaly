@@ -26,7 +26,7 @@ namespace CityVisitorFinaly
             ArkhangelskObl.AddCities(new City("Северодвинск", "severodvinsk.png"));
             ArkhangelskObl.AddCities(new City("Сольвычегорск", "solvychegodsk.png"));
             ArkhangelskObl.AddCities(new City("Шенкуринск", "shenkursk.png"));
-            ArkhangelskObl.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(ArkhangelskObl);
         }
     }

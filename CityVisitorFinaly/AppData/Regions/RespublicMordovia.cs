@@ -22,7 +22,7 @@ namespace CityVisitorFinaly
             RespublicMordovia.AddCities(new City("Саранск", "saransk.png"));
             RespublicMordovia.AddCities(new City("Темников", "temnikov.png"));
 
-            RespublicMordovia.Append_Reg = AppendReg.RegAppend.ToString();
+           
             AddRegToDB(RespublicMordovia);
         }
     }

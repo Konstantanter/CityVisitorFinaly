@@ -31,7 +31,7 @@ namespace CityVisitorFinaly
             IvanovoOblast.AddCities(new City("Шуя", "shuya.png"));
             IvanovoOblast.AddCities(new City("Южа", "yuza.png"));
             IvanovoOblast.AddCities(new City("Юрьевевц", "yurievets.png"));
-            IvanovoOblast.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(IvanovoOblast);
 
         }

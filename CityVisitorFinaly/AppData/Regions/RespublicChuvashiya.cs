@@ -23,7 +23,6 @@ namespace CityVisitorFinaly
             RespublicChuvashiya.AddCities(new City("Шумерля", "shumerlya.png"));
             RespublicChuvashiya.AddCities(new City("Ядрин", "yadrin.png"));
 
-            RespublicChuvashiya.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(RespublicChuvashiya);
         }
     }

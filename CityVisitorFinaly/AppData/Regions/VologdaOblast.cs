@@ -28,7 +28,7 @@ namespace CityVisitorFinaly
             VologdaOblast.AddCities(new City("Устюжна", "ustyuzhna.png"));
             VologdaOblast.AddCities(new City("Харовск", "harovsky.png"));
             VologdaOblast.AddCities(new City("Череповец", "cherepovezc.png"));
-            VologdaOblast.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(VologdaOblast);
         }
     }

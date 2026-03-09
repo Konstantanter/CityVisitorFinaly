@@ -31,7 +31,7 @@ namespace CityVisitorFinaly
             KirovObl.AddCities(new City("Сосновка", "sosnovk.png"));
             KirovObl.AddCities(new City("Уржум", "urzhum.png"));
             KirovObl.AddCities(new City("Яранск", "yaransk.png"));
-            KirovObl.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(KirovObl);
         }
     }

@@ -21,7 +21,7 @@ namespace CityVisitorFinaly
             RespublicBuriyatiya.AddCities(new City("Северобайкальск", "severobaikalsk.png"));
             RespublicBuriyatiya.AddCities(new City("Улан-Удэ", "ulanude.png"));
 
-            RespublicBuriyatiya.Append_Reg = AppendReg.RegAppend.ToString();
+          
             AddRegToDB(RespublicBuriyatiya);
         }
     }

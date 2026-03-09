@@ -38,7 +38,6 @@ namespace CityVisitorFinaly
             RespublicTatarstan.AddCities(new City("Тетюши", "tetiushi.png"));
             RespublicTatarstan.AddCities(new City("Чистополь", "chapaevsk.png"));
 
-            RespublicTatarstan.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(RespublicTatarstan);
         }
     }

@@ -25,7 +25,7 @@ namespace CityVisitorFinaly
             AmurskayaObl.AddCities(new City("Циолковский", "zciolkovskii.png"));
             AmurskayaObl.AddCities(new City("Шимановск", "shimanovsk.png"));
 
-            AmurskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
+           
             AddRegToDB(AmurskayaObl);
         }
     }

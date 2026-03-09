@@ -21,7 +21,6 @@ namespace CityVisitorFinaly
             TomskayaObl.AddCities(new City("Стрежевой", "strezhevoi.png"));
             TomskayaObl.AddCities(new City("Томск", "tomsk.png"));
 
-            TomskayaObl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(TomskayaObl);
         }
     }

@@ -28,7 +28,6 @@ namespace CityVisitorFinaly
             RespublicYakutiya.AddCities(new City("Удачный", "udachny.png"));
             RespublicYakutiya.AddCities(new City("Якутск", "yakutsk.png"));
             
-            RespublicYakutiya.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(RespublicYakutiya);
         }
     }

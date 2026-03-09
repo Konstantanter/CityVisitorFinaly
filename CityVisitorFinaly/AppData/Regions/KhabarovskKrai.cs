@@ -22,7 +22,7 @@ namespace CityVisitorFinaly
             KhabarovskKrai.AddCities(new City("Советская Гавань", "sovietskayagavan.png"));
             KhabarovskKrai.AddCities(new City("Хабаровск", "khabarovsk.png"));
 
-            KhabarovskKrai.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(KhabarovskKrai);
         }
     }

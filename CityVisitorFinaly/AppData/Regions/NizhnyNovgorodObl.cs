@@ -41,7 +41,7 @@ namespace CityVisitorFinaly
             NizhnyNovgorodObl.AddCities(new City("Урень", "uren.png"));
             NizhnyNovgorodObl.AddCities(new City("Чкаловск", "chkalovsk.png"));
             NizhnyNovgorodObl.AddCities(new City("Шахунья", "shakhunya.png"));
-            NizhnyNovgorodObl.Append_Reg = AppendReg.RegAppend.ToString();
+           
             AddRegToDB(NizhnyNovgorodObl);
         }
     }

@@ -18,7 +18,6 @@ namespace CityVisitorFinaly
             RespublicMariEl.AddCities(new City("Йошкар-Ола", "yoshkarola.png"));
             RespublicMariEl.AddCities(new City("Козьмодемьянск", "kozmodemiansk.png"));
             
-            RespublicMariEl.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(RespublicMariEl);
         }
     }

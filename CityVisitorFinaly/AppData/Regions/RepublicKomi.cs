@@ -24,8 +24,6 @@ namespace CityVisitorFinaly
             RepublicKomi.AddCities(new City("Усинск", "usinsk.png"));
             RepublicKomi.AddCities(new City("Ухта", "ukhta.png"));
  
-
-            RepublicKomi.Append_Reg = AppendReg.RegAppend.ToString();
             AddRegToDB(RepublicKomi);
         }
     }

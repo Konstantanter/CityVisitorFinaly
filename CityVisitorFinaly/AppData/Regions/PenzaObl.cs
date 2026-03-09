@@ -25,7 +25,7 @@ namespace CityVisitorFinaly
             PenzaObl.AddCities(new City("Спасск", "spassk.png"));
             PenzaObl.AddCities(new City("Сурск", "sursk.png"));
 
-            PenzaObl.Append_Reg = AppendReg.RegAppend.ToString();
+            
             AddRegToDB(PenzaObl);
         }
     }
