@@ -9,7 +9,7 @@ public partial class App : Application
 
     public static string DataBasePath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Citiesbase.db3");
     public static string DataSVGPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3.svg");
-    // public static string DataSVGPath1 = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg");
+   
 
     public static DataBase Db
     {
@@ -33,7 +33,7 @@ public partial class App : Application
         //  System.IO.File.Delete(DataSVGPath);
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
-        // DeleteDataBase();
+       // DeleteDataBase();
         MainPage = new NavigationPage(new MenuPage(MainPage));
 
        }

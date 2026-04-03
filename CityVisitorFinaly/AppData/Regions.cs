@@ -7,7 +7,7 @@ namespace CityVisitorFinaly.AppData
     /// <summary>
     /// Регион Российской Федерации
     /// </summary>
-    public class Regions : INotifyPropertyChanged
+    public class RegionsRF : INotifyPropertyChanged
     {
         /// <summary>
         /// ИД Региона
@@ -102,7 +102,7 @@ namespace CityVisitorFinaly.AppData
         /// </summary>
         /// <param name="name">Имя региона</param>
         /// <param name="pathImg">путь к изображению (герб)</param>
-        public Regions(string name, string pathImg)
+        public RegionsRF(string name, string pathImg)
         {
             Name = name;
             PathImage = pathImg;
@@ -118,7 +118,7 @@ namespace CityVisitorFinaly.AppData
                 ListCities.Add(new City(CityDB));
             }
         }
-        public Regions(RegionsDB reg)
+        public RegionsRF(RegionsDB reg)
         {
             IdRegion = reg.Id;
             Name = reg.Name;
@@ -130,7 +130,7 @@ namespace CityVisitorFinaly.AppData
       
 
         }
-        public Regions() { }
+       // public Regions() { }
         public string ShowInfo()
         {
             int CountCities = ListCities.Count;

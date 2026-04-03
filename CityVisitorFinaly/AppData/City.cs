@@ -153,16 +153,18 @@ namespace CityVisitorFinaly.AppData
     public enum State
     {
         /// <summary>
-        /// Посещен полноценно
+        /// Не посещен
         /// </summary>
-        Visited,
+        NotVisited,
         /// <summary>
         /// Посещен проездом
         /// </summary>
         VisitedTransit,
+       
         /// <summary>
-        /// Не посещен
+        /// Посещен полноценно
         /// </summary>
-        NotVisited
+        Visited
+        
     }
 }

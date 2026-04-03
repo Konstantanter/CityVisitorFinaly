@@ -1,4 +1,4 @@
-using CityVisitorFinaly.AppData;
+п»їusing CityVisitorFinaly.AppData;
 using SkiaSharp;
 using SkiaSharp.Views.Maui;
 using Svg;
@@ -12,11 +12,11 @@ namespace CityVisitorFinaly;
 public partial class MapsPage : ContentPage
 {
     /// <summary>
-    /// Список регионов
+    /// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
-    List<Regions> RegionList = new List<Regions>();
+    List<RegionsRF> RegionList = new List<RegionsRF>();
     /// <summary>
-    /// Процесс чтения данных
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     public async Task ReadData()
     {
@@ -24,7 +24,7 @@ public partial class MapsPage : ContentPage
 
         foreach (var region in regions)
         {
-            Regions newReg = new Regions(region);
+            RegionsRF newReg = new RegionsRF(region);
 
             var newListCities = await App.Db.GetCitiesFromRegion(region.Id);
             newReg.AddCities(newListCities);
@@ -32,14 +32,14 @@ public partial class MapsPage : ContentPage
         }
 
     }
-    //Обязательная конструкция
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     protected override async void OnAppearing()
     {
 
         base.OnAppearing();
         await ReadData();
         int cur = RegionList.Count;
-        canvasView.InvalidateSurface(); // Обновляем поверхность
+        canvasView.InvalidateSurface(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
         var tap = new TapGestureRecognizer { NumberOfTapsRequired = 1 };
         tap.Tapped += OnTapGestureRecognizerTapped;
@@ -82,7 +82,7 @@ public partial class MapsPage : ContentPage
         this.mPaths.RemoveAt(0);
         this.mPaths.RemoveAt(0);
 
-        
+
         var pinch = new PinchGestureRecognizer();
         pinch.PinchUpdated += PinchGestureRecognizer_PinchUpdated;
         canvasView.GestureRecognizers.Add(pinch);
@@ -93,7 +93,7 @@ public partial class MapsPage : ContentPage
 
     float scaleH, scaleW;
     /// <summary>
-    /// Определение нажатия на карту
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="args"></param>
@@ -114,7 +114,7 @@ public partial class MapsPage : ContentPage
                 }
                 catch
                 {
-                    str = "к сожалению этот регион еще инициализирован ид региона - " + mPaths[i].IdReg;
+                    str = "Рє СЃРѕР¶Р°Р»РµРЅРёСЋ СЌС‚РѕС‚ СЂРµРіРёРѕРЅ РµС‰Рµ РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ РёРґ СЂРµРіРёРѕРЅР° - " + mPaths[i].IdReg;
                 }
                 cur = 1;
                 break;
@@ -122,11 +122,11 @@ public partial class MapsPage : ContentPage
         }
         if (cur == 1)
         {
-            DisplayAlert("Информационное сообщение", $"{str}", "ок");
+            DisplayAlert("РРЅС„РѕСЂРјР°С†РёРѕРЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ", $"{str}", "РѕРє");
         }
         else
         {
-            DisplayAlert("Информационное сообщение", "нажатие мимо региона", "ок");
+            DisplayAlert("РРЅС„РѕСЂРјР°С†РёРѕРЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ", "РЅР°Р¶Р°С‚РёРµ РјРёРјРѕ СЂРµРіРёРѕРЅР°", "РѕРє");
         }
     }
     private T Clamp<T>(T value, T minimum, T maximum) where T : IComparable
@@ -184,7 +184,7 @@ public partial class MapsPage : ContentPage
         this.comicPageContainer.Scale = newScale;
         this.comicPageContainer.TranslationX = e.ScaleOrigin.X;
         this.comicPageContainer.TranslationY = e.ScaleOrigin.Y;
-       // Debug.WriteLine("Scale: {0}", newScale);
+        // Debug.WriteLine("Scale: {0}", newScale);
     }
     SKPath transformPath = new SKPath();
     List<SVGHelp> mPaths = new List<SVGHelp>();
@@ -227,7 +227,7 @@ public partial class MapsPage : ContentPage
                         paint.Color = Config.OutlineColor;
                         canvas.DrawPath(transformPath, paint);
                     }
-                    else if (reg.StateReg.Equals(State.VisitedTransit.ToString()) && Config.VisiblePassing==true)
+                    else if (reg.StateReg.Equals(State.VisitedTransit.ToString()) && Config.VisiblePassing == true)
                     {
                         paint.Style = SKPaintStyle.Fill;
                         paint.Color = Config.ColorPassingVisit;

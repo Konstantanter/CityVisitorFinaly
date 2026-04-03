@@ -8,8 +8,9 @@ namespace CityVisitorFinaly.AppData
         /// <summary>
         /// ИД регоина
         /// </summary>
-        [PrimaryKey]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+        
         /// <summary>
         /// Имя региона 
         /// </summary>
@@ -42,7 +43,7 @@ namespace CityVisitorFinaly.AppData
         /// Конструктор с пааметрами
         /// </summary>
         /// <param name="reg">Регион</param>
-        public RegionsDB(Regions reg)
+        public RegionsDB(RegionsRF reg)
         {
             Id = reg.IdRegion;
             IdRegionsMaps = reg.IdRegionsMaps;

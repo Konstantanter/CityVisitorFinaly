@@ -9,10 +9,10 @@ public partial class CityPage : ContentPage
     public string NameCity { get; set; }
     public string NameReg { get; set; }
     City city;
-    Regions myReg;
+    RegionsRF myReg;
    
    
-    public CityPage(City selectedCity, AppData.Regions region)
+    public CityPage(City selectedCity, RegionsRF region)
     {
         InitializeComponent();
         myReg = region;

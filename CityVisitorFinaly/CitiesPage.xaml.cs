@@ -26,14 +26,14 @@ public partial class CitiesPage : ContentPage
     /// <summary>
     /// Переменная для хранения региона
     /// </summary>
-    Regions tmpreg;
+    RegionsRF tmpreg;
     #endregion
     public CitiesPage()
     {
         InitializeComponent();
     }
 
-    public CitiesPage(Regions selectedRegion)
+    public CitiesPage(RegionsRF selectedRegion)
     {
         InitializeComponent();
 

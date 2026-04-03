@@ -4,12 +4,10 @@ namespace CityVisitorFinaly.AppData
 {
     public class CityDB
     {
-      
-        [PrimaryKey]
-        /// <summary>
-        // ИД города
-        /// </summary>
+
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+ 
         /// <summary>
         /// Наличие магнита
         /// </summary>
@@ -34,6 +32,11 @@ namespace CityVisitorFinaly.AppData
         /// Изображение
         /// </summary>
         public string ImagePath { get; set; }
+     
+
+        // ✅ ДОБАВИТЬ: Временное поле для маппинга при сидировании (не сохраняется в БД)
+        [Ignore]
+        public string TempRegionName { get; set; }
         /// <summary>
         /// Статус города
         /// </summary>

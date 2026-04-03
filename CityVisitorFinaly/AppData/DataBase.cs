@@ -2,82 +2,49 @@
 
 namespace CityVisitorFinaly.AppData
 {
-    /// <summary>
-    /// База данных
-    /// </summary>
     public class DataBase
     {
-        /// <summary>
-        /// Строка подключения
-        /// </summary>
         private readonly SQLiteAsyncConnection db;
-        /// <summary>
-        /// Конструктор с параметрами
-        /// </summary>
-        /// <param name="connection">Строка подключения</param>
+
         public DataBase(string connection)
         {
             db = new SQLiteAsyncConnection(connection);
             db.CreateTableAsync<CityDB>().Wait();
             db.CreateTableAsync<RegionsDB>().Wait();
         }
-        /// <summary>
-        /// Получение регионов из базы данных
-        /// </summary>
+
+        // ✅ ДОБАВИТЬ: Доступ к соединению для транзакций
+        public SQLiteAsyncConnection Connection => db;
+
+        // ✅ ДОБАВИТЬ: Метод подсчёта регионов
+        public Task<int> GetRegionsCountAsync()
+            => db.Table<RegionsDB>().CountAsync();
+
         public Task<List<RegionsDB>> GetRegions()
-        {
-            return db.Table<RegionsDB>().ToListAsync();
-        }
-        /// <summary>
-        /// Получение городов региона
-        /// </summary>
-        /// <param name="idRegion">ИД региона</param>
+            => db.Table<RegionsDB>().ToListAsync();
+
         public Task<List<CityDB>> GetCitiesFromRegion(int idRegion)
-        {
-            return db.Table<CityDB>().Where(a => a.Regionid == idRegion).ToListAsync();
-        }
-        /// <summary>
-        /// Вставка региона в базу данных
-        /// </summary>
-        /// <param name="reg">Регион</param>
+            => db.Table<CityDB>().Where(a => a.Regionid == idRegion).ToListAsync();
+
         public Task<int> InsertRegion(RegionsDB reg)
-        {
-            return db.InsertAsync(reg);
-        }
-        /// <summary>
-        /// Обновление региона
-        /// </summary>
+            => db.InsertAsync(reg);
+
         public Task<int> UpdateRegion(RegionsDB reg)
-        {
-            return db.UpdateAsync(reg);
-        }
-        /// <summary>
-        /// Получение города
-        /// </summary>
+            => db.UpdateAsync(reg);
+
         public Task<CityDB> GetCity(int IdCity)
-        {
-            return db.Table<CityDB>().Where(a => a.Id == IdCity).FirstOrDefaultAsync();
-        }
-        /// <summary>
-        /// Вставка города в базу данных
-        /// </summary>
+            => db.Table<CityDB>().Where(a => a.Id == IdCity).FirstOrDefaultAsync();
+
         public Task<int> InsertCity(CityDB city)
-        {
-            return db.InsertAsync(city);
-        }
-        /// <summary>
-        /// Обновление города
-        /// </summary>
+            => db.InsertAsync(city);
+
         public Task<int> UpdateCity(CityDB city)
+            => db.UpdateAsync(city);
+        public Task<List<CityDB>> GetAllCitiesAsync()
         {
-            return db.UpdateAsync(city);
+            return db.Table<CityDB>().ToListAsync();
         }
-        /// <summary>
-        /// Удаление города
-        /// </summary>
         public Task<int> DeleteCity(CityDB city)
-        {
-            return db.DeleteAsync(city);
-        }
+            => db.DeleteAsync(city);
     }
 }

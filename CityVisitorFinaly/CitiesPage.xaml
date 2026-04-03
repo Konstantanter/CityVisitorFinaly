@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:local="clr-namespace:CityVisitorFinaly.AppData"
              x:Class="CityVisitorFinaly.CitiesPage"
+
              Title="Города региона">
     <ContentPage.Resources>
         <ResourceDictionary>
