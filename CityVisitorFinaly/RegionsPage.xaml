@@ -65,16 +65,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <!-- ✅ Индикатор загрузки (поверх списка в той же ячейке Grid) -->
-        <ActivityIndicator 
-            x:Name="loadingIndicator"
-            Grid.Row="1" Grid.ColumnSpan="3"
-            HorizontalOptions="Center" 
-            VerticalOptions="Center" 
-            Color="#0066CC"
-            Scale="1.5"
-            IsRunning="False"
-            IsVisible="False"/>
+        
 
     </Grid>
 </ContentPage>

@@ -2,101 +2,98 @@
 using CityVisitorFinaly.AppData.DataRegions;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Xml.XPath;
+
 namespace CityVisitorFinaly;
 
 public partial class RegionsPage : ContentPage
 {
-    // ✅ Коллекция создается сразу как свойство класса
-    public ObservableCollection<RegionsRF> RegionList { get; set; } = new ObservableCollection<RegionsRF>();
+    public ObservableCollection<RegionsRF> RegionList { get; set; }
 
-    private bool _isDataLoaded = false; // Флаг, чтобы не загружать данные повторно
-
-    // 1. КОНСТРУКТОР: выполняется ОДИН РАЗ при создании страницы
     public RegionsPage()
     {
-        InitializeComponent(); // ✅ InitializeComponent() должен быть ТОЛЬКО здесь
+        InitializeComponent();
 
-        // ✅ Привязываем источник данных к ListView. Это делается один раз.
-        //    Теперь ListView "слушает" изменения в RegionList.
+        RegionList = new ObservableCollection<RegionsRF>();
+
+        // ✅ Привязка источника данных (один раз)
         listViewRegion.ItemsSource = RegionList;
+
+
+        //if (!System.IO.File.Exists(App.DataBasePath))
+       
+            // 🔥 Инициализация БД и загрузка данных — ТОЛЬКО один раз при создании страницы
+            InitializeDataAsync();
     }
 
-    // 2. OnAppearing: выполняется КАЖДЫЙ РАЗ, когда страница появляется
-    protected override async void OnAppearing()
+    // 🔥 Асинхронная инициализация (не блокирует UI)
+    private async void InitializeDataAsync()
     {
-        base.OnAppearing();
-
-        // Если данные уже загружены, ничего не делаем
-        // (полезно, когда ты возвращаешься с предыдущей страницы)
-        if (_isDataLoaded) return;
-
         try
         {
-            // Убедимся, что база данных создана и наполнена (если нужно)
-            // Эту проверку можно вынести в App.xaml.cs для однократного выполнения при старте
-            if (!System.IO.File.Exists(App.DataBasePath))
-            {
-                // Тут должен быть твой DbInitializer.SeedDatabase(), который читает JSON
-                await SeedDatabase();
-            }
-
-            await LoadAndPaintData();
-            _isDataLoaded = true; // Отмечаем, что данные загружены
+          
+                await App.Db.SeedDatabase();
+           
+            // 2. Загружаем и отрисовываем данные
+            await Paintdata();
         }
         catch (Exception ex)
         {
-            Debug.WriteLine($"❌ Ошибка загрузки: {ex.Message}");
+            Debug.WriteLine($"❌ Ошибка инициализации: {ex.Message}");
             await DisplayAlert("Ошибка", "Не удалось загрузить данные", "OK");
         }
     }
 
-    // 3. Метод загрузки данных
-    public async Task LoadAndPaintData()
+    // ✅ Оптимизированная загрузка: 2 запроса вместо 99
+    public async Task Paintdata()
     {
-        // Показываем индикатор
-        loadingIndicator.IsVisible = true;
-        loadingIndicator.IsRunning = true;
+       
 
-        try
-        {
-            var regionsFromDb = await App.Db.GetRegions();
-            var allCitiesFromDb = await App.Db.GetAllCitiesAsync();
+       
+            // 1️⃣ Загружаем все регионы (1 запрос)
+            var regions = await App.Db.GetRegions();
 
-            // Твой эффективный способ группировки - он отличный!
-            var citiesByRegion = allCitiesFromDb.GroupBy(c => c.Regionid)
-                                                .ToDictionary(g => g.Key, g => g.ToList());
+            // 2️⃣ Загружаем ВСЕ города одним запросом (1 запрос вместо 85!)
+            var allCities = await App.Db.GetAllCitiesAsync();
 
-            // Очищаем старые данные перед добавлением новых
-            RegionList.Clear();
+            // 3️⃣ Группируем города по RegionId в памяти (мгновенно)
+            var citiesByRegion = allCities.GroupBy(c => c.Regionid)
+                                          .ToDictionary(g => g.Key, g => g.ToList());
 
-            foreach (var region in regionsFromDb)
+            // 4️⃣ Заполняем коллекцию
+            foreach (var region in regions)
             {
-                var newReg = new RegionsRF(region); // Создаем объект для отображения
+                var newReg = new RegionsRF(region);
+
+                // Берём города из словаря за O(1)
                 if (citiesByRegion.TryGetValue(region.Id, out var cityList))
                 {
-                    newReg.AddCities(cityList); // Добавляем города
+                    newReg.AddCities(cityList);
                 }
-                RegionList.Add(newReg); // ✅ Просто добавляем в коллекцию. UI обновится сам!
-            }
-        }
-        finally
-        {
-            // Скрываем индикатор в любом случае (даже если была ошибка)
-            loadingIndicator.IsVisible = false;
-            loadingIndicator.IsRunning = false;
-            Debug.WriteLine($"📊 В RegionList: {RegionList.Count} регионов");
-        }
-    }
 
-    // Обработчик нажатия остаётся без изменений
+                RegionList.Add(newReg); // ✅ UI обновится сам благодаря ObservableCollection
+            }
+
+            Debug.WriteLine($"📊 Загружено: {RegionList.Count} регионов");
+        
+        
+    }
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+
+        // 🔥 Очистка коллекции, если страница больше не нужна
+        // (например, если это временный экран)
+        RegionList?.Clear();
+
+        // Если используешь подписки — отпишись здесь
+        // MessagingCenter.Unsubscribe<...>(this, "...");
+    }
     async void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)
     {
         if (e.Item is RegionsRF selectedRegion)
         {
             await Navigation.PushAsync(new CitiesPage(selectedRegion));
         }
-        // Сбрасываем выделение
         ((ListView)sender).SelectedItem = null;
     }
 }

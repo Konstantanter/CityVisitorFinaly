@@ -84,7 +84,6 @@ namespace CityVisitorFinaly.AppData
             ImagePath = img;
             _isVisited = false;
             _state = State.NotVisited;
-            Id++;
             IdCity = Id;
             _magned = false;
         }

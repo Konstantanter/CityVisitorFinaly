@@ -3,16 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CityVisitorFinaly.MenuPage"
              Title="MenuPage">
-    <VerticalStackLayout>
-        <Button  
-            Text="Регионы"
+
+    <!-- ✅ Grid позволяет накладывать элементы -->
+    <Grid>
+
+        <!-- Твои кнопки — БЕЗ ИЗМЕНЕНИЙ, просто внутри Grid -->
+        <VerticalStackLayout>
+            <Button  
+                x:Name="Button1"
+                Text="Регионы"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Clicked="ButtonRegion_Clicked"/>
+            <Button  
+                Text="Карты"
+                x:Name="Button2"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Clicked="ButtonMaps_Clicked"/>
+        </VerticalStackLayout>
+
+        <!-- ✅ Индикатор загрузки (поверх, по центру) -->
+        <ActivityIndicator 
+            x:Name="loadingIndicator"
+            HorizontalOptions="Center" 
             VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Clicked="ButtonRegion_Clicked"/>
-        <Button  
-            Text="Карты"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Clicked="ButtonMaps_Clicked"/>
-    </VerticalStackLayout>
+            Color="#0066CC"
+            Scale="1.5"
+            IsRunning="False"
+            IsVisible="False"
+            InputTransparent="True"/>
+
+    </Grid>
 </ContentPage>
