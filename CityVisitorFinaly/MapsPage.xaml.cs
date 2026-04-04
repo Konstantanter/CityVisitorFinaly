@@ -11,13 +11,9 @@ namespace CityVisitorFinaly;
 
 public partial class MapsPage : ContentPage
 {
-    /// <summary>
-    /// ������ ��������
-    /// </summary>
+    
     List<RegionsRF> RegionList = new List<RegionsRF>();
-    /// <summary>
-    /// ������� ������ ������
-    /// </summary>
+
     public async Task ReadData()
     {
         var regions = await App.Db.GetRegions();
@@ -32,14 +28,14 @@ public partial class MapsPage : ContentPage
         }
 
     }
-    //������������ �����������
+   
     protected override async void OnAppearing()
     {
 
         base.OnAppearing();
         await ReadData();
         int cur = RegionList.Count;
-        canvasView.InvalidateSurface(); // ��������� �����������
+        canvasView.InvalidateSurface(); 
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
         var tap = new TapGestureRecognizer { NumberOfTapsRequired = 1 };
         tap.Tapped += OnTapGestureRecognizerTapped;
@@ -93,7 +89,7 @@ public partial class MapsPage : ContentPage
 
     float scaleH, scaleW;
     /// <summary>
-    /// ����������� ������� �� �����
+    /// Обработка нажатия ("Тапа")
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="args"></param>

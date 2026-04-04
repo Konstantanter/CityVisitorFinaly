@@ -25,8 +25,7 @@ public partial class MenuPage : ContentPage
         try
         {
 
-            // Убедимся, что база данных создана и наполнена (если нужно)
-            // Эту проверку можно вынести в App.xaml.cs для однократного выполнения при старте
+
             if (!System.IO.File.Exists(App.DataBasePath))
             {
 
@@ -35,7 +34,7 @@ public partial class MenuPage : ContentPage
                 Button1.IsVisible = false;
                 Button2.IsVisible = false;
                 DataBase Db = new DataBase(App.DataBasePath);
-                // Тут должен быть твой DbInitializer.SeedDatabase(), который читает JSON
+ 
                 await Db.SeedDatabase();
                 loadingIndicator.IsVisible = false;
                 loadingIndicator.IsRunning = false;
