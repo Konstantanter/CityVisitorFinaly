@@ -25,6 +25,7 @@ public partial class App : Application
 
     public  void ShowForm(Page page)
     {
+
         MainPage = new NavigationPage(new MenuPage(page));
     }
     public App()
@@ -33,7 +34,9 @@ public partial class App : Application
         //  System.IO.File.Delete(DataSVGPath);
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
         //System.IO.File.Delete(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Test3_1.svg"));
-        //DeleteDataBase();
+#if DEBUG
+        DeleteDataBase();
+#endif
         MainPage = new NavigationPage(new MenuPage(MainPage));
 
        }
